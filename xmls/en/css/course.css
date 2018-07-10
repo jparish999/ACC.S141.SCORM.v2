@@ -1,0 +1,2669 @@
+/*
+ *
+ * EXAMPLE:
+ * 	<button id="btn1" class="themebutton" name="btn1" type="submit" value="Submit">
+ * 		<span><span><span class="ok">Submit</span></span></span>
+ * 	</button>
+ *
+ */
+
+
+/*
+ *	Generic styles for all theme Buttons
+ */
+
+.themebutton {
+	display: inline-block;
+	vertical-align: middle;
+	margin: 0;
+	padding: 0;
+	font: bold 13px "Helvetica Neue", Helvetica, Arial, clean, sans-serif !important;
+	text-decoration: none !important;
+	text-shadow: 1px 1px 2px rgba(0,0,0,0.20);
+	background: none;
+	border: none;
+	white-space: nowrap;
+	cursor: pointer;
+	user-select: none;
+	-moz-user-select: none;
+
+	/* Fix extra width padding in IE */
+	_width: 0;
+	overflow: visible;
+}
+
+.themebutton span {
+	display: block;						/* Prevents :active from working in IE--oh well! */
+	height: 24px;
+	padding-right: 12px;
+	background-repeat: no-repeat;
+	background-position: right top;
+}
+
+.themebutton span span {
+	padding-right: 0;
+	padding-left: 12px;
+	line-height: 24px;
+	background-position: left top;
+}
+
+.themebutton span span span {
+	padding-left: 21px;
+	background-image: none;
+	background-repeat: no-repeat;
+	background-position: left center;
+	/* IE6 still requires a PNG transparency fix */
+	/* _background-image: none;		Or just hide icons from the undeserving IE6 */
+	/* _padding-left: 0;					Or just hide icons from the undeserving IE6 */
+}
+
+.themebutton span span span.after {
+	padding-left: 0px;
+	padding-right: 21px;
+	background-position: right center;
+	/* IE6 still requires a PNG transparency fix */
+	/* _padding-right: 0;					Or just hide icons from the undeserving IE6 */
+}
+
+.themebutton.themeicononly span span span {
+	padding-left: 16px;
+}
+
+.themebutton.themeicononly span span span.after {
+	padding-left: 0px;
+	padding-right: 16px;
+}
+
+.themebutton[disabled],
+.themebutton[disabled]:hover,
+.themebutton[disabled]:focus,
+.themebutton[disabled]:active,
+.themebutton.disabled,
+.themebutton.disabled:hover,
+.themebutton.disabled:focus,
+.themebutton.disabled:active {
+	color: #333 !important;
+	cursor: inherit;
+	text-shadow: none;
+	opacity: 0;
+}
+
+.themebutton:hover span,
+.themebutton:focus span {
+	background-position: 100% -24px;
+}
+
+.themebutton:hover span span,
+.themebutton:focus span span {
+	background-position: 0% -24px;
+}
+
+.themebutton:active span {
+	background-position: 100% -48px;
+}
+
+.themebutton:active span span {
+	background-position: 0% -48px;
+}
+
+.themebutton[disabled] span,
+.themebutton.disabled span {
+	background-position: 100% -72px;
+}
+
+.themebutton[disabled] span span,
+.themebutton.disabled span span {
+	background-position: 0% -72px;
+}
+
+.themebutton:hover span span span,
+.themebutton:focus span span span,
+.themebutton:active span span span,
+.themebutton[disabled] span span span,
+.themebutton.disabled span span span {
+	background-position: left center;
+}
+
+.themebutton:hover span span span.after,
+.themebutton:focus span span span.after,
+.themebutton:active span span span.after,
+.themebutton[disabled] span span span.after,
+.themebutton.disabled span span span.after {
+	background-position: right center;
+}
+
+.themebutton img {
+	margin-right: 5px;
+	vertical-align: text-top;
+	/* IE6 Hack */
+	_margin-top: 4px;
+	_vertical-align: text-bottom;
+	/* IE6 still requires a PNG transparency fix */
+	/* _display: none;		Or just hide icons from the undeserving IE6 */
+}
+
+.themebutton img.after {
+	margin-right: 0;
+	margin-left: 5px;
+	/* IE6 still requires a PNG transparency fix */
+	/* _margin-left: 0;		Or just hide icons from the undeserving IE6 */
+}
+
+.themebutton.thememedium	{ font-size: 15px !important; }
+.themebutton.themelarge	{ font-size: 18px !important; }
+
+
+/*
+ * Button Skins
+ *
+ * .PNG background images with alpha transparency are also supplied if you'd rather use them instead of the
+ * default .GIF images. (Just beware of IE6's lack of support.)
+ *
+ * Additional skins can be added below. The images/skins/ButtonTemplate.psd can be used to create new skins.
+ * Prefix the skin name with "theme" to avoid any potential conflicts with other class names.
+ */
+
+/* Silver Button Skin (the default skin) */
+
+.themebutton,
+.themebutton.themesilver {
+	color: #666 !important;
+}
+
+.themebutton:hover,
+.themebutton:focus,
+.themebutton.themesilver:hover,
+.themebutton.themesilver:focus {
+	color: #333 !important;
+}
+
+.themebutton span,
+.themebutton.themesilver span {
+	background-image: url(images/skins/silver/button_right.gif);
+}
+
+.themebutton span span,
+.themebutton.themesilver span span {
+	background-image: url(images/skins/silver/button_left.gif);
+}
+
+/* Orange Button Skin */
+
+.themebutton.themeorange,
+.themebutton.themeorange:hover,
+.themebutton.themeorange:focus {
+	color: white !important;
+}
+
+.themebutton.themeorange[disabled],
+.themebutton.themeorange[disabled]:hover,
+.themebutton.themeorange[disabled]:active,
+.themebutton.themeorange[disabled]:focus,
+.themebutton.themeorange.disabled,
+.themebutton.themeorange.disabled:hover,
+.themebutton.themeorange.disabled:active,
+.themebutton.themeorange.disabled:focus {
+	color: #333 !important;
+}
+
+.themebutton.themeorange span {
+	background-image: url(images/skins/orange/button_right.gif);
+}
+
+.themebutton.themeorange span span {
+	background-image: url(images/skins/orange/button_left.gif);
+}
+
+/* Yellow Button Skin */
+
+.themebutton.themeyellow,
+.themebutton.themeyellow:hover,
+.themebutton.themeyellow:focus {
+	color: #994800 !important;
+}
+
+.themebutton.themeyellow span {
+	background-image: url(images/skins/yellow/button_right.gif);
+}
+
+.themebutton.themeyellow span span {
+	background-image: url(images/skins/yellow/button_left.gif);
+}
+
+
+/*
+ * Simple Skin Buttons
+ */
+
+.themebutton.themesimple {
+	position: relative;
+	padding: 5px 10px 5px;
+	font: inherit;
+	font-size: 13px !important;
+	font-style: normal !important;
+	font-weight: bold !important;
+	color: #fff !important;
+	line-height: 1;
+	background-image: url(images/skins/simple/awesome-overlay-sprite.png);
+	background-repeat: repeat-x;
+	background-position: 0 0;
+
+	/* Special effects */
+	text-shadow: 0 -1px 1px rgba(0,0,0,0.25), -2px 0 1px rgba(0,0,0,0.25);
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.5);
+
+	/* IE only stuff */
+	border-bottom: 1px solid transparent\9;
+	_background-image: none;
+
+	/* Cross browser inline block hack - http://blog.mozilla.com/webdev/2009/02/20/cross-browser-inline-block/ */
+	display: -moz-inline-stack;
+	display: inline-block;
+	vertical-align: middle;
+	*display: inline !important;
+	position: relative;
+
+	/* Force hasLayout in IE */
+	zoom: 1;
+
+	/* Disable text selection (Firefox only)*/
+	-moz-user-select: none;
+
+	behavior: url(css/PIE.htc);
+}
+
+.themebutton.themesimple::selection {
+	background: transparent;
+}
+
+.themebutton.themesimple:hover,
+.themebutton.themesimple:focus {
+	background-position: 0 -50px;
+	color: #fff !important;
+}
+
+.themebutton.themesimple:active {
+	background-position: 0 -100px;
+	-moz-box-shadow: inset 0 1px 2px rgba(0,0,0,0.7);
+	/* Unfortunately, Safari doesn't support inset yet */
+	-webkit-box-shadow: none;
+
+	/* IE only stuff */
+	border-bottom: 0\9;
+	border-top: 1px solid #666\9;
+}
+
+.themebutton.themesimple[disabled],
+.themebutton.themesimple.disabled {
+	background-position: 0 -150px;
+	color: #333 !important;
+	text-shadow: none;
+}
+
+.themebutton.themesimple[disabled]:hover,
+.themebutton.themesimple[disabled]:focus,
+.themebutton.themesimple[disabled]:active,
+.themebutton.themesimple.disabled:hover,
+.themebutton.themesimple.disabled:focus,
+.themebutton.themesimple.disabled:active {
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,0.5);
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+.themebutton.themesimple span {
+	height: auto;
+	padding-left: 24px;
+	padding-right: 0;
+	background-position: left center;
+	background-repeat: no-repeat;
+	/* IE6 still requires a PNG transparency fix */
+	/* _padding-left: 0;		Or just hide icons from the undeserving IE6 */
+}
+
+.themebutton.themesimple span.after {
+	padding-left: 0;
+	padding-right: 24px;
+	background-position: right center;
+	/* IE6 still requires a PNG transparency fix */
+	/* _padding-right: 0;		Or just hide icons from the undeserving IE6 */
+}
+
+.themebutton.themesimple.themeicononly span {
+	height: 16px;
+	padding-left: 16px;
+}
+
+.themebutton.themesimple.themeicononly span.after {
+	padding-left: 0px;
+	padding-right: 16px;
+}
+
+/* Simple button colors */
+.themebutton.themesimple					{ background-color: #0186df; }		/* Default */
+.themebutton.themesimple.themeblack		{ background-color: #333; }
+.themebutton.themesimple.themered		{ background-color: #a90118; }
+.themebutton.themesimple.themeorange	{ background-color: #ff8a00; }
+.themebutton.themesimple.themeyellow	{ background-color: #ffb515; }
+.themebutton.themesimple.themegreen		{ background-color: #59a901; }
+.themebutton.themesimple.themeblue		{ background-color: #015ea9; }
+.themebutton.themesimple.themeteal		{ background-color: #2daebf; }
+.themebutton.themesimple.thememagenta	{ background-color: #a9014b; }
+.themebutton.themesimple.themepurple	{ background-color: #9d01a9; }
+
+/* Simple button sizes */
+.themebutton.themesimple.themesmall          { padding: 4px 7px 5px; font-size: 10px !important; }
+.themebutton.themesimple.themesmall:active   { padding: 5px 7px 4px; }
+.themebutton.themesimple                    { /* default */ }
+.themebutton.themesimple:active             { padding: 6px 10px 4px; }
+.themebutton.themesimple.thememedium         { /* default */ }
+.themebutton.themesimple.thememedium:active  { padding: 6px 10px 4px; }
+.themebutton.themesimple.themelarge          { padding: 8px 14px 8px; font-size: 14px !important; }
+.themebutton.themesimple.themelarge:active   { padding: 9px 14px 7px; }
+.themebutton.themesimple.themexl             { padding: 8px 14px 8px; font-size: 16px !important; }
+.themebutton.themesimple.themexl:active      { padding: 9px 14px 7px; }
+.themebutton.themesimple.themexxl            { padding: 8px 14px 8px; font-size: 20px !important; }
+.themebutton.themesimple.themexxl:active     { padding: 9px 14px 7px; }
+.themebutton.themesimple.themexxxl           { padding: 8px 14px 8px; font-size: 26px !important; }
+.themebutton.themesimple.themexxxl:active    { padding: 9px 14px 7px; }
+
+.themebutton.themesimple.themesmall[disabled]:active,
+.themebutton.themesimple.themesmall.disabled:active   	{ padding: 4px 7px 5px; }
+.themebutton.themesimple[disabled]:active,
+.themebutton.themesimple.disabled:active 	            { padding: 5px 10px 5px; }
+.themebutton.themesimple.thememedium[disabled]:active,
+.themebutton.themesimple.thememedium.disabled:active 		{ padding: 6px 10px 4px; }
+.themebutton.themesimple.themelarge[disabled]:active,
+.themebutton.themesimple.themelarge.disabled:active   	{ padding: 8px 14px 8px; }
+.themebutton.themesimple.themexl[disabled]:active,
+.themebutton.themesimple.themexl.disabled:active	      { padding: 8px 14px 8px; }
+.themebutton.themesimple.themexxl[disabled]:active,
+.themebutton.themesimple.themexxl.disabled:active 		   { padding: 8px 14px 8px; }
+.themebutton.themesimple.themexxxl[disabled]:active,
+.themebutton.themesimple.themexxxl.disabled:active    	{ padding: 8px 14px 8px; }
+
+
+/*
+ * Icon Definitions
+ */
+
+/* Silk Icons - http://www.famfamfam.com/lab/icons/silk/ */
+/* (Obviously not all Silk icons are defined here. Feel free to define any other icons that you may need.) */
+
+.themebutton span.ok				{ background-image: url(images/icons/silk/tick.png) !important; }
+.themebutton span.cancel			{ background-image: url(images/icons/silk/cross.png) !important; }
+.themebutton span.add			{ background-image: url(images/icons/silk/add.png) !important; }
+.themebutton span.delete			{ background-image: url(images/icons/silk/delete.png) !important; }
+.themebutton span.download		{ background-image: url(images/icons/silk/arrow_down.png) !important; }
+.themebutton span.download2		{ background-image: url(images/icons/silk/package_down.png) !important; }
+.themebutton span.upload			{ background-image: url(images/icons/silk/arrow_up.png) !important; }
+.themebutton span.search			{ background-image: url(images/icons/silk/magnifier.png) !important; }
+.themebutton span.find			{ background-image: url(images/icons/silk/find.png) !important; }
+.themebutton span.first			{ background-image: url(images/icons/silk/resultset_first.png) !important; }
+.themebutton span.prev			{ background-image: url(images/icons/silk/resultset_previous.png) !important; }
+.themebutton span.next			{ background-image: url(images/icons/silk/resultset_next.png) !important; }
+.themebutton span.last			{ background-image: url(images/icons/silk/resultset_last.png) !important; }
+.themebutton span.play			{ background-image: url(images/icons/silk/play_blue.png) !important; }
+.themebutton span.pause			{ background-image: url(images/icons/silk/pause_blue.png) !important; }
+.themebutton span.rewind			{ background-image: url(images/icons/silk/rewind_blue.png) !important; }
+.themebutton span.forward		{ background-image: url(images/icons/silk/forward_blue.png) !important; }
+.themebutton span.stop			{ background-image: url(images/icons/silk/stop_blue.png) !important; }
+.themebutton span.reload			{ background-image: url(images/icons/silk/reload.png) !important; }
+.themebutton span.sync			{ background-image: url(images/icons/silk/arrow_refresh.png) !important; }
+.themebutton span.save			{ background-image: url(images/icons/silk/disk.png) !important; }
+.themebutton span.email			{ background-image: url(images/icons/silk/email.png) !important; }
+.themebutton span.print			{ background-image: url(images/icons/silk/printer.png) !important; }
+.themebutton span.heart			{ background-image: url(images/icons/silk/heart.png) !important; }
+.themebutton span.like			{ background-image: url(images/icons/silk/thumb_up.png) !important; }
+.themebutton span.dislike		{ background-image: url(images/icons/silk/thumb_down.png) !important; }
+.themebutton span.accept			{ background-image: url(images/icons/silk/accept.png) !important; }
+.themebutton span.decline		{ background-image: url(images/icons/silk/decline.png) !important; }
+.themebutton span.help			{ background-image: url(images/icons/silk/help.png) !important; }
+.themebutton span.home			{ background-image: url(images/icons/silk/house.png) !important; }
+.themebutton span.info			{ background-image: url(images/icons/silk/information.png) !important; }
+.themebutton span.cut			{ background-image: url(images/icons/silk/cut.png) !important; }
+.themebutton span.copy			{ background-image: url(images/icons/silk/page_white_copy.png) !important; }
+.themebutton span.paste			{ background-image: url(images/icons/silk/paste_plain.png) !important; }
+.themebutton span.erase			{ background-image: url(images/icons/silk/erase.png) !important; }
+.themebutton span.undo			{ background-image: url(images/icons/silk/arrow_undo.png) !important; }
+.themebutton span.redo			{ background-image: url(images/icons/silk/arrow_redo.png) !important; }
+.themebutton span.edit			{ background-image: url(images/icons/silk/pencil.png) !important; }
+.themebutton span.calendar		{ background-image: url(images/icons/silk/date.png) !important; }
+.themebutton span.user			{ background-image: url(images/icons/silk/user.png) !important; }
+.themebutton span.settings		{ background-image: url(images/icons/silk/cog.png) !important; }
+.themebutton span.cart			{ background-image: url(images/icons/silk/cart.png) !important; }
+.themebutton span.wand			{ background-image: url(images/icons/silk/wand.png) !important; }
+.themebutton span.wrench			{ background-image: url(images/icons/silk/wrench.png) !important; }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.right-answer-image	{ background-image: url(images/icons/silk/tick.png) !important; height:auto; padding-left:20px; background-repeat: no-repeat;	background-position: left center; }
+.wrong-answer-image	{ background-image: url(images/icons/silk/cross.png) !important; height:auto; padding-left:20px; background-repeat: no-repeat;	background-position: left center; }
+.score-box-image	{ background-image: url(images/icons/silk/information.png) !important; height:auto; padding-left:20px; background-repeat: no-repeat;	background-position: left center; }
+.question-box-image	{ background-image: url(images/icons/silk/time.png) !important; height:auto; padding-left:20px; background-repeat: no-repeat;	background-position: left center; }
+.star-box-image		{ background-image: url(images/icons/silk/star.png) !important; height:auto; padding-left:20px; background-repeat: no-repeat;	background-position: left center; }
+
+
+
+.video-field-style {
+	pointer-events: none;
+	position:absolute;
+	display: inline-block;
+	top:0px;
+	left:0px;
+	width:780px;
+	height:280px;
+	padding:0px;
+	color:white;
+	background-color:#bbbbbb;
+	z-index:2;
+	overflow:hidden;
+}
+
+.text-field-background-style {
+	position:absolute;
+	display: inline-block;
+	top:280px;
+	left:0px;
+	width:720px;
+	height:155px;
+	padding-left:20px;
+	padding-right:40px;
+	color:black;
+	background-color:#bbbbbb;
+	z-index:2;
+	overflow:auto;
+	overflow-x:hidden;
+	line-height:180%;
+
+/* IE10 */
+background-image: -ms-linear-gradient(top left, #DFDFDF 0%, #747474 100%);
+
+/* Mozilla Firefox */
+background-image: -moz-linear-gradient(top left, #DFDFDF 0%, #747474 100%);
+
+/* Opera */
+background-image: -o-linear-gradient(top left, #DFDFDF 0%, #747474 100%);
+
+/* Webkit (Safari/Chrome 10) */
+background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0, #DFDFDF), color-stop(1, #747474));
+
+/* Webkit (Chrome 11+) */
+background-image: -webkit-linear-gradient(top left, #DFDFDF 0%, #747474 100%);
+
+/* Proposed W3C Markup */
+background-image: linear-gradient(top left, #DFDFDF 0%, #747474 100%);
+
+}
+
+.text-field-background-style2 {
+	position:absolute;
+	display: inline-block;
+	top:280px;
+	left:0px;
+	width:720px;
+	height:0px;
+	padding-left:20px;
+	padding-right:40px;
+	color:black;
+	background-color:#bbbbbb;
+	z-index:2;
+	overflow:auto;
+	overflow-x:hidden;
+	line-height:180%;
+
+/* IE10 */
+background-image: -ms-linear-gradient(top left, #DFDFDF 0%, #747474 100%);
+
+/* Mozilla Firefox */
+background-image: -moz-linear-gradient(top left, #DFDFDF 0%, #747474 100%);
+
+/* Opera */
+background-image: -o-linear-gradient(top left, #DFDFDF 0%, #747474 100%);
+
+/* Webkit (Safari/Chrome 10) */
+background-image: -webkit-gradient(linear, left top, right bottom, color-stop(0, #DFDFDF), color-stop(1, #747474));
+
+/* Webkit (Chrome 11+) */
+background-image: -webkit-linear-gradient(top left, #DFDFDF 0%, #747474 100%);
+
+/* Proposed W3C Markup */
+background-image: linear-gradient(top left, #DFDFDF 0%, #747474 100%);
+
+}
+
+.text-field-background-style3 {
+	position:absolute;
+	display: inline-block;
+	top:280px;
+	left:0px;
+	width:720px;
+	height:155px;
+	padding-left:20px;
+	padding-right:40px;
+	color:black;
+	background-color:#bbbbbb;
+	overflow:auto;
+	overflow-x:hidden;
+	line-height:180%;
+	background-image:url("../images/background8.jpg");
+}
+
+.text-field-background-style4 {
+	position:absolute;
+	display: inline-block;
+	top:396px;
+	left:0px;
+	width:926px;
+	height:70px;
+	padding-left:20px;
+	padding-right:40px;
+	color:#ffffff;
+	overflow:auto;
+	overflow-x:hidden;
+	line-height:180%;
+}
+
+.text-field-style {
+	position:relative;
+	display: inline-block;
+	top:0px;
+	left:0px;
+	width:750px;
+	height:155px;
+	padding:0px;
+	color:black;
+	z-index:2;
+	line-height:180%;
+	opacity:1;
+}
+
+.text-field-style2 {
+	position:relative;
+	display: inline-block;
+	top:0px;
+	left:0px;
+	width:750px;
+	height:0px;
+	padding:0px;
+	color:black;
+	z-index:2;
+	line-height:70%;
+	opacity:1;
+}
+
+
+.header1 {
+	line-height:100%;
+	font-size:18px;
+}
+
+.form-font-11-text {
+    font-family: "Segoe UI";
+	font-size:11px;
+	line-height:145%;
+	color:black
+}
+
+.form-font-11-text-white {
+    font-family: "Segoe UI";
+	font-size:11px;
+	line-height:145%;
+	color:white
+}
+
+.form-font-12-text {
+    font-family: font-family: font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-size:12px;
+	line-height:normal
+}
+
+.form-font-13-text {
+    font-family: font-family: font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-size:13px;
+	line-height:normal
+}
+
+.form-font {
+    font-family: font-family: font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-size:12px;
+}
+
+.form-font-10 {
+    font-family: font-family: font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-size:10px;
+}
+
+.form-font-11 {
+    font-family: font-family: font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-size:11px;
+}
+
+.form-font-11-lh130 {
+    font-family: font-family: font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-size:11px;
+	line-height:14px;
+}
+
+.form-font-12 {
+    font-family: font-family: font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-size:12px;
+}
+
+.form-font-12g {
+    font-family: font-family: font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-size:12px;
+	color:#383838;
+}
+
+.form-font-14 {
+    font-family: font-family: font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-size:14px;
+	line-height:160%;
+}
+
+.form-font-14b {
+    font-family: font-family: font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-size:14px;
+	line-height:140%;
+	font-weight:bold;
+	color:#373737;
+}
+
+.form-font-16 {
+    font-family: font-family: font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-size:16px;
+	line-height:140%;
+}
+
+.form-font-16-question {
+    font-family: font-family: font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-size:16px;
+	line-height:140%;
+	
+}
+
+.form-font-16ul {
+    font-family: font-family: font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-size:16px;
+	line-height:140%;
+	border-bottom: solid #ccc 1px;
+	padding-bottom:17px;
+	width: 490px;
+}
+
+.form-font-16dg {
+    font-family: "Segoe UI";
+	font-size:16px;
+	line-height:140%;
+	color:#373737
+}
+
+.form-font-16lh120 {
+    font-family: font-family: font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-size:16px;
+	line-height:120%;
+}
+
+.form-font-16r {
+    font-family: font-family: font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-size:16px;
+	line-height:140%;
+	color:#c74d41;
+	font-weight:bold;
+}
+
+.form-font-16m {
+    font-family: font-family: font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-size:16px;
+	line-height:140%;
+	color:#872f33;
+	font-weight:bold;
+}
+
+.form-font-18 {
+    font-family: font-family: font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-size:18px;
+	line-height:140%;
+}
+
+.form-font-18lg {
+    font-family: font-family: font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-size:18px;
+	line-height:140%;
+	color:#939393;
+}
+
+.form-font-20 {
+    font-family: font-family: font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-size:20px;
+	line-height:140%;
+	
+}
+
+.form-font-20lg {
+    font-family: "Segoe UI";
+	font-size:22px;
+	line-height:140%;
+	color:#000000;
+	font-weight:regular;
+	text-shadow: 1px 1px #ffffff;
+}
+
+.form-font-20lg9 {
+    font-family: font-family: font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-size:20px;
+	line-height:140%;
+	color:#939393;
+	position:absolute;
+	top:9px;
+}
+
+.form-font-20 {
+    font-family: font-family: font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-size:20px;
+	line-height:140%;
+}
+
+.form-font-21 {
+    font-family: font-family: font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-size:21px;
+	line-height:140%;
+}
+
+.form-font-22 {
+    font-family: font-family: font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-size:22px;
+	line-height:140%;
+}
+
+.form-font-24 {
+    font-family: font-family: font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-size:24px;
+	line-height:140%;
+}
+
+
+.form-font-30 {
+    font-family: font-family: font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-size:30px;
+	line-height:140%;
+}
+
+.form-font-40 {
+    font-family: font-family: font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-size:40px;
+	line-height:140%;
+}
+
+.form-font-quiz-head {
+    font-family: "Segoe UI";
+	font-size:22px;
+	line-height:140%;
+	color:#000;
+	font-weight: normal;
+	text-shadow: 1px 1px #ffffff;
+}
+
+.form-font-quiz-head-policy {
+    font-family: "Segoe UI";
+	font-size:22px;
+	line-height:140%;
+	color:#ffffff;
+	font-weight: normal;
+	text-shadow: 1px 1px #000000;
+}
+
+.form-font-quiz-head-outline {
+    font-family: "Segoe UI";
+	font-size:28pt;
+	line-height:140%;
+	color:#7f7f7f;
+	font-weight: normal;
+	text-shadow: 1px 1px #ffffff;
+}
+
+.form-font-quiz-head-number {
+    font-family: "Segoe UI";
+	font-size:15px;
+	line-height:140%;
+	color:#7f7f7f;
+	font-weight: normal;
+	text-shadow: 1px 1px #ffffff;
+}
+
+.popupquiz-font-15 {
+    font-family: font-family: font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-size:14px;
+
+	color:#000000
+}
+
+.popupquiz-font-16 {
+    font-family: font-family: font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-size:16px;
+	line-height:140%;
+	color:#000000
+}
+
+.popupquiz-font-16-picture {
+    font-family: font-family: font-family: "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+	font-size:16px;
+	line-height:140%;
+	color:#373737;
+	width: 600px;
+}
+
+
+.color-black {
+	color:black;
+}
+
+.color-white {
+	color:white;
+}
+
+.color-lightgray {
+	color:#555555
+}
+
+.link-effect {
+	color:blue;
+	text-decoration:underline;
+	cursor:pointer;
+}
+
+.no-warp {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.border-box {
+  border: 3px solid green;
+  box-shadow: 0 0 5px #000000 inset;
+}
+
+.opaque-box {
+  color:black;
+  margin:7px;
+  pointer-events:none;
+  background-color: #FFFFFF transparent;
+  border: 1px solid #333333;
+  box-shadow: 0 0 5px #000000 inset;
+  opacity: 0.6;
+  background:none !important;
+}
+
+.flat-quiz-answer {
+    -webkit-transition: background 0.5s linear;
+    -moz-transition: background 0.5s linear;
+    -ms-transition: background 0.5s linear;
+    -o-transition: background 0.5s linear;
+    transition: background 0.5s linear;	background-color: #FFFFFF;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	cursor:pointer;
+
+	}
+
+.flat-quiz-answer:hover {
+    -webkit-transition: background 0.5s linear;
+    -moz-transition: background 0.5s linear;
+    -ms-transition: background 0.5s linear;
+    -o-transition: background 0.5s linear;
+    transition: background 0.5s linear;	background-color: #CCCCCC;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	}
+
+.flat-quiz-answer2 {
+    -webkit-transition: background 0.5s linear;
+    -moz-transition: background 0.5s linear;
+    -ms-transition: background 0.5s linear;
+    -o-transition: background 0.5s linear;
+    transition: background 0.5s linear;	background-color: #FFFFFF;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	cursor:pointer;
+
+	}
+
+.flat-quiz-answer2:hover {
+    -webkit-transition: background 0.5s linear;
+    -moz-transition: background 0.5s linear;
+    -ms-transition: background 0.5s linear;
+    -o-transition: background 0.5s linear;
+    transition: background 0.5s linear;	background-color: #FF6600;
+	border-radius: 5px;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	}
+
+
+.InteractiveAnswerSpace {
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border: 1px solid #AAAAAA;
+	padding:5px;
+
+	}
+
+.boxed {
+  border: 1px solid black ;
+  background-color:#FFFFFF;
+  padding:5px;
+  width:625px;
+}
+
+
+
+
+.c2 {
+	margin: 0 auto;
+	text-align:center;
+	border: 1px solid red;
+    border-radius: 4px 4px 4px 4px;
+    background: rgba(0,0,0,0.25);
+	padding:5px;
+	padding-top:25px;
+	color:#EEEEEE;
+
+}
+
+@-webkit-keyframes pulse1
+{
+0% {background-color: #45CEEF;}
+25% {background-color: #FFF5A5;}
+ 50% {background-color: #FFD4DA;}
+ 75% {background-color: #99D2E4;}
+100% {background-color: #D8CAB4;}
+}
+
+
+.pulsate1 {
+    -webkit-animation: pulse1 1s 3;
+}
+
+.clickpointer {
+	cursor:pointer;
+}
+
+
+.ButtonEffect1
+{
+	cursor:pointer;
+	float:left;
+	padding-right:10px;
+	margin-top:-3px;
+
+	opacity: 1;
+	filter:alpha(opacity=100);
+
+   transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+}
+
+.ButtonEffect1:hover
+{
+	opacity: 0.5;
+	filter:alpha(opacity=50);
+}
+
+
+
+.ButtonEffect2
+{
+	cursor:pointer;
+	float:left;
+	padding-right:10px;
+	margin-top:-3px;
+
+	opacity: 1;
+	filter:alpha(opacity=100);
+
+   transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+}
+
+.ButtonEffect2:hover
+{
+	opacity: 0.8;
+	filter:alpha(opacity=80);
+}
+
+
+
+.scoreboard {
+	width:170px;
+	overflow: hidden;
+	white-space: nowrap;
+	padding:14px;
+	text-align:center;
+	color:white;
+	background-color:blue;
+
+
+   border-radius: 4px 4px 4px 4px;
+   box-shadow: 0 2px 4px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+   -o-box-shadow: 0 2px 4px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+   -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+   -moz-box-shadow: 0 2px 4px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 10px rgba(255,255,255,0.2), inset 0 10px 20px rgba(255,255,255,0.25), inset 0 -15px 30px rgba(0,0,0,0.3);
+}
+
+
+.InteractivityButton
+{
+	cursor:pointer;
+	opacity: 1;
+	filter:alpha(opacity=100);
+   transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+}
+
+.InteractivityButton:hover
+{
+	opacity: 0.8;
+	filter:alpha(opacity=80);
+}
+
+.InteractivityButtonDone
+{
+	cursor:pointer;
+	opacity: 0.3;
+	filter:alpha(opacity=30);
+   transition: opacity .25s ease-in-out;
+   -moz-transition: opacity .25s ease-in-out;
+   -webkit-transition: opacity .25s ease-in-out;
+
+}
+
+.InteractivityButtonDone:hover
+{
+	opacity: 0.8;
+	filter:alpha(opacity=80);
+}
+
+.FlatDialogContainer {
+	background:white;
+	color:black;
+	border-radius: 8px 8px 8px 8px;
+   -moz-box-shadow: 3px 3px 5px #888;
+   -webkit-box-shadow: 3px 3px 5px #888;
+    box-shadow: 3px 3px 5px #888;
+	margin:10px;
+	behavior: url(css/PIE.htc);
+	position: relative;
+}
+
+.FlatDialogHeader {
+    font-family: "Segoe UI";
+	font-size:18px;
+	background:#f2f2f2;
+	text-shadow: 1px 1px #ffffff;
+	border: 0px;
+	color:#000;
+	border-radius: 8px 8px 0px 0px;
+	padding: 10px 0 10px 14px;
+	font-weight: normal;
+	behavior: url(css/PIE.htc);
+	position: relative;
+}
+
+
+.FlatDialogHeader-txt {
+	color: #000;
+	display: block;
+    font-family: "Segoe UI";	
+	font-size: 16px; 
+	font-weight: normal;	
+	text-align: center;
+	text-shadow: 1px 1px #ffffff;
+	width: 180px;
+	
+}
+
+.FlatDialogClose {
+	cursor:pointer;
+	position:absolute;
+	right:-18px;
+	top:-18px;
+	width:36px;
+	height:35px;
+	background:url(../images/actions_window_close_icon.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+
+}
+
+.FlatDialogContent {
+	padding:10px;
+	font-size:16px;
+	line-height:normal;
+	overflow:auto;
+	width:797px;
+	height:290px;
+	position: relative;
+	left: 4px;
+	top: -10px;
+}
+
+.FlatDialogHeader-complete {
+    font-family: "Segoe UI";
+	font-size:18px;
+	background:#f2f2f2;
+	text-shadow: 1px 1px #ffffff;
+	border: 0px;
+	color:#7f7f7f;
+	border-radius: 8px 8px 0px 0px;
+	padding:10px;
+	font-weight:regular;
+	text-align: center;
+	
+}
+
+/*
+DEFALUT NEW DIALOG CLASSES
+*/
+.CourseDefaultFadeOutBackground {
+	position:absolute;
+	top:0px;
+	left:0px;
+	background-color:#CCCCCC;
+	opacity: 0.5;
+
+	filter:alpha(opacity=50);
+
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+
+	z-index:98;
+	display:none;
+}
+
+.CourseDefaultDialogContainer {
+	background:white;
+	color:black;
+	border-radius: 8px 8px 8px 8px;
+   -moz-box-shadow: 3px 3px 5px #888;
+   -webkit-box-shadow: 3px 3px 5px #888;
+    box-shadow: 3px 3px 5px #888;
+	margin:0px;
+	padding:0px;
+	width:400px;
+	z-index:100;
+	display:inline-block;
+	display:none;
+	position:relative;
+}
+
+.CourseDefaultDialogHeader {
+	background:#77AA00;
+	border: 0px;
+	color:black;
+	border-radius: 8px 8px 0px 0px;
+	padding:10px;
+	font-weight:bold;
+}
+
+.CourseDefaultDialogContent {
+	position:relative;
+	padding:10px;
+	font-size:12px;
+	overflow:auto;
+	width:400px;
+	height:220px;
+
+}
+
+
+/*
+VIDEO POPUP QUIZ DIALOG CLASSES
+*/
+.CourseVideoQuizFadeOutBackground {
+	position:absolute;
+	top:0px;
+	left:0px;
+	background-color:#CCCCCC;
+	opacity: 0;
+	filter:alpha(opacity=0);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+
+	z-index:98;
+	display:none;
+}
+
+.CourseVideoQuizDialogContainer {
+	background:white;
+	color:black;
+	border-radius: 8px 8px 8px 8px;
+   -moz-box-shadow: 3px 3px 5px #888;
+   -webkit-box-shadow: 3px 3px 5px #888;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, .2);
+	margin:0px;
+	padding:0px;
+	width:400px;
+	z-index:100;
+	display:inline-block;
+	display:none;
+	position:relative;
+}
+
+.CourseVideoQuizDialogHeader {
+	background: none repeat scroll 0 0 #F2F2F2;
+	border: 0px;
+	color:black;
+	border-radius: 8px 8px 0px 0px; 
+	padding-left:19px;
+	padding-bottom:15px;
+	padding-top:10px;
+	height:26px;
+	behavior: url(css/PIE.htc);
+	position: relative;
+	
+}
+
+.CourseVideoQuizDialogContent {
+	position:relative;
+	font-size:12px;
+	overflow:hidden;
+	width:400px;
+	height:220px;
+	padding-left:20px;
+	padding-top:20px;
+}
+
+/*
+VIDEO POPUP CONTENT DIALOG CLASSES
+*/
+.CourseVideoContentFadeOutBackground {
+	position:absolute;
+	top:0px;
+	left:0px;
+	background-color:#CCCCCC;
+	opacity: 0;
+	filter:alpha(opacity=0);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+
+	z-index:98;
+	display:none;
+}
+
+.CourseVideoContentDialogContainer {
+	background:white;
+	color:black;
+	border-radius: 8px 8px 8px 8px;
+   -moz-box-shadow: 3px 3px 5px #888;
+   -webkit-box-shadow: 3px 3px 5px #888;
+    box-shadow: 3px 3px 5px #888;
+	margin:0px;
+	padding:0px;
+	width:400px;
+	z-index:100;
+	display:inline-block;
+	position:relative;
+}
+
+.CourseVideoContentDialogHeader {
+	background: url('http://cdn.inspiredelearning.com/H-143/generic/images/bg_quiz-header.png') no-repeat;
+	border: 0px;
+	color:black;
+	border-radius: 8px 8px 0px 0px;
+	padding:10px;
+	
+}
+
+
+
+.CourseVideoContentDialogContent {
+	position:relative;
+	padding:0px;
+	font-size:12px;
+	overflow:hidden;
+	width:400px;
+	height:220px;
+
+}
+
+
+/*
+FINAL EXAM DIALOG CLASSES
+*/
+.CourseFinalFadeOutBackground {
+	position:absolute;
+	top:0px;
+	left:0px;
+	background-color:#CCCCCC;
+	opacity: 0.5;
+	filter:alpha(opacity=50);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+
+	z-index:98;
+	display:none;
+}
+
+.CourseFinalDialogContainer {
+	background:white;
+	color:black;
+	border-radius: 8px 8px 8px 8px;
+   -moz-box-shadow: 3px 3px 5px #888;
+   -webkit-box-shadow: 3px 3px 5px #888;
+    box-shadow: 3px 3px 5px #888;
+	margin:0px;
+	padding:0px;
+	z-index:100;
+	display:inline-block;
+	position:relative;
+}
+
+.CourseFinalDialogHeader {
+	background: none repeat scroll 0 0 #F2F2F2;
+	border: 0px;
+	color:black;
+	border-radius: 8px 8px 0px 0px;
+	padding:10px;
+	font-weight: normal;
+	height: 26px;
+}
+
+.CourseFinalDialogContent {
+	position:relative;
+	padding:10px;
+	font-size:12px;
+	overflow:hidden;
+	width:400px;
+	height:220px;
+
+}
+
+
+/*
+Flash DIALOG CLASSES
+*/
+.CourseFlashFadeOutBackground {
+	position:absolute;
+	top:0px;
+	left:0px;
+	background-color:#CCCCCC;
+	opacity: 0.5;
+	z-index:98;
+
+	filter:alpha(opacity=50);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+}
+
+.CourseFlashDialogContainer {
+	background:white;
+	color:black;
+	border-radius: 8px 8px 8px 8px;
+   -moz-box-shadow: 3px 3px 5px #888;
+   -webkit-box-shadow: 3px 3px 5px #888;
+    box-shadow: 3px 3px 5px #888;
+	margin:0px;
+	padding:0px;
+	width:400px;
+	z-index:100;
+	display:inline-block;
+	position:relative;
+}
+
+.CourseFlashDialogHeader {
+	font-family: "Segoe UI";
+	font-size:22px;
+	line-height:140%;
+	color: #7f7f7f;
+	text-shadow: 1px 1px #ffffff;	
+	background:#f2f2f2;
+	border: 0px;
+	border-radius: 8px 8px 0px 0px;
+	padding:10px;
+	font-weight:regular;
+}
+
+.CourseFlashDialogContent {
+	position:relative;
+	padding:10px;
+	font-size:12px;
+	overflow:hidden;
+	width:400px;
+	height:220px;
+
+}
+
+
+/*
+Policy DIALOG CLASSES
+*/
+.CoursePolicyFadeOutBackground {
+	position:absolute;
+	top:0px;
+	left:0px;
+	background-color:#CCCCCC;
+	opacity: 0.5;
+	filter:alpha(opacity=50);
+
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+
+	z-index:98;
+	display:none;
+}
+
+.CoursePolicyDialogContainer {
+	background:white;
+	color:black;
+	border-radius: 8px 8px 8px 8px;
+   -moz-box-shadow: 3px 3px 5px #888;
+   -webkit-box-shadow: 3px 3px 5px #888;
+    box-shadow: 3px 3px 5px #888;
+	margin:0px;
+	padding:0px;
+	width:400px;
+	z-index:100;
+	display:inline-block;
+	position:relative;
+	behavior: url(css/PIE.htc);
+
+}
+
+.CoursePolicyDialogHeader {
+	background: #f2f2f2 url('ttp://cdn.inspiredelearning.com/H-143/generic/images/bg_quiz-header.png') no-repeat;
+	left:-1px;
+	border: 0px;
+	color:black;
+	border-radius: 8px 8px 0px 0px;
+	padding:10px;
+	font-weight:normal;
+	behavior: url(css/PIE.htc);
+}
+
+.CoursePolicyDialogContent {
+	position:relative;
+	padding:10px;
+	font-size:12px;
+	overflow:hidden;
+	width:400px;
+	height:220px;
+
+}
+
+
+/*
+Flat Quiz DIALOG CLASSES
+*/
+.CourseFlatFadeOutBackground {
+	position:absolute;
+	top:0px;
+	left:0px;
+	background-color:#CCCCCC;
+	opacity: 0.5;
+	filter:alpha(opacity=50);
+
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+
+	z-index:98;
+	display:none;
+}
+
+.CourseFlatDialogContainer {
+	background:white;
+	color:black;
+	border-radius: 8px 8px 8px 8px;
+   -moz-box-shadow: 3px 3px 5px #888;
+   -webkit-box-shadow: 3px 3px 5px #888;
+    box-shadow: 3px 3px 5px #888;
+	margin:0px;
+	padding:0px;
+	width:400px;
+	z-index:100;
+	display:inline-block;
+	position:relative;
+}
+
+.CourseFlatDialogHeader {
+	background: url('http://cdn.inspiredelearning.com/H-143/generic/images/bg_quiz-header.png') no-repeat;
+	border: 0px;
+	color:black;
+	border-radius: 8px 8px 0px 0px;
+	padding:10px;
+	font-weight:regular;
+}
+
+.CourseFlatDialogContent {
+	position:relative;
+	padding:10px;
+	font-size:12px;
+	overflow:hidden;
+	width:400px;
+	height:220px;
+
+}
+
+
+/*
+Interactive Quiz DIALOG CLASSES
+*/
+.CourseInteractiveFadeOutBackground {
+	position:absolute;
+	top:0px;
+	left:0px;
+	background-color:#CCCCCC;
+	opacity: 0.5;
+	filter:alpha(opacity=50);
+
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+
+	z-index:98;
+	display:none;
+}
+
+.CourseInteractiveDialogContainer {
+	background:white;
+	color:black;
+	border-radius: 8px 8px 8px 8px;
+   -moz-box-shadow: 3px 3px 5px #888;
+   -webkit-box-shadow: 3px 3px 5px #888;
+    box-shadow: 3px 3px 5px #888;
+	margin:0px;
+	padding:0px;
+	width:400px;
+	z-index:100;
+	display:inline-block;
+	position:relative;
+}
+
+.CourseInteractiveDialogHeader {
+	background:#77AA00;
+	border: 0px;
+	color:black;
+	border-radius: 8px 8px 0px 0px;
+	padding:10px;
+	font-weight:bold;
+}
+
+.CourseInteractiveDialogContent {
+	position:relative;
+	padding:10px;
+	font-size:12px;
+	overflow:hidden;
+	width:400px;
+	height:220px;
+
+}
+
+/*
+SCORM Quiz DIALOG CLASSES
+*/
+.CourseQuizFadeOutBackground {
+	position:absolute;
+	top:0px;
+	left:0px;
+	background-color:#CCCCCC;
+	opacity: 0;
+	filter:alpha(opacity=0);
+
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+
+	z-index:98;
+	display:none;
+}
+
+.CourseQuizDialogContainer {
+	background:#EEEEEE;
+	color:black;
+	border-radius: 8px 8px 8px 8px;
+   -moz-box-shadow: 3px 3px 5px #888;
+   -webkit-box-shadow: 3px 3px 5px #888;
+    box-shadow: 3px 3px 5px #888;
+	margin:0px;
+	padding:0px;
+	width:400px;
+	z-index:100;
+	display:inline-block;
+	position:relative;
+}
+
+.CourseQuizDialogHeader {
+	background:#77AA00;
+	border: 0px;
+	color:black;
+	border-radius: 8px 8px 0px 0px;
+	padding:4px;
+	font-weight:bold;
+}
+
+.CourseQuizDialogContent {
+	position:relative;
+	padding:10px;
+	font-size:12px;
+	overflow:hidden;
+	width:400px;
+	height:220px;
+
+}
+
+/*
+Slide DIALOG CLASSES
+*/
+.CourseSlideFadeOutBackground {
+	position:absolute;
+	top:0px;
+	left:0px;
+	background-color:#CCCCCC;
+	opacity: 0.5;
+	filter:alpha(opacity=50);
+
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+
+	z-index:98;
+	display:none;
+}
+
+.CourseSlideDialogContainer {
+	background:white;
+	color:black;
+	border-radius: 8px 8px 8px 8px;
+   -moz-box-shadow: 3px 3px 5px #888;
+   -webkit-box-shadow: 3px 3px 5px #888;
+    box-shadow: 3px 3px 5px #888;
+	margin:0px;
+	padding:0px;
+	width:400px;
+	z-index:100;
+	display:inline-block;
+	position:relative;
+}
+
+.CourseSlideDialogHeader {
+	background:#77AA00;
+	border: 0px;
+	color:black;
+	border-radius: 8px 8px 0px 0px;
+	padding:10px;
+	font-weight:bold;
+}
+
+.CourseSlideDialogContent {
+	position:relative;
+	padding:10px;
+	font-size:12px;
+	overflow:hidden;
+	width:400px;
+	height:220px;
+
+}
+
+/*
+TextMode DIALOG CLASSES
+*/
+.CourseTextModeFadeOutBackground {
+	position:absolute;
+	top:0px;
+	left:0px;
+	background-color:#CCCCCC;
+	opacity: 0.5;
+	filter:alpha(opacity=50);
+
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+
+	z-index:98;
+	display:none;
+}
+
+.CourseTextModeDialogContainer {
+	background:white;
+	color:black;
+	border-radius: 8px 8px 8px 8px;
+   -moz-box-shadow: 3px 3px 5px #888;
+   -webkit-box-shadow: 3px 3px 5px #888;
+    box-shadow: 3px 3px 5px #888;
+	margin:0px;
+	padding:0px;
+	width:400px;
+	z-index:100;
+	display:inline-block;
+	position:relative;
+}
+
+.CourseTextModeDialogHeader {
+	background:#77AA00;
+	border: 0px;
+	color:black;
+	border-radius: 8px 8px 0px 0px;
+	padding:10px;
+	font-weight:bold;
+}
+
+.CourseTextModeDialogContent {
+	position:relative;
+	padding:10px;
+	font-size:12px;
+	overflow:hidden;
+	width:400px;
+	height:220px;
+
+}
+
+/*
+INTERACTIVE FADEOUT STYLE
+*/
+.InteractiveFadeoutStyle {
+	position:absolute;
+	top:0px;
+	left:0px;
+	background-color:#CCCCCC;
+	opacity: 0.5;
+	filter:alpha(opacity=50);
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)";
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+	z-index:101;
+	display:none;
+}
+
+/*
+FREE FORM DIALOG
+*/
+.FreeFormDialogBaseCSS {
+	z-index:101;
+	display:inline-block;
+	position:absolute;
+}
+
+.FreeTestDialog {
+	background: white;
+	color: black;
+	border-radius: 8px 8px 8px 8px;
+	-moz-box-shadow: 3px 3px 5px #888;
+	-webkit-box-shadow: 3px 3px 5px #888;
+	box-shadow: 0 0 5px 5px #c0c0c0;
+	margin: 0px;
+	padding: 0px;
+	width: 400px;
+	z-index: 100;
+	display: inline-block;
+	position: relative;
+	behavior: url(css/PIE.htc);
+}
+
+.FreeTestDialogClose {
+	cursor:pointer;
+	position:absolute;
+	right:-10px;
+	top:-10px;
+	width:32px;
+	height:32px;
+	background:url(../images/Actions-window-close-icon.png);
+	background-position: center center;
+	background-repeat: no-repeat;
+}
+
+
+
+
+.feedback {
+	background: url('http://cdn.inspiredelearning.com/H-143/generic/images/bg_quizz-fdk-correct.png') 0 0 no-repeat;
+	height: 82px;
+	margin-left: 30px;
+	width: 596px;
+}
+
+.feedbackinc {
+	background: url('xmls/en/images/quizincorrect490.png') 0 0 no-repeat;
+	height: 82px;
+	margin-left: 30px;
+	width: 596px;
+}
+
+.feedback p {
+	color: #666;
+	font-size: 11px;
+	line-height: 1.2em;
+	margin: 0 20px 0 90px;
+	padding-top: 8px;
+}
+
+.feedbackinc p {
+	color: #666;
+	font-size: 16px;
+	line-height: 1.2em;
+	margin: 0 20px 0 90px;
+	padding-top: 8px;
+}
+
+h3 {
+	border-bottom: solid #ccc 1px;
+	font-size: 16px;
+	font-weight: normal;
+	line-height: 1.5em;
+	width: 659px;
+	padding: 0 0 17px 0
+}
+
+.quizincorrect {
+	position: relative;
+	background: url('../images/s141/quiz_light/bg_quiz_fdbk-incorrect.png') no-repeat;
+	height: 82px;
+	margin-left: -3px;
+	width: 596px;
+	border: 0px;
+	color:black;
+	border-radius: 0px 0px 0px 0px;
+	padding-bottom:65px;
+	padding-right:814px;
+	padding-top:2px;
+}
+
+.quizincorrect p {
+	position: absolute; 
+	top: 10px; 
+	left: 0;
+	font-family: "Segoe UI";
+	color: #000000;
+	font-size: 16px;
+	line-height: 140%;
+		margin: 0 20px 0 90px;
+}
+
+.quizcorrect {
+	position: relative;
+	background: url('../images/s141/quiz_light/bg_quiz_fdbk-correct.png') no-repeat;
+	height: 80px;
+	margin-left: -3px;
+	width: 806px;
+	border: 0px;
+	color:black;
+	border-radius: 0px 0px 0px 0px;
+	padding-bottom:65px;
+	padding-right:814px;
+	padding-top:2px;
+}
+
+.quizcorrect p {
+	position: absolute; 
+	top: 5px; 
+	left: 0;
+	font-family: "Segoe UI";
+	color: #000000;
+	font-size: 15px;
+	line-height: 140%;
+	margin: 0 20px 0 90px;
+}
+
+.quizincorrect-big {
+	position: relative;
+	background: url('../images/s141/quiz_light/bg_quiz_fdbk-incorrect.png') no-repeat;
+	height: 82px;
+	margin-left: 0px;
+	width: 806px;
+	border: 0px;
+	color:black;
+	border-radius: 0px 0px 0px 0px;
+	padding-bottom:82px;
+	padding-right:806px;
+	padding-top:2px;
+}
+
+.quizincorrect-big p {
+	position: absolute; 
+	top: 5px; 
+	left: 0;
+	font-family: "Segoe UI";
+	color: #000000;
+	font-size: 14px;
+	line-height: 120%;
+	margin: 0 20px 0 90px;
+}
+
+.quizcorrect-big {
+	position: relative;
+	background: url('../images/s141/quiz_light/bg_quiz_fdbk-correct.png') no-repeat;
+	height: 82px;
+	margin-left: 0px;
+	width: 806px;
+	border: 0px;
+	color:black;
+	border-radius: 0px 0px 0px 0px;
+	padding-bottom:82px;
+	padding-right:806px;
+	padding-top:2px;
+}
+
+.quizcorrect-big p {
+	position: absolute; 
+	top: 5px; 
+	left: 0;
+	font-family: "Segoe UI";
+	color: #000000;
+	font-size: 14px;
+	line-height: 120%;
+	margin: 0 20px 0 90px;
+}
+
+.quizcorrect-big2 {
+	position: relative;
+	background: url('../images/s141/quiz_light/bg_quiz_fdbk-correct.png') no-repeat;
+	height: 82px;
+	margin-left: 0px;
+	width: 806px;
+	border: 0px;
+	color:black;
+	border-radius: 0px 0px 0px 0px;
+	padding-bottom:82px;
+	padding-right:806px;
+	padding-top:2px;
+}
+
+.quizcorrect-big2 p {
+	position: absolute; 
+	top: 0px; 
+	left: 0;
+	font-family: "Segoe UI";
+	color: #000000;
+	font-size: 13.4px;
+	line-height: 120%;
+	margin: 0 20px 0 90px;
+}
+
+/* ===== HEADER ===== */
+
+.header {
+	background: url('../img/bg_quiz-header.png') no-repeat;
+	height: 56px;
+	width: 724px;
+}
+
+h1 {
+	color: #7f7f7f;
+	font-size: 2.1em;
+	font-weight: normal;
+	float: left;
+	margin: 17px 0 0 30px;
+}
+
+h2 {
+	color: #7f7f7f;
+	font-size: 1.4em;
+	font-weight: normal;
+	float: right;
+	margin: 21px 30px 0 0;
+
+}
+
+/******* ===== CUSTOM STYLE FOR S141 ===== *******/
+
+/** == GENERAL STYLES == **/
+
+.bg_slide-image-general {
+	height:466px;
+	width:926px; 
+}
+
+.image_slide-shadow {
+	box-shadow: 0px 0px 2px rgb(153, 153, 153);
+	border-radius: 4px;
+}
+
+.quiz_bg-slide-general {
+	height: 466px;
+	width: 926px; 
+}
+
+.quiz_bg-general {
+	height: 420px;
+	width: 890px; 
+}
+
+.quiz_line-divider {
+	height: 1px;
+	width: 806px;
+}
+
+.bg_fade-general {
+	background: #000; 
+	border: 0px;  
+	color: black;  
+	width: 926px; 
+	height: 466px; 
+	opacity: 0.6; 
+	filter:alpha(opacity=60);
+}
+
+.text_bold-format {
+	color: #16395e;
+	font-weight: bold;
+}
+
+.text_cursive-format {
+	font-style: italic;
+}
+
+/** == INTRO == **/
+
+.intro_slide01 {
+	color: #fff;
+	font-size: 38px;
+	font-weight: bold;
+}
+
+/** == LESSON 1 == **/
+
+.lesson1_slide02-title {
+	color: #fff;
+	display: block;
+	font-size: 20px;
+	font-weight: bold;
+	line-height: 24px;
+	width: 380px;
+}
+
+.lesson1_slide02-text {
+	color: #fff;
+	font-size: 16px;
+}
+
+.lesson1_warning-icon {
+	height: 20px;
+	margin-right: 6px;
+	position: relative;
+	top: 4px;
+}
+
+.lesson2_slide02-text {
+	color: #fff;
+	font-size: 36px;
+	position: relative;
+	top: -2px;
+}
+
+.lesson2_shield-icon {
+	height: 40px;
+	margin-right: 6px;
+	position: relative;
+	top: 4px;
+}
+
+/* PRIVACY INTERACTIVITY */
+
+.text_flatdialogcontent-general {
+	line-height: 160%;
+	width: 493px; 
+}
+
+.img_flatdialogcontainer-general {
+	height: 290px;
+	left: 517px; 
+	position: absolute; 
+	top: 47px;
+	width: 290px;
+}
+
+#Dialog_complete .FlatDialogHeader {
+	text-align: center;
+	padding: 10px;
+}
+
+#Dialog_complete .text_flatdialogcontent-complete {
+	height: 58px;
+	font-style: italic;
+	font-weight: normal;
+	color:#16395e;
+	text-align: center;
+	width: 400px;
+	font-size: 14px;
+}
+
+#Dialog_complete .text_flatdialogcontent-complete p {
+	margin: 13px auto;
+	width: 360px;
+}
+
+
+/* THREATS INTERACTIVITY */
+
+.interactivity_image-office {
+	height: 309px;
+	width: 876px;
+}
+
+
+/* BEST GUEST INTERACTIVE */
+
+.guest_title-paragraph {
+	margin-top: 22px;
+}
+
+.guest_text-paragraph {
+	margin-top: 0px;
+	margin-bottom: 2px;
+}
+
+.FreeTestDialog {
+	height:300px;
+	width:440px; 
+}
+
+.guest_image-header-popup {
+	float: left;
+}
+
+.guest_text-header-popup {
+	float: left;
+	margin: 0px;
+	padding-left: 12px;
+}
+
+.guest_text-popup-continue {
+	color:#16395e;
+	font-style: italic;
+}
+
+.FreeTestDialog .CourseVideoQuizDialogContent p {
+	margin-top: 0px;
+}
+
+#FreeFormDialogCloseButton {
+	display:block; 
+	position:absolute; 
+	right:10px; 
+	bottom:10px; 
+	width:40px; 
+	margin-bottom:0px;	
+}
+
+/** == LESSON 2 == **/
+
+#Dialog_complete .fix_sixe-flatdialogcontent-complete {
+	height: 100px;
+}
+
+#Dialog_complete .text_flatdialogcontent-complete-normal {
+	color: #000;
+	display: block;
+	font-style: normal;
+	width: 380px;
+
+}
+
+/** == LESSON 2 == **/
+
+/* PASSWORD BEST PRACTICES */
+
+.slide_password-list-title {
+	color: rgb(0, 0, 0);
+	font-size: 30px;
+	margin: 0px;
+	text-shadow: 1px 1px rgb(255, 255, 255);
+}
+
+.slide_password-list-text {
+	color: rgb(36, 36, 36);
+	margin-bottom: 0px;
+	text-shadow: 1px 1px rgb(255, 255, 255);
+}
+
+ul.slide_password-list-text {
+	line-height: 130%;
+}
+
+.slide_password-fix-text {
+	font-size: 12px;
+	line-height: 14px;
+	width: 100px;
+}
+
+#RightText3 p, #RightText4 p, #RightText5 p, #RightText6 p, #RightText7 p  {
+	font-size: 16px;
+	float:left;
+	width: 380px;
+	margin-left: 15px;
+	text-shadow: 1px 1px #fff;
+	color: #242424;
+	line-height: 160%;
+}
+
+#RightText3 img, #RightText4 img, #RightText5 img, #RightText6 img, #RightText7 img  {
+	float:left;
+	position: relative;
+	top: 18px;
+	width: 30px;
+}
+
+#RightText3 img, #RightText7 img {
+	top: 11px;
+}
+
+/* PASSWORD BEST PRACTICES POPUP*/
+
+#slide_additional-info-fix p{ 
+	margin: 0;
+}
+
+#slide_additional-info-fix .FlatDialogContent {
+	height: 100%;
+	width: 616px;
+}
+
+#slide_additional-info-fix .popup_additional-box-pass {
+
+	/* Gradient */
+	background: #f0f0f0; /* Old browsers */
+	background: -moz-linear-gradient(top, #fbfbfb 0%, #f0f0f0 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fbfbfb), color-stop(100%,#f0f0f0)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #fbfbfb 0%,#f0f0f0 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #fbfbfb 0%,#f0f0f0 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #fbfbfb 0%,#f0f0f0 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #fbfbfb 0%,#f0f0f0 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fbfbfb', endColorstr='#f0f0f0',GradientType=0 ); /* IE6-9 */
+	/* Finish of gradient */
+
+	border-radius: 4px;
+	border: 1px solid #ccc;
+	*box-shadow: 0px 0px 2px rgb(153, 153, 153);
+	height: 100px;
+	margin: 10px 0 10px 0;
+	width: 606px;
+	
+	text-align: center;
+}
+
+#slide_additional-info-fix .text_flatdialogcontent-general {
+	width: 100%;
+}
+	
+#slide_additional-info-fix .popup_additional-title {
+	float: left;
+	line-height: 130%;
+}
+
+#slide_additional-info-fix .FlatDialogHeader {
+	overflow: hidden;
+}
+
+#slide_additional-info-fix .FlatDialogHeader img {
+	float: left;
+	margin-right: 10px;
+}
+
+#slide_additional-info-fix .popup_additional-box-title {
+	color: #333;
+	font-size: 20px;
+	margin-top: 15px;
+}
+
+#slide_additional-info-fix .popup_additional-box-text {
+	color: #16395e;
+	font-size: 25px;
+	font-weight: bold;
+	margin-top: 14px;
+}
+
+#slide_additional-info-fix .text_flatdialogcontent-general:first-child {
+	margin-top: 10px;
+}
+
+#slide_additional-info-fix .text_flatdialogcontent-general ol {
+	margin: 5px 0 5px 0;
+}
+
+/* BEST PRACTICES FOR AVOIDING MALWARE */
+
+#l2-14_text03 p, #l2-14_text04 p, #l2-14_text05 p, #l2-14_text06 p {
+	font-size: 15px;
+	float:left;
+	width: 422px;
+	margin-left: 15px;
+	text-shadow: 1px 1px #fff;
+	color: #242424;
+	line-height: 160%;
+}
+
+#l2-14_text03 p {
+	width: 445px;
+} 
+
+#l2-14_text03 img, #l2-14_text04 img, #l2-14_text05 img, #l2-14_text06 img {
+	float:left;
+	position: relative;
+	top: 18px;
+	width: 30px;	
+}
+
+
+/** == LESSON 4 == **/
+
+/* Best Practices for Thwarting Social Engineers */
+
+.slide_full-image-thumbs {
+	float: left;
+
+}
+
+.slide_full-text-bullets {
+	float: left;
+	width: 630px;	
+}
+
+#textBlock01 .slide_full-list, #textBlock02 .slide_full-list, #textBlock03 .slide_full-list {
+	margin: 0;
+	padding: 0;
+}
+
+#textBlock01 .slide_full-list li, #textBlock02 .slide_full-list li, #textBlock03 .slide_full-list li {
+	list-style: none;
+}
+
+.slide_full-text-bullets p {
+ 	margin: 0 0 0 15px;
+ 	width: 505px;
+	text-shadow: 1px 1px #fff;
+	color: #242424;
+	line-height: 160%;
+	font-size: 15px;
+}
+
+/** == LESSON 4 == **/
+
+/* Mobile Device Policy – Bring Your Own Device */
+
+#l5-31_text01 p:last-child {
+	width: 555px;
+}
+
+
+#l5-31_text03 p, #l5-31_text04 p, #l5-31_text05 p {
+	font-size: 15px;
+	float:left;
+	width: 422px;
+	margin-left: 15px;
+	text-shadow: 1px 1px #fff;
+	color: #242424;
+	line-height: 160%;
+}
+
+#l5-31_text03 img, #l5-31_text04 img, #l5-31_text05 img {
+	float:left;
+	position: relative;
+	top: 18px;
+	width: 30px;	
+}
+
+/* Working in Public Places Best Practices */
+
+
+#l5-33_text02 p, #l5-33_text03 p, #l5-33_text04 p, #l5-33_text05 p, #l5-33_text06 p {
+	font-size: 15px;
+	float:left;
+	width: 422px;
+	margin-left: 15px;
+	text-shadow: 1px 1px #fff;
+	color: #242424;
+	line-height: 160%;
+}
+
+#l5-33_text02 p {
+	width: 380px;
+}
+
+
+#l5-33_text03 p {
+	width: 370px;
+}
+
+
+#l5-33_text02 img, #l5-33_text03 img, #l5-33_text04 img, #l5-33_text05 img, #l5-33_text06 img {
+	float:left;
+	position: relative;
+	top: 18px;
+	width: 30px;	
+}
+
+
+/* Remote Access Best Practices */
+
+
+#l5-34_text02 p, #l5-34_text03 p, #l5-34_text04 p {
+	font-size: 15px;
+	float:left;
+	width: 422px;
+	margin-left: 15px;
+	text-shadow: 1px 1px #fff;
+	color: #242424;
+	line-height: 160%;
+}
+
+#l5-34_text02 img, #l5-34_text03 img, #l5-34_text04 img {
+	float:left;
+	position: relative;
+	top: 18px;
+	width: 30px;	
+}
+
+
+/** == LESSON 5 == **/
+
+/* Protecting Mobile Data and Devices  */
+
+.folder_01 {
+	-webkit-animation: slidein_folder-01 1.5s ease-in-out;
+	   -moz-animation: slidein_folder-01 1.5s ease-in-out;
+	    -ms-animation: slidein_folder-01 1.5s ease-in-out;
+	     -o-animation: slidein_folder-01 1.5s ease-in-out;
+            animation: slidein_folder-01 1.5s ease-in-out;
+    position: absolute;
+}
+
+@keyframes slidein_folder-01 {
+  from {
+    top: -185px;
+    left: 130px;
+
+  }
+
+  to {
+    top: 0;
+    left: 0;
+
+  }
+}
+
+@-webkit-keyframes slidein_folder-01 {
+  from {
+    top: -185px;
+    left: 130px;
+
+  }
+
+  to {
+    top: 0;
+    left: 0;
+
+  }
+}
+
+
+.folder_02 {
+	-webkit-animation: slidein_folder-02 1.5s ease-in-out;
+	   -moz-animation: slidein_folder-02 1.5s ease-in-out;
+	    -ms-animation: slidein_folder-02 1.5s ease-in-out;
+	     -o-animation: slidein_folder-02 1.5s ease-in-out;
+            animation: slidein_folder-02 1.5s ease-in-out;
+    position: absolute;
+}
+
+@keyframes slidein_folder-02 {
+  from {
+    top: -253px;
+    left: -15px;
+
+  }
+
+  to {
+    top: 0;
+    left: 0;
+
+  }
+}
+
+@-webkit-keyframes slidein_folder-02 {
+  from {
+    top: -253px;
+    left: -15px;
+
+  }
+
+  to {
+    top: 0;
+    left: 0;
+
+  }
+}
+
+.folder_03 {
+    -webkit-animation: slidein_folder-03 1.5s ease-in-out;
+	   -moz-animation: slidein_folder-03 1.5s ease-in-out;
+	    -ms-animation: slidein_folder-03 1.5s ease-in-out;
+	     -o-animation: slidein_folder-03 1.5s ease-in-out;
+            animation: slidein_folder-03 1.5s ease-in-out;
+    position: absolute;
+}
+
+@keyframes slidein_folder-03 {
+  from {
+    top: -185px;
+    left: -180px;
+
+  }
+
+  to {
+    top: 0;
+    left: 0;
+
+  }
+}
+
+@-webkit-keyframes slidein_folder-03 {
+  from {
+    top: -185px;
+    left: -180px;
+
+  }
+
+  to {
+    top: 0;
+    left: 0;
+
+  }
+}
+
+.policy-header {
+	text-align: left;
+}
+
+/* Travel Safety Best Practices Interactivity */
+
+#popup_travel-safety-left, #popup_travel-safety-right {
+	margin-left:0px; 
+	margin-top: 10px; 
+	border-radius: 0; 
+	border: none; 
+	position: relative; 
+	top: 10px; 
+	width: 50%;
+	float: left;
+}
+
+#popup_travel-safety-left ul, #popup_travel-safety-right ul {
+	margin: 0;
+	padding: 0;
+}
+
+
+#popup_travel-safety-left li, #popup_travel-safety-right li {
+	list-style-type: none;
+}
+
+
+#popup_travel-safety-left li .popup_travel-safety-img, #popup_travel-safety-right li .popup_travel-safety-img {
+	float: left;
+	margin-right: 15px;
+	position: relative;
+	top: 3px;
+}
+
+#popup_travel-safety-left li .popup_travel-safety-img img, #popup_travel-safety-right li .popup_travel-safety-img img {
+	width: 50px;
+} 
+
+#popup_travel-safety-left li .popup_travel-safety-text, #popup_travel-safety-right li .popup_travel-safety-text {
+	float: left;
+	line-height: 160%;
+	width: 83%;
+}
+
+#popup_travel-safety-left li h4, #popup_travel-safety-right li h4 {
+	margin: 0 0 -2px 0;
+	padding: 0;	
+}
+
+#popup_travel-safety-left li p, #popup_travel-safety-right li p {
+	margin: 0 0 4px 0;
+	padding: 0;	
+}
+
+
+/** == CHECK TO INTERACTIVES == **/
+
+.check_interactives-done, .check_interactives-done-wide {
+	top: -150px; 
+	position: relative;
+	display: none;
+}
+
+
+.InteractivityButtonDone .check_interactives-done, .InteractivityButtonDone .check_interactives-done-wide {
+	display: block !important;
+
+}
+
+
+
+/** == FINAL EXAM == **/
+
+
+
+.final_exam-fix {
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 19px;
+} 
+

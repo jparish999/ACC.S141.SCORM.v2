@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="title" content="Video Now!">
+
+<meta name="viewport" content="width=device-width,target-densitydpi=device-dpi,initial-scale=1.0, user-scalable=yes, minimum-scale=0.75, maximum-scale=1.5">
+
+<title>Inspired eLearning</title>
+
+<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery.ui.touch-punch.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery.ba-dotimeout.js" type="text/javascript"></script>
+
+<script src="js/jquery.timer.js?q=470" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery.timer2.js?q=470" type="text/javascript" charset="utf-8"></script>
+
+<script src="js/jsencryption.js?q=470"></script>
+
+<script src="jplayer/jquery.jplayer.min.js" type="text/javascript"></script>
+<link href="jplayer/skin/jplayer.blue.monday.css" rel="stylesheet" type="text/css" >
+
+<link href="css/jquery-ui-1.8.21.custom.css" rel="stylesheet" type="text/css" >
+
+<script src="js/course-engine-text.js?q=470" type="text/javascript"></script>
+
+<script src="js/course-engine-quiz.js?q=470" type="text/javascript"></script>
+<script src="js/course-engine-quiz-flat.js?q=470" type="text/javascript"></script>
+<script src="js/course-engine-quiz-interactive.js?q=470" type="text/javascript"></script>
+<script src="js/course-engine-final-exam.js?q=470" type="text/javascript"></script>
+<script src="js/course-engine-pre-exam.js?q=470" type="text/javascript"></script>
+<script src="js/course-engine-survey.js?q=470" type="text/javascript"></script>
+<script src="js/course-engine-flash.js?q=470" type="text/javascript"></script>
+
+<script src="js/course-engine-slide.js?q=470" type="text/javascript"></script>
+<script src="js/course-engine-policy.js?q=470" type="text/javascript"></script>
+<script src="js/course-engine-video-popup.js?q=470" type="text/javascript"></script>
+
+<script src="js/course-engine-dialog-buttons.js?q=470" type="text/javascript"></script>
+<script src="js/course-engine-tabs.js?q=470" type="text/javascript" charset="utf-8"></script>
+
+<script src="scorm/language.js?q=470" type="text/javascript"></script>
+<script src="scorm/apiwrapper.js?q=470" type="text/javascript"></script>
+<script src="js/completion-certificate.js?q=470" type="text/javascript"></script>
+<script src="js/scorm.js?q=470" type="text/javascript"></script>
+<script src="js/aicc.js?q=470" type="text/javascript"></script>
+</head>
+
+<BODY onbeforeunload="unloadPage()" onunload="unloadPage()">
+
+<div name="page" id="page" style="position:absolute; display:none">
+	<div id="skin-container" class="skin-background-780x510">
+
+		<div id="template-place" class="template-space"></div>
+
+		<div id="FadeOutBackgroundDiv" class="CourseDefaultFadeOutBackground" style="display:none"></div>
+		<div id="CourseDialogContainerDiv" class="CourseDefaultDialogContainer">
+			<div id="CourseDialogHeaderDiv" class="CourseDefaultDialogHeader"></div>
+			<div id="CourseDialogContentDiv" class="CourseDefaultDialogContent"></div>
+		</div>
+		<div id="FadeOutBackgroundDiv2" class="CourseDefaultFadeOutBackground" style="display:none; z-index:101"></div>
+		<div id="FreeFormDialogDiv" class="FreeFormDialogBaseCSS" style="display:none"></div>
+
+		<div id="custom-logo" class="custom-logo-style"></div>
+		<div id="product-logo" class="product-logo-style"></div>
+
+		<div id="copyright-text" class="copyright-text-style"></div>
+		<div id="version-text" class="version-text-style"></div>
+
+		<div id="course-header" class="course-header-style"><!--S-133: Strongest Link Security Awareness Training--></div>
+		<div id="module-name" class="module-name-style"><!--Introduction--></div>
+		<a href="#" onClick="event.preventDefault();" id="page-combo" class="page-combo-style" style="color:white"><!--The Strongest Link--></a>
+
+		<div id="chapterdialog" title="" style="display:none"></div>
+
+		<div id="progress-bar" class="progress-bar-style"><div id="progress-bar-start" class="progress-bar-start-style"></div><div id="progress-bar-middle" class="progress-bar-middle-style"></div><div id="progress-bar-middle" class="progress-bar-middle-style"></div><div id="progress-bar-end" class="progress-bar-end-style"></div><div id="progress-bar-circle" class="progress-bar-circle-style"></div></div>
+
+		<div id="tooltip" class="tooltip-style"><div id="tooltip-start" class="tooltip-start-style"></div><div id="tooltip-middle" class="tooltip-middle-style"><div id="tooltip-text" class="tooltip-text-style"></div></div><div id="tooltip-end" class="tooltip-end-style"></div><div id="tooltip-bubble" class="tooltip-bubble-style"></div></div>
+
+		<div id="mode-box" class="mode-box-style" style="display:none;">
+		<div style="padding:5px; text-align:center; font-weight:bold" id="mode-box-text"></div>
+		</div>
+
+		<div id="scorm-timer-container" class="scorm-timer-style"><div id="scorm-timer" class="scorm-timer-text-style">Timer: 00:00:00</div></div>
+
+		<a id="help-button" href="#" class="skin-button help-button-style" onclick="return false">Help</a>
+		<a id="glossary-button" href="#" class="skin-button glossary-button-style" onclick="return false">Glossary</a>
+		<a id="exit-button" href="#" class="skin-button exit-button-style" onclick="return false">Exit</a>
+
+		<div ><a id="volume-button" href="#" class="skin-button volume-button-style" onclick="return false">Volume</a></div>
+		<div id="volume-box" class="volume-box-style"><div id="volume-slider" class="volume-slider-style"><div id="volume-slider-button" class="volume-slider-button-style"></div></div><div id="volume-popup-mute" class="volume-popup-speaker-style"><a href="#" class="volume-popup-speaker-style" onclick="return false">Mute</a></div></div>
+
+		<div id="autoforward-button" class="skin-button autoforward-button-style"></div>
+		<div id="mode-button" class="skin-button mode-button-style"></div>
+		<div id="replay-button" class="skin-button replay-button-style"></div>
+
+		<div id="play-button" class="skin-button play-button-style">Play</div>
+		<a id="backward-button" href="#" class="skin-button backward-button-style" onclick="return false">Previous</a>
+		<a id="forward-button" href="#" class="skin-button forward-button-style" onclick="return false">Next</a>
+
+
+
+	</div>
+</div>
+
+<div id="jquery_jplayer_1" class="jp-jplayer"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<Settings>
+<!-- Course Version: v.14.2.0 -->
+        <Launch LaunchIntroFile="true" IntroFilePath="xmls/en/menu.htm" DefaultCourseMode="video"></Launch>
+        <URLOnExit>http://www.inspiredelearning.com/inspired/request.info.htm?link=id6</URLOnExit>
+        <LicenseURL>xmls/en/expired.htm</LicenseURL>
+
+		<AutoForwardEnabled>true</AutoForwardEnabled>
+        <AutoForwardDefaultSetting>true</AutoForwardDefaultSetting>
+		<ForwardBlink>true</ForwardBlink>
+        <DisableVolume>false</DisableVolume>
+
+		<TimerText>Timer: </TimerText>
+		<ShowTimer>false</ShowTimer>
+		<MinTime>1</MinTime>
+		<MinTimeMessage>You have to spend at least %%MinTime minutes to finish this course.</MinTimeMessage>
+		<FinalExamPostQuestionsScorm>true</FinalExamPostQuestionsScorm>
+		<UseScorm>true</UseScorm>
+		<ReviewMode>false</ReviewMode>
+		<CopyrightInfo><![CDATA[Copyright &copy; 2015 Inspired eLearning LLC.]]></CopyrightInfo>
+
+		<VideoProgress>true</VideoProgress>
+		<VideoProgressCanMove>true</VideoProgressCanMove>
+
+        <BottomLogo>skins/original/skinimages/logo_iel_v3.png</BottomLogo>
+        <TopLogo>skins/original/skinimages/customer_logo.png</TopLogo>
+
+		<CourseCSSFile>xmls/en/css/course.css</CourseCSSFile>
+		<SkinCSSFile>new-wide</SkinCSSFile>
+
+		<HelpFile>xmls/en/help/help.html</HelpFile>
+		<GlossaryFile>xmls/en/glossary.xml</GlossaryFile>
+		<CourseFile>xmls/en/course.xml</CourseFile>
+		<QuizFile>xmls/en/quiz.xml</QuizFile>
+
+		<Review>Review</Review>
+		<RetakeFinalExam>Retake Exam</RetakeFinalExam>
+		<Submit>Answer</Submit>
+		<Finish>FINISH</Finish>
+
+		<Help>Help &amp; Resources</Help>
+		<Glossary>Glossary</Glossary>
+		<SaveAndExit>Save and exit</SaveAndExit>
+
+		<Volume>Volume</Volume>
+		<Mute>Mute</Mute>
+		<UnMute>Unmute</UnMute>
+
+		<Mode>Mode</Mode>
+
+		<AutoForwardText>Auto Forward</AutoForwardText>
+		<NoAutoForwardText>Don't Auto Forward</NoAutoForwardText>
+
+		<Replay>Replay</Replay>
+
+		<Prev>Previous</Prev>
+
+		<Pause>Pause</Pause>
+		<Play>Play</Play>
+
+		<Next>Next</Next>
+
+		<Progress>Page %%PageNo out of %%TotalPages - %%PageName</Progress>
+
+		<MinTimeWaitAlert>Sorry. You must spend at least %%MinTime seconds on this page.</MinTimeWaitAlert>
+		<DropDownAlert>You can only review previously viewed pages. Please select a previously viewed page.</DropDownAlert>
+		<FlatQuizAlert>Please choose the correct answer to continue with the course.</FlatQuizAlert>
+
+</Settings>

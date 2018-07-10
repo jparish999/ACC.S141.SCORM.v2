@@ -1,0 +1,80 @@
+<Page Template="SummaryTemplate" Name="Policy Acceptance Form" Type="Policy"  RadioValue="1" RadioName="check" RadioCount="4" AudioFile="xmls/en/audio/completepolicy.mp3">			
+				<IncompleteHeader><![CDATA[<span class="form-font-16 color-black wrong-answer-image">Incomplete</span>]]></IncompleteHeader>
+				<SuccessHeader><![CDATA[<span class="form-font-16 color-black right-answer-image">Thank You</span>]]></SuccessHeader>
+				<InvalidHeader><![CDATA[<span class="form-font-16 color-black wrong-answer-image">Invalid</span>]]></InvalidHeader>
+
+
+				<IncompleteBox Top="85" Left="200" Width="400" Height="200" AudioFile="xmls/en/audio/s161_03_i.mp3"><![CDATA[<span class="form-font-14 color-black">Please complete this policy acceptance form by indicating whether or not you agree with each statement.</span>]]></IncompleteBox>
+				<SuccessBox Top="85" Left="200" Width="400" Height="200" AudioFile="xmls/en/audio/s161_03_c.mp3"><![CDATA[<span class="form-font-14 color-black">Thank you!  Please click next to advance to the next slide.</span>]]></SuccessBox>
+				<InvalidBox Top="85" Left="200" Width="400" Height="200" AudioFile="xmls/en/audio/s161_03_i.mp3"><![CDATA[<span class="form-font-14 color-black">You must agree to abide by all policies to continue with this course and receive course credit. </span>]]></InvalidBox>
+
+					<Elements>
+						<Element Top="10" Left="10" Height="100"><![CDATA[<span style="font-size:14px; color:#ffffff"><b>Please complete this policy acceptance form by indicating whether or not you agree with each statement.</b></span>]]></Element>
+
+						<Element Top="30" Left="15"><![CDATA[
+<style type="text/css">
+td { padding: 5px 0px; }
+tr.policyrow { background-color: #3e6aa9;}
+tr.policyrow_odd { background-color: #254777;}
+</style>
+
+<table border=0 cellpadding=0 cellspacing=0 style="width:750px;">
+<tr>
+<td style="width:40px"><span style="font-size:14px; color:#ffffff"><b><center>Yes
+<td style="width:40px"><span style="font-size:14px; color:#ffffff"><b><center>No
+<td style="width:20px;">
+<td style="width:610px">
+<td style="width:25px">
+</table>
+
+<div style="overflow-x: hidden; overflow-y: hidden; width:750px; height:370px; border:1px solid #ffffff; padding:0px;">
+
+<table border=0 cellpadding=0 cellspacing=0 style="width:750px;">
+<tr class="policyrow">
+<td style="width:40px; border"><center><input type="radio" class="graphically" style="cursor:pointer" name="check_1" value="1" id="check_1_1"><label for="check_1_1" class="graphically"></label>
+<td style="width:40px"><center><input type="radio"  class="graphically" style="cursor:pointer" name="check_1" value="0" id="check_1_2"><label for="check_1_2" class="graphically"></label>
+<td style="width:20px; border-left: 1px solid #ffffff;">
+<td style="width:610px"><span style="font-size:14px; color:#ffffff"><b>Code of Conduct</b><br> 
+</span><span style="font-size:11px; color:#ffffff">I have read and been informed about the standards, guidelines, processes, and procedures set forth in the Code of Conduct. I have received a copy of the policy and agree to abide by the policy and understand that if I have questions, it is my responsibility to consult with my immediate supervisor, HR, the law department, or higher-level management, or contact the ethics hotline or the anonymous hotline.
+
+<td style="width:25px">
+</tr>
+
+<tr class="policyrow_odd">
+<td style="width:40px"><center><input type="radio"  class="graphically" style="cursor:pointer" name="check_2" value="1" id="check_2_1"><label for="check_2_1" class="graphically"></label>
+<td style="width:40px"><center><input type="radio"  class="graphically" style="cursor:pointer" name="check_2" value="0" id="check_2_2"><label for="check_2_2" class="graphically"></label>
+<td style="width:20px; border-left: 1px solid #ffffff;">
+<td style="width:610px"><span style="font-size:14px; color:#ffffff"><b>Information Security</b><br></span><span style="font-size:11px; color:#ffffff">
+I have read and been informed about the standards, guidelines, processes, and procedures set forth in the Information Security Policy. I have received a copy of the policy and agree to abide by the policy and understand that if I have questions, it is my responsibility to consult with my immediate supervisor or the IT department for guidance.
+
+<td style="width:25px">
+</tr>
+
+<tr class="policyrow">
+<td style="width:40px;"><center><input type="radio" class="graphically" style="cursor:pointer" name="check_3" value="1" id="check_3_1"><label for="check_3_1" class="graphically"></label>
+<td style="width:40px"><center><input type="radio"  class="graphically" style="cursor:pointer" name="check_3" value="0" id="check_3_2"><label for="check_3_2" class="graphically"></label>
+<td style="width:20px; border-left: 1px solid #ffffff;">
+<td style="width:610px"><span style="font-size:14px; color:#ffffff"><b>Harassment and Discrimination-Free Workplace</b><br></span><span style="font-size:11px; color:#ffffff">I have read and been informed about the standards, guidelines, processes, and procedures set forth in the Harassment and Discrimination-Free Workplace
+Policy. I have received a copy of the policy and agree to abide by the policy and understand that if I have questions, it is my responsibility to consult with my immediate supervisor, HR, the law department, or higher-level management, or contact the ethics hotline or the anonymous hotline.
+
+
+<td style="width:25px">
+</tr>
+
+<tr class="policyrow_odd">
+<td style="width:40px"><center><input type="radio"  class="graphically" style="cursor:pointer" name="check_4" value="1" id="check_4_1"><label for="check_4_1" class="graphically"></label>
+<td style="width:40px"><center><input type="radio"  class="graphically" style="cursor:pointer" name="check_4" value="0" id="check_4_2"><label for="check_4_2" class="graphically"></label>
+<td style="width:20px; border-left: 1px solid #ffffff; ">
+<td style="width:610px"><span style="font-size:14px; color:#ffffff; "><b>Records Retention</b><br></span><span style="font-size:11px; color:#ffffff">
+I have read and been informed about the standards, guidelines, processes, and procedures set forth in the Records Retention Policy. I have received a copy of the policy and agree to abide by the policy and understand that if I have questions, it is my responsibility to consult with my immediate supervisor, HR, the law department, or higher-level management, or contact the ethics hotline or the anonymous hotline.
+<td style="width:25px">
+</tr>
+
+</table>
+</div>
+
+<a href="#" onclick="return false" style="cursor:pointer; width:80px; margin-top:10px; margin-left:650px;" class="themebutton themesimple" id="PolicyButton" title="Submit"><center>Submit</center></a>
+]]>
+						</Element>
+					</Elements>
+			</Page>

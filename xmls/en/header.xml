@@ -1,0 +1,702 @@
+<course Name="AP-101 PhishProof">
+	<Quiz Name="Phishing Quiz" GameType="Versus"></Quiz>
+	<Templates DefaultTemplate="VideoTemplate1">
+		<Template HasVideo="true" VideoHeight="280" VideoWidth="780" Name="VideoTemplate1"><![CDATA[
+			<div id="jplayer_video" class="jp-jplayer"></div>
+			<div class="text-field-background-style"><div id="TextArea1" class="text-field-style"></div></div>
+			<div id="VideoOverLap" style="position:absolute; left:20px; top:20px;"></div>
+			]]>
+		</Template>
+		<Template HasVideo="false" VideoHeight="280" VideoWidth="780" Name="TextTemplate1"><![CDATA[
+			<div id="jplayer_video"></div>
+			<div class="text-field-background-style"><a href="#"  onclick="return false" id="TextArea1" class="text-field-style" style="color:black"></a></div>
+			<div id="VideoOverLap" style="position:absolute; left:20px; top:20px; width:0px; height:0px; overflow:hidden"></div>
+			]]>
+		</Template>
+		<Template HasVideo="false" VideoHeight="280" VideoWidth="780" Name="QuizTemplate"><![CDATA[<div style="width:780px; height:500px; background-color:white"></div>]]>
+		</Template>
+		<Template HasVideo="true" VideoHeight="0" VideoWidth="0" Name="SummaryTemplate"><![CDATA[<div id="TextArea1" style="width:780px; height:500px; background-color:white"></div>]]>
+		</Template>
+	</Templates>
+	<ModeValues>
+		<Mode Name="High" Value="1"></Mode>
+		<Mode Name="Low"  Value="2"></Mode>
+	</ModeValues>
+	<QuizSetup PassingPercentage="50" RetakeTillPass="true"></QuizSetup>
+
+	<Dialogs>
+		<StandardDialog Name="Dialog1" Top="85" Left="150" Width="480" Height="250" AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_24_summary.mp3" File="xmls/en/popup/popup.htm">
+			<DialogHeader><![CDATA[<span class="form-font-16 color-black right-answer-image">Business and Leadership</span>]]></DialogHeader>
+		</StandardDialog>
+
+		<StandardDialog Name="Dialog2" Top="85" Left="150" Width="480" Height="250" AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_24_summary.mp3" File="http://www.inspiredelearning.com/inspired/Custom_eLearning_Development.htm?link=id2">
+			<DialogHeader><![CDATA[<span class="form-font-16 color-black right-answer-image">What is Lorem Ipsum?</span>]]></DialogHeader>
+		</StandardDialog>
+
+		<QuizDialog Name="QDialog1" Top="85" Left="200" Width="400" Height="200" AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_02.mp3">
+			<DialogHeader><![CDATA[<span class="form-font-16 color-black question-box-image">Radio Mini Quiz</span>]]></DialogHeader>
+			<DialogBody><![CDATA[<span class="form-font-14 color-black">Please answer the following question: 2+2 = ?</span>]]></DialogBody>
+
+			<Answers Type="radio">
+				<Answer AnswerID="1"><![CDATA[<span class="popupquiz-font-16 color-black">2</span>]]></Answer>
+				<Answer AnswerID="2"><![CDATA[<span class="popupquiz-font-16 color-black">3</span>]]></Answer>
+				<Answer AnswerID="3"><![CDATA[<span class="popupquiz-font-16 color-black">4</span>]]></Answer>
+				<Answer AnswerID="4"><![CDATA[<span class="popupquiz-font-16 color-black">5</span>]]></Answer>
+			</Answers>
+
+			<Rules>
+				<Rule AnswerID="" AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_03_i.mp3"><![CDATA[<span class="form-font-14 color-black">Please select your answer.</span>]]></Rule>
+				<Rule AnswerID="*" AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_03_i.mp3"><![CDATA[<span class="form-font-14 color-black">That answer is wrong.</span>]]></Rule>
+				<Rule AnswerID="3" AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_03_c.mp3" Correct="yes"><![CDATA[<span class="form-font-14 color-black">That is correct</span>]]></Rule>
+				<Rule AnswerID="4" AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_03_i.mp3"><![CDATA[<span class="form-font-14 color-black">A bit little less would be correct.</span>]]></Rule>
+			</Rules>
+
+		</QuizDialog>
+
+		<QuizDialog Name="QDialog2" Top="85" Left="200" Width="400" Height="200" AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_02.mp3">
+			<DialogHeader><![CDATA[<span class="form-font-16 color-black question-box-image">Checkbox Mini Quiz</span>]]></DialogHeader>
+			<DialogBody><![CDATA[<span class="form-font-16 color-black">Please select all answers for the following question:<br> 2+2 = ?</span>]]></DialogBody>
+
+			<Answers Type="checkbox">
+				<Answer AnswerID="1"><![CDATA[<span class="popupquiz-font-16 color-black">2</span>]]></Answer>
+				<Answer AnswerID="2"><![CDATA[<span class="popupquiz-font-16 color-black">3</span>]]></Answer>
+				<Answer AnswerID="3"><![CDATA[<span class="popupquiz-font-16 color-black">4</span>]]></Answer>
+				<Answer AnswerID="4"><![CDATA[<span class="popupquiz-font-16 color-black">6-2</span>]]></Answer>
+			</Answers>
+
+			<Rules>
+				<Rule AnswerID="*" AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_03_i.mp3"><![CDATA[<span class="form-font-14 color-black">Wrong selection.</span>]]></Rule>
+				<Rule AnswerID="" AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_03_i.mp3"><![CDATA[<span class="form-font-14 color-black">Please select your answer.</span>]]></Rule>
+				<Rule AnswerID="3,4" AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_03_c.mp3" Correct="yes"><![CDATA[<span class="form-font-14 color-black">That is correct. Click play to continue.</span>]]></Rule>
+				<Rule AnswerID="3" AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_03_i.mp3"><![CDATA[<span class="form-font-14 color-black">Good, but there are more correct answers.</span>]]></Rule>
+				<Rule AnswerID="4" AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_03_i.mp3"><![CDATA[<span class="form-font-14 color-black">Good, but there are more correct answers.</span>]]></Rule>
+			</Rules>
+
+		</QuizDialog>
+
+	</Dialogs>
+
+
+	<Modules>
+
+		<Module Name="Policies II">
+
+			<Page Template="QuizTemplate" Name="Quiz V3" Type="InteractiveQuiz" AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_02.mp3" ContinueButton="Continue" StartButton="Start" BackgroundAudioFile="http://www.jplayer.org/audio/mp3/Miaow-04-Lismore.mp3">
+				<IntroTitle><![CDATA[<span class="form-font-14 color-black">Interactive Quiz</span>]]></IntroTitle>
+				<IntroText AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_02.mp3" Top="80" Left="200" Width="440" Height="290" AnswerTop="80" AnswerLeft="200" AnswerWidth="350" AnswerHeight="165" ScoreTop="80" ScoreLeft="200" ScoreWidth="350" ScoreHeight="200"><![CDATA[
+				<span Class="form-font-14 color-black">Now let’s put what you’ve learned to work by testing your skills against a phisher. <br><br>So let’s get started. In this first simulation, you’ll play the role of Charles, who works at Big Boxes International.<br>Click “Start” to begin.</span>]]>
+				</IntroText>
+
+				<RightAnswerHeader><![CDATA[<span class="form-font-16 color-black right-answer-image">Correct</span>]]></RightAnswerHeader>
+				<WrongAnswerHeader><![CDATA[<span class="form-font-16 color-black wrong-answer-image">Incorrect</span>]]></WrongAnswerHeader>
+				<Elements>
+					<Element Top="0" Left="0" Width="780" Height="435"><![CDATA[<img src="xmls/en/images/interactiveQuizBg.png" style="width:780px; height:435px">]]></Element>
+					<Element Top="105" Left="105" Width="390"><![CDATA[<span Class="form-font-16 color-black"><b>Who do you think is responsible for information security?</b></span>]]></Element>
+				</Elements>
+
+				<Answers Type="radio" Top="160" Left="110" Width="300" Spacing="5">
+					<Answer AnswerID="1"><![CDATA[<span class="popupquiz-font-16 color-black">Information Security personnel only</span>]]></Answer>
+					<Answer AnswerID="2"><![CDATA[<span class="popupquiz-font-16 color-black">Managment</span>]]></Answer>
+					<Answer AnswerID="3"><![CDATA[<span class="popupquiz-font-16 color-black">Everyone, including me</span>]]></Answer>
+					<Answer AnswerID="4"><![CDATA[<span class="popupquiz-font-16 color-black">Firewalls and antivirus software</span>]]></Answer>
+				</Answers>
+
+				<AnswerButton Class="themebutton themesimple themeorange" Icon="ok" Left="110" Top="280" Width="120" Text="Submit answer"></AnswerButton>
+				<AnswerSpace Class="" Left="110" Top="280" Width="120" Height="60"></AnswerSpace>
+
+				<Rules Target="Dialog">
+					<Rule AnswerID="" AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_03_i.mp3"><![CDATA[<span class="form-font-14 color-black">Please select your answer.</span>]]></Rule>
+					<Rule AnswerID="*" AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_03_i.mp3"><![CDATA[<span class="form-font-14 color-black">That answer is wrong.</span>]]></Rule>
+					<Rule AnswerID="3" AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_03_c.mp3" Correct="yes"><![CDATA[<span class="form-font-14 color-black">That is correct</span>]]></Rule>
+					<Rule AnswerID="4" AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_03_i.mp3"><![CDATA[<span class="form-font-14 color-black">A bit little less would be correct.</span>]]></Rule>
+				</Rules>
+
+				<AnswerBox Top="85" Left="200" Width="400" Height="200"></AnswerBox>
+				<Answer AnswerID="1" AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_03_c.mp3" Correct="yes"><![CDATA[<span class="form-font-14 color-black">That is correct, on a mobile device a securid connection is all that is needed..</span>]]></Answer>
+				<Answer AnswerID="2" AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_03_i.mp3"><![CDATA[<span class="form-font-14 color-black">Incorrect, you don't need more security than a secure Wi-Fi on a mobile device.</span>]]></Answer>
+			</Page>
+
+
+			<Page Template="SummaryTemplate" Name="Code of Conduct II" Type="Policy" AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_24_summary.mp3" RadioValue="1" RadioName="check" RadioCount="2" BackgroundAudioFile="http://www.jplayer.org/audio/mp3/Miaow-05-The-separation.mp3">
+				<IncompleteHeader><![CDATA[<span class="form-font-16 color-black wrong-answer-image">Incomplete</span>]]></IncompleteHeader>
+				<SuccessHeader><![CDATA[<span class="form-font-16 color-black right-answer-image">Thank You</span>]]></SuccessHeader>
+				<InvalidHeader><![CDATA[<span class="form-font-16 color-black wrong-answer-image">Invalid</span>]]></InvalidHeader>
+
+
+				<IncompleteBox Top="85" Left="200" Width="400" Height="200" AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_03_i.mp3"><![CDATA[<span class="form-font-14 color-black">Please agree on all questions. You may have to scorll down to check them all.</span>]]></IncompleteBox>
+				<SuccessBox Top="85" Left="200" Width="400" Height="200" AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_03_c.mp3"><![CDATA[<span class="form-font-14 color-black">Success, thank you. Please click on next to start the course..</span>]]></SuccessBox>
+				<InvalidBox Top="85" Left="200" Width="400" Height="200" AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_03_i.mp3"><![CDATA[<span class="form-font-14 color-black">Invalid, you have to agree on all the terms.</span>]]></InvalidBox>
+
+					<Elements>
+						<Element Top="15" Left="30" Width="64" Height="64"><![CDATA[<img src="xmls/en/images/agt_action_success.png" style="height:64px">]]></Element>
+						<Element Top="25" Left="105" Height="100"><![CDATA[<span style="font-size:22px; color:red;"><b>Policy Acceptance Form</b></span>]]></Element>
+						<Element Top="55" Left="95" Height="100"><![CDATA[<span style="font-size:16px; color:black"><b>Please complete the policy acceptance form bellow.</b></span>]]></Element>
+
+						<Element Top="85" Left="15"><![CDATA[
+<style type="text/css">
+td { padding: 5px 0px; }
+tr.policyrow:hover { background-color: #DDDDDD;}
+tr.policyrow_odd { background-color: #EEEEEE;}
+tr.policyrow_odd:hover { background-color: #DDDDDD;}
+</style>
+
+<table border=0 cellpadding=0 cellspacing=0 style="width:735px;">
+<tr>
+<td style="width:40px"><span style="font-size:14px; color:black"><b><center>Yes
+<td style="width:40px"><span style="font-size:14px; color:black"><b><center>No
+<td style="width:20px;">
+<td style="width:610px">
+<td style="width:25px">
+</table>
+
+<div style="overflow-x: hidden; overflow-y: scroll; width:750px; height:270px; border:1px solid black; padding:0px;">
+
+<table border=0 cellpadding=0 cellspacing=0 style="width:735px;">
+<tr class="policyrow">
+<td style="width:40px;"><center><input type="radio" class="graphically" style="cursor:pointer" name="check_1" value="1" id="check_1_1"><label for="check_1_1" class="graphically"></label>
+<td style="width:40px"><center><input type="radio"  class="graphically" style="cursor:pointer" name="check_1" value="0" id="check_1_2"><label for="check_1_2" class="graphically"></label>
+<td style="width:20px; border-left: 1px solid black;">
+<td style="width:610px"><span style="font-size:14px; color:black">Do you understand our organization has a zero tolerance policy with respect to workplace harrasment based on <span style="color:blue"><b>gender, race, national origin, age and disability?</b>
+<td style="width:25px">
+</tr>
+
+<tr class="policyrow_odd">
+<td style="width:40px"><center><input type="radio"  class="graphically" style="cursor:pointer" name="check_2" value="1" id="check_2_1"><label for="check_2_1" class="graphically"></label>
+<td style="width:40px"><center><input type="radio"  class="graphically" style="cursor:pointer" name="check_2" value="0" id="check_2_2"><label for="check_2_2" class="graphically"></label>
+<td style="width:20px; border-left: 1px solid black;">
+<td style="width:610px"><span style="font-size:14px; color:black">organization has a zero tolerance policy with respect to workplace harrasment based on gender, race, national origin, age and disability?</b>
+<td style="width:25px">
+</tr>
+
+</table>
+</div>
+
+<a href="#" onclick="return false" style="cursor:pointer; width:80px; margin-top:10px; margin-left:650px;" class="themebutton themesimple" id="PolicyButton" title="Submit"><center>Submit</center></a>
+]]>
+						</Element>
+					</Elements>
+			</Page>
+
+			<Page Template="QuizTemplate" Name="Image Quiz II" Type="FlatQuiz" AudioFile="" ContinueButton="Continue" StartButton="Start" BackgroundAudioFile="http://www.jplayer.org/audio/mp3/Miaow-04-Lismore.mp3">
+				<IntroTitle><![CDATA[<span class="form-font-14 color-black">Flat Quiz</span>]]></IntroTitle>
+					<IntroText AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_02.mp3" Top="80" Left="200" Width="440" Height="390" AnswerTop="80" AnswerLeft="200" AnswerWidth="350" AnswerHeight="165" ScoreTop="80" ScoreLeft="200" ScoreWidth="350" ScoreHeight="200"><![CDATA[
+					<span Class="form-font-14 color-black">Now let’s put what you’ve learned to work by testing your skills against a phisher.  In this game-based simulation, you’ll be presented with a series of email messages. Your job is to figure out whether certain parts of each message are suspicious or not. For each question you get right, you get 10 points.  For each question you get
+					 wrong, the phisher gets 10 points.<P><br><B>To win the game and get credit for this course, you must score higher than the phisher. </B></P><br>So let’s get started. In this first simulation, you’ll play the role of Charles, who works at Big Boxes International.<br>Click “Start” to begin.</span>]]>
+					</IntroText>
+
+				<RightAnswerHeader><![CDATA[<span class="form-font-16 color-black right-answer-image">Correct</span>]]></RightAnswerHeader>
+				<WrongAnswerHeader><![CDATA[<span class="form-font-16 color-black wrong-answer-image">Incorrect</span>]]></WrongAnswerHeader>
+				<Elements>
+					<Element Top="60" Left="60" Width="450"><![CDATA[<span Class="form-font-16 color-black"><b>You have connected your tablet via a secure Wi-Fi connection and need to upload a sensitive document to a website. What should you dou?</b></span>]]></Element>
+					<Element Top="160" Left="60" AnswerID="1" HoverClass="flat-quiz-answer"><![CDATA[<center><b><img src="xmls/en/images/keyboard-press.jpg"><center><br><span Class="form-font-14 color-black">Upload it right away</span>]]></Element>
+					<Element Top="160" Left="420" AnswerID="2" HoverClass="flat-quiz-answer"><![CDATA[<center><b><img src="xmls/en/images/wifi-security.jpg"><center><br><span Class="form-font-14 color-black">Ensure additional security is in place.</span>]]></Element>
+				</Elements>
+				<AnswerBox Top="85" Left="200" Width="400" Height="200"></AnswerBox>
+				<Answer AnswerID="1" AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_03_c.mp3" Correct="yes"><![CDATA[<span class="form-font-14 color-black">That is correct, on a mobile device a securid connection is all that is needed..</span>]]></Answer>
+				<Answer AnswerID="2" AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_03_i.mp3"><![CDATA[<span class="form-font-14 color-black">Incorrect, you don't need more security than a secure Wi-Fi on a mobile device.</span>]]></Answer>
+			</Page>
+
+		</Module>
+
+		<Module Name="Outwitting Internet Phishers">
+
+			<Page VideoTemplate="VideoTemplate1" TextTemplate="TextTemplate1" Name="Internet Phishers" MinTime="1" VideoImage="xmls/en/images/video-screen.png"  Type="Course">
+				<Mode Level="1" File="http://inspiredcdn.s3.amazonaws.com/AP-101/video/iE_Internet_Phishers.mp4,http://inspiredcdn.s3.amazonaws.com/AP-101/video/iE_Internet_Phishers.webm"></Mode>
+				<Mode Level="2" File="http://inspiredcdn.s3.amazonaws.com/AP-101/video/iE_Internet_Phishers_02.mp4,http://inspiredcdn.s3.amazonaws.com/AP-101/video/iE_Internet_Phishers.webm"></Mode>
+
+				<Text Insert="Overwrite" Target="TextArea1" TimeToShow="00:00:00" AltImage="xmls/en/images/phishers1.png"><![CDATA[<span class="form-font-11"><P align="center">PhishProof Training  :  Presented by <a href="#" class="textlink" data-dialog="Dialog2">Inspired eLearning Studios</a></P></span>]]></Text>
+
+				<Text Insert="Overwrite" FadeSpeed="3000" Target="VideoOverLap" TimeToShow="00:00:03" AltImage="xmls/en/images/phishers1.png"><![CDATA[<img src="xmls/en/images/your_logo.png">]]>
+				</Text>
+
+				<Text Insert="PopupDialog" Target="Dialog1" TimeToShow="00:00:4"></Text>
+
+				<Text Insert="Fadeout" FadeSpeed="3000" Target="VideoOverLap" TimeToShow="00:00:6" AltImage="xmls/en/images/phishers1.png"></Text>
+
+				<Text Insert="QuizDialog" Target="QDialog1" TimeToShow="00:00:8"></Text>
+
+				<Text Insert="QuizDialog" Target="QDialog2" TimeToShow="00:00:12"></Text>
+
+				<Text Insert="Overwrite" Target="TextArea1" TimeToShow="00:00:19" AltImage="xmls/en/images/phishers1.png"><![CDATA[<span class="form-font-11-text"><br><b>Outwitting Internet Phishers</b><br><br>Today, computers systems and networks are heavily defended against attackers, making it difficult and time consuming for them to mount a direct assault.<br><br>Their answer to this problem is to simply go around it by attacking you, the end user.  After all, you have what they want – a network username and password, a computer that’s behind the network firewall, possibly access rights to internal trade secrets and confidential information, and of course a bank account they can steal from.
+				<br><br>And that’s where phishing comes in.  Fishers use bait, like worms, to catch fish.  Internet Phishers use lies and manipulation to catch you.</span>]]></Text>
+				<Text Insert="Overwrite" Target="TextArea1" TimeToShow="00:00:59" AltImage="xmls/en/images/phishers2.png"><![CDATA[<span class="form-font-11-text"><P>Let’s look at how it works.<br><br>Phishers typically create fake emails that appear to come from someone you trust, such as a bank, credit card company, or a popular website. The email may ask you to “confirm your account details” and direct you to a website that looks just like the real website, but whose sole purpose is stealing information.
+				<br><br>Of course, if you enter your information, a cybercriminal could use it to steal your identity and possibly make fraudulent purchases with your money.
+				<br><br>To protect yourself from Phishers, follow these best practices:</P></span>]]></Text>
+				<Text Insert="Overwrite" Target="TextArea1" TimeToShow="00:01:35" AltImage="xmls/en/images/phishers3.png"><![CDATA[<span class="form-font-11-text"><P>Never respond to unsolicited email messages that request personal information.  A reputable organization will never ask for your password or other sensitive information via email.
+				<br><br>They also won’t use sensational phrases like "WARNING!" or threaten to close your account or charge you fees if you don’t respond immediately.
+				<br><br>Be suspicious of emails that don’t address you by name or that have misspellings or simply don’t look professional.
+				<br><br>Hover over links in email messages and on websites to verify a link’s actual destination, even if the link comes from a trusted source.</p></span>]]></Text>
+				<Text Insert="Overwrite" Target="TextArea1" TimeToShow="00:02:13" AltImage="xmls/en/images/phishers4.png"><![CDATA[<span class="form-font-11-text"><P>The key thing to remember is that the end of the link, before the first single forward slash (“/”), is what matters.  You should ignore the subdomain, folder, and page name.
+				<br><br>Always navigate to your bank or other financial institution's website by typing in the website’s address, rather than clicking a link from an email message.
+				<br><br>And for best results, simply never click on links in unsolicited email messages - ever.
+				<br><br>You should also make sure that any website you visit that requests sensitive information uses encryption.  Look for <B>https</B> in the web address or a padlock icon in your browser window.</P></span>]]></Text>
+				<Text Insert="Overwrite" Target="TextArea1" TimeToShow="00:02:52" AltImage="xmls/en/images/phishers5.png"><![CDATA[<span class="form-font-11-text"><P>And keep in mind that phishing emails may not always be designed to steal your information; instead, their goal may be to install malicious software on your computer that can monitor your keystrokes or even fully control your system without your knowledge.
+				<br><br>So you should never trust phone numbers found in suspicious email messages, even if an authentic sounding voice response system answers.  Instead, use the phone number found on your card or statement.
+				<br><br>And finally, to sum things up, to avoid being Phished, always think before you click.
+				<br><br>This can happen by simply clicking an infected link or opening an infected attachment.</P></span>]]></Text>
+				<Text Insert="Overwrite" Target="TextArea1" TimeToShow="00:03:14" AltImage="xmls/en/images/phishers6.png"><![CDATA[<span class="form-font-11-text"><P>To help protect yourself from these kinds of attacks, keep your operating system, browser, any plugins, and security software patched and up to date with the latest software updates.
+				<br><br>And in general, when an email looks suspicious, simply delete it without opening it.
+				<br><br>And keep in mind that phishing can also happen via SMS text messages, faxes, and even automated voice response systems.
+				<br><br>So you should never trust phone numbers found in suspicious email messages, even if an authentic sounding voice response system answers.  Instead, use the phone number found on your card or statement.</P></span>]]></Text>
+				<Text Insert="Overwrite" Target="TextArea1" TimeToShow="00:03:54" AltImage="xmls/en/images/phishers7.png"><![CDATA[<span class="form-font-11-text"><P>And finally, to sum things up, to avoid being Phished, always think before you click.</P></span>]]></Text>
+			</Page>
+		</Module>
+
+
+
+
+		<Module Name="Quiz">
+			<Page Template="QuizTemplate" Name="Phishing Practice: Simulation 1" Type="Quiz" KeepScore="true">
+				<PageSetup ContinueButton="Continue" StartButton="Start">
+					<RightAnswerHeader><![CDATA[<span class="form-font-16 color-black right-answer-image">Correct</span>]]></RightAnswerHeader>
+					<WrongAnswerHeader><![CDATA[<span class="form-font-16 color-black wrong-answer-image">Incorrect</span>]]></WrongAnswerHeader>
+					<ScoreBoxHeader><![CDATA[<span class="form-font-16 color-black score-box-image">Current Score</span>]]></ScoreBoxHeader>
+					<ModuleScoreResultUserWinner><![CDATA[
+						<br>
+						<span style="display:block; padding:4px; padding-right:14px; background-color:#ddffdd;"><span style="display:block" class="form-font-16 color-black right-answer-image">Your Score: <span style="float:right"><b>#UserScore</b></span></span></span>
+						<span style="display:block; height:4px;"></span>
+						<span style="display:block; padding:4px; padding-right:14px;"><span style="display:block" class="form-font-16 color-black wrong-answer-image">Phishers: <span style="float:right"><b>#ComputerScore</b></span></span></span><br>]]>
+					</ModuleScoreResultUserWinner>
+					<ModuleScoreResultComputerWinner><![CDATA[
+						<br>
+						<span style="display:block; padding:4px; padding-right:14px; background-color:#ddffdd;"><span style="display:block" class="form-font-16 color-black wrong-answer-image">Phishers: <span style="float:right"><b>#ComputerScore</b></span></span></span>
+						<span style="display:block; height:4px;"></span>
+						<span style="display:block; padding:4px; padding-right:14px;"><span style="display:block" class="form-font-16 color-black right-answer-image">Your Score: <span style="float:right"><b>#UserScore</b></span></span></span><br>]]>
+					</ModuleScoreResultComputerWinner>
+					<IntroTitle><![CDATA[<span class="form-font-14 color-black">Phishing Practice: Simulation 1</span>]]></IntroTitle>
+						<IntroText AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_02.mp3" Top="80" Left="200" Width="440" Height="390" AnswerTop="80" AnswerLeft="200" AnswerWidth="350" AnswerHeight="165" ScoreTop="80" ScoreLeft="200" ScoreWidth="350" ScoreHeight="200"><![CDATA[
+						<span Class="form-font-14 color-black">Now let’s put what you’ve learned to work by testing your skills against a phisher.  In this game-based simulation, you’ll be presented with a series of email messages. Your job is to figure out whether certain parts of each message are suspicious or not. For each question you get right, you get 10 points.  For each question you get
+						 wrong, the phisher gets 10 points.<P><br><B>To win the game and get credit for this course, you must score higher than the phisher. </B></P><br>So let’s get started. In this first simulation, you’ll play the role of Charles, who works at Big Boxes International.<br>Click “Start” to begin.</span>]]>
+						</IntroText>
+					<Elements>
+						<Element Top="5" Left="5" Width="575" Height="435"><![CDATA[<img src="xmls/en/quiz/mailmac_look_2012.png" Height="435">]]></Element>
+						<Element Top="12" Left="20"><![CDATA[<span Class="form-font-11 color-black"><b>From:</b></span>]]></Element>
+						<Element Top="28" Left="20"><![CDATA[<span Class="form-font-11 color-black"><b>To:</b></span>]]></Element>
+						<Element Top="47" Left="20"><![CDATA[<span Class="form-font-11 color-black">CC:</span>]]></Element>
+						<Element Top="63" Left="20"><![CDATA[<span Class="form-font-11 color-black"><b>Subject:</b></span>]]></Element>
+						<Element Top="12" Left="100" ><![CDATA[<span Class="form-font-11 color-black">SystemAdministrator@gmail.com</span>]]></Element>
+						<Element Top="28" Left="100"><![CDATA[<span Class="form-font-11 color-black">Charles@BigBoxes.com</span>]]></Element>
+						<Element Top="63" Left="100"><![CDATA[<span Class="form-font-11 color-black">Mailbox about to be de-activated due to unusual activity</span>]]></Element>
+						<Element Top="105" Left="30" Width="500" ><![CDATA[<span Class="form-font-12 color-black">This is to infrom you that you email accont is about to be de-activated by your Sys Admin due to an unusual activity detected on your mailbox.</span>]]></Element>
+						<Element Top="145" Left="30" Width="500" ><![CDATA[<span Class="form-font-12 color-black">To re-activate your mailbox please click on the link below or copy it to a browser and fill in the necessary information.</span>]]></Element>
+						<Element Top="195" Left="30" Width="500" ><![CDATA[<span Class="form-font-12 link-effect">http://192.91.02.123/admin/email_update</span>]]></Element>
+						<Element Top="215" Left="30" Width="500" ><![CDATA[<span Class="form-font-12 color-black">Regards,<br>
+							System Administrator
+							</span>]]></Element>
+						<Element Top="275" Left="30" Width="500" ><![CDATA[<span Class="form-font-12 color-black">Note: If your mailbox remains de-activated for five days, it will be deleted, along with all of your email messages.  </span>]]></Element>
+					</Elements>
+				</PageSetup>
+				<Question Name="Question 1">
+					<Highlight Class="border-box" Top="8" Left="10" Width="320" Height="20"></Highlight>
+					<AnswerBox Top="85" Left="360" Width="195" Height="70"></AnswerBox>
+					<Answer AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_03_c.mp3" Correct="yes" Class="themebutton themesimple" Icon="ok" Width="150" Text="Suspicious" ComputerPoints="0" Points="10"><![CDATA[<span class="form-font-14 color-black">Email messages from your system administrator or any legitimate organization won’t come from public email addresses, such as Gmail.</span>]]></Answer>
+					<Answer AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_03_i.mp3" Class="themebutton themesimple" Icon="cancel" Width="150" Text="NOT Suspicious" ComputerPoints="10" Points="0"><![CDATA[<span class="form-font-14 color-black">Email messages from your system administrator or any legitimate organization won’t come from public email addresses, such as Gmail. </span>]]></Answer>
+				</Question>
+				<Question Name="Question 2">
+					<Highlight Class="border-box" Top="95" Left="20" Width="520" Height="44"></Highlight>
+						<AnswerBox Top="170" Left="560" Width="195" Height="70"></AnswerBox>
+					<Answer AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_04_c.mp3" Correct="yes" Class="themebutton themesimple" Icon="ok" Width="150" Text="Suspicious" ComputerPoints="0" Points="10"><![CDATA[<span class="form-font-14 color-black">You should always be suspicious of emails with misspellings or grammar mistakes that request sensitive information or ask you to click on a link or open an attachment. Professional organizations proofread emails before sending them.</span>]]></Answer>
+					<Answer AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_04_i.mp3" Class="themebutton themesimple" Icon="cancel" Width="150" Text="NOT Suspicious" ComputerPoints="10" Points="0"><![CDATA[<span class="form-font-14 color-black">You should always be suspicious of emails with misspellings or grammar mistakes that request sensitive information or ask you to click on a link or open an attachment. Professional organizations proofread emails before sending them.</span>]]></Answer>
+				</Question>
+				<Question Name="Question 3">
+					<Highlight Class="border-box" Top="190" Left="20" Width="520" Height="20"></Highlight>
+						<AnswerBox Top="240" Left="570" Width="195" Height="70"></AnswerBox>
+					<Answer AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_05_c.mp3" Correct="yes" Class="themebutton themesimple" Icon="ok" Width="150" Text="Suspicious" ComputerPoints="0" Points="10"><![CDATA[<span class="form-font-14 color-black">You should always be suspicious of links with an IP address, 192.91.02.123 in this case, rather than a text-based domain name. Never click on these types of links.</span>]]></Answer>
+					<Answer AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_05_i.mp3" Class="themebutton themesimple" Icon="cancel" Width="150" Text="NOT Suspicious" ComputerPoints="10" Points="0"><![CDATA[<span class="form-font-14 color-black">You should always be suspicious of links with an IP address, 192.91.02.123 in this case, rather than a text-based domain name. Never click on these types of links.</span>]]></Answer>
+				</Question>
+				<Question Name="Question 4">
+					<Highlight Class="border-box" Top="265" Left="20" Width="520" Height="46"></Highlight>
+						<AnswerBox Top="325" Left="560" Width="195" Height="70"></AnswerBox>
+					<Answer AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_06_c.mp3" Correct="yes" Class="themebutton themesimple" Icon="ok" Width="150" Text="Suspicious" ComputerPoints="0" Points="10"><![CDATA[<span class="form-font-14 color-black">Phishers attempt to create a sense of urgency with threats or enticing offers. Don’t fall for it!</span>]]></Answer>
+					<Answer AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_06_i.mp3" Class="themebutton themesimple" Icon="cancel" Width="150" Text="NOT Suspicious" ComputerPoints="10" Points="0"><![CDATA[<span class="form-font-14 color-black">Phishers attempt to create a sense of urgency with threats or enticing offers. Don’t fall for it!</span>]]></Answer>
+				</Question>
+			</Page>
+			<Page Template="QuizTemplate" Name="Phishing Practice: Simulation 2" Type="Quiz" KeepScore="true">
+				<PageSetup ContinueButton="Continue" StartButton="Start">
+					<RightAnswerHeader><![CDATA[<span class="form-font-16 color-black right-answer-image">Correct</span>]]></RightAnswerHeader>
+					<WrongAnswerHeader><![CDATA[<span class="form-font-16 color-black wrong-answer-image">Incorrect</span>]]></WrongAnswerHeader>
+					<ScoreBoxHeader><![CDATA[<span class="form-font-16 color-black score-box-image">Current Score</span>]]></ScoreBoxHeader>
+					<ModuleScoreResultUserWinner><![CDATA[
+						<br>
+						<span style="display:block; padding:4px; padding-right:14px; background-color:#ddffdd;"><span style="display:block" class="form-font-16 color-black right-answer-image">Your Score: <span style="float:right"><b>#UserScore</b></span></span></span>
+						<span style="display:block; height:4px;"></span>
+						<span style="display:block; padding:4px; padding-right:14px;"><span style="display:block" class="form-font-16 color-black wrong-answer-image">Phishers: <span style="float:right"><b>#ComputerScore</b></span></span></span>]]>
+						</ModuleScoreResultUserWinner>
+					<ModuleScoreResultComputerWinner><![CDATA[
+						<br>
+						<span style="display:block; padding:4px; padding-right:14px; background-color:#ddffdd;"><span style="display:block" class="form-font-16 color-black wrong-answer-image">Phishers: <span style="float:right"><b>#ComputerScore</b></span></span></span>
+						<span style="display:block; height:4px;"></span>
+						<span style="display:block; padding:4px; padding-right:14px;"><span style="display:block" class="form-font-16 color-black right-answer-image">Your Score: <span style="float:right"><b>#UserScore</b></span></span></span>]]>
+						</ModuleScoreResultComputerWinner>
+						<IntroTitle><![CDATA[<span class="form-font-14 color-black">Phishing Practice: Simulation 2</span>]]></IntroTitle>
+						<IntroText AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_07.mp3" Top="80" Left="200" Width="350" Height="180" AnswerTop="80" AnswerLeft="200" AnswerWidth="350" AnswerHeight="220" ScoreTop="80" ScoreLeft="200" ScoreWidth="350" ScoreHeight="200"><![CDATA[
+						<span Class="form-font-14 color-black">For this email, keep in mind that Charles is a MegaBank customer. Decide whether each part of the following email message is suspicious or not.  Click “Start” to begin.</span>]]>
+						</IntroText>
+					<Elements>
+					<Element Top="5" Left="5" Width="575" Height="435"><![CDATA[<img src="xmls/en/quiz/mailmac_look_2012.png" Height="435">]]></Element>
+						<Element Top="12" Left="20"><![CDATA[<span Class="form-font-11 color-black"><b>From:</b></span>]]></Element>
+						<Element Top="28" Left="20"><![CDATA[<span Class="form-font-11 color-black"><b>To:</b></span>]]></Element>
+						<Element Top="47" Left="20"><![CDATA[<span Class="form-font-11 color-black">CC:</span>]]></Element>
+						<Element Top="63" Left="20"><![CDATA[<span Class="form-font-11 color-black"><b>Subject:</b></span>]]></Element>
+						<Element Top="12" Left="100" ><![CDATA[<span Class="form-font-11 color-black">MegaBank Online &lt;info@megabank.com&gt;</span>]]></Element>
+						<Element Top="28" Left="100"><![CDATA[<span Class="form-font-11 color-black">Charles@BigBoxes.com</span>]]></Element>
+						<Element Top="63" Left="100"><![CDATA[<span Class="form-font-11 color-black">Message Alert – You Have 1 Important Unread Message</span>]]></Element>
+						<Element Top="105" Left="30" Width="500" ><![CDATA[<span Class="form-font-12 color-black">Dear Charles,<br><br>You have 1 new important message waiting in your inbox.</span>]]></Element>
+						<Element Top="155" Left="25" Width="550" ><![CDATA[<span Class="form-font-12"><img src="xmls/en/images/clicktoread.jpg"></span>]]></Element>
+						<Element Top="220" Left="30" Width="500" ><![CDATA[<span Class="form-font-12 color-black">Best Regards,<br>MegaBank Security Department</span>]]></Element>
+						<Element Top="285" Left="30" Width="500" ><![CDATA[<span Class="form-font-12 color-black">*Please do not reply to this email as your reply will not be received.*</span>]]></Element>
+					</Elements>
+				</PageSetup>
+				<Question Name="Question 1">
+					<Highlight Class="border-box" Top="8" Left="10" Width="320" Height="20"></Highlight>
+					<AnswerBox Top="85" Left="360" Width="195" Height="70"></AnswerBox>
+					<Answer AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_08_i.mp3" Class="themebutton themesimple" Icon="ok" Width="150" Text="Suspicious" ComputerPoints="10" Points="0"><![CDATA[<span class="form-font-14 color-black">There is nothing suspicious about this email address, but keep in mind that the “from” address can easily be faked. </span>]]></Answer>
+					<Answer AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_08_c.mp3" Correct="yes" Class="themebutton themesimple" Icon="cancel" Width="150" Text="NOT Suspicious" ComputerPoints="0" Points="10"><![CDATA[<span class="form-font-14 color-black">There is nothing suspicious about this email address, but keep in mind that the “from” address can easily be faked. </span>]]></Answer>
+				</Question>
+				<Question Name="Question 2">
+					<Highlight Class="border-box" Top="95" Left="20" Width="100" Height="30"></Highlight>
+					<AnswerBox Top="185" Left="200" Width="195" Height="70"></AnswerBox>
+					<Answer AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_09_i.mp3" Class="themebutton themesimple" Icon="ok" Width="150" Text="Suspicious" ComputerPoints="10" Points="0"><![CDATA[<span class="form-font-14 color-black">An email that addresses you by name is not suspicious.  Generic greetings, such as “Dear Customer,” are suspicious. But keep in mind that simply because an email addresses you by name doesn’t make it legitimate. </span>]]></Answer>
+					<Answer AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_09_c.mp3" Correct="yes" Class="themebutton themesimple" Icon="cancel" Width="150" Text="NOT Suspicious" ComputerPoints="0" Points="10"><![CDATA[<span class="form-font-14 color-black">An email that addresses you by name is not suspicious.  Generic greetings, such as “Dear Customer,” are suspicious. But keep in mind that simply because an email addresses you by name doesn’t make it legitimate.</span>]]></Answer>
+				</Question>
+				<Question Name="Question 3">
+					<Highlight Class="border-box" Top="150" Left="20" Width="535" Height="70"></Highlight>
+					<AnswerBox Top="200" Left="575" Width="195" Height="70"></AnswerBox>
+					<Answer AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_10_c.mp3" Correct="yes" Class="themebutton themesimple" Icon="ok" Width="150" Text="Suspicious" ComputerPoints="0" Points="10"><![CDATA[<span class="form-font-14 color-black">Hovering over the link reveals that it is pointing to an address that includes the bank’s name to make it seem legitimate, even though it isn’t. The link actually points to the logoninform.com web address and could take you to a fake website that asks for your account information or to a page that could infect your computer the moment you open it.</span>]]></Answer>
+					<Answer AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_10_i.mp3" Class="themebutton themesimple" Icon="cancel" Width="150" Text="NOT Suspicious" ComputerPoints="10" Points="0"><![CDATA[<span class="form-font-14 color-black">Hovering over the link reveals that it is pointing to an address that includes the bank’s name to make it seem legitimate, even though it isn’t. The link actually points to the logoninform.com web address and could take you to a fake website that asks for your account information or to a page that could infect your computer the moment you open it.</span>]]></Answer>
+				</Question>
+			</Page>
+			<Page Template="QuizTemplate" Name="Phishing Practice: Simulation 3" Type="Quiz" KeepScore="true">
+				<PageSetup ContinueButton="Continue" StartButton="Start">
+					<RightAnswerHeader><![CDATA[<span class="form-font-16 color-black right-answer-image">Correct</span>]]></RightAnswerHeader>
+					<WrongAnswerHeader><![CDATA[<span class="form-font-16 color-black wrong-answer-image">Incorrect</span>]]></WrongAnswerHeader>
+					<ScoreBoxHeader><![CDATA[<span class="form-font-16 color-black score-box-image">Current Score</span>]]></ScoreBoxHeader>
+					<ModuleScoreResultUserWinner><![CDATA[
+						<br>
+						<span style="display:block; padding:4px; padding-right:14px; background-color:#ddffdd;"><span style="display:block" class="form-font-16 color-black right-answer-image">Your Score: <span style="float:right"><b>#UserScore</b></span></span></span>
+						<span style="display:block; height:4px;"></span>
+						<span style="display:block; padding:4px; padding-right:14px;"><span style="display:block" class="form-font-16 color-black wrong-answer-image">Phishers: <span style="float:right"><b>#ComputerScore</b></span></span></span>]]>
+					</ModuleScoreResultUserWinner>
+					<ModuleScoreResultComputerWinner><![CDATA[
+						<br>
+						<span style="display:block; padding:4px; padding-right:14px; background-color:#ddffdd;"><span style="display:block" class="form-font-16 color-black wrong-answer-image">Phishers: <span style="float:right"><b>#ComputerScore</b></span></span></span>
+						<span style="display:block; height:4px;"></span>
+						<span style="display:block; padding:4px; padding-right:14px;"><span style="display:block" class="form-font-16 color-black right-answer-image">Your Score: <span style="float:right"><b>#UserScore</b></span></span></span>]]>
+					</ModuleScoreResultComputerWinner>
+					<IntroTitle><![CDATA[<span class="form-font-16 color-black">Phishing Practice: Simulation 3</span>]]></IntroTitle>
+					<IntroText AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_11.mp3" Top="80" Left="200" Width="350" Height="180" AnswerTop="80" AnswerLeft="200" AnswerWidth="350" AnswerHeight="235" ScoreTop="80" ScoreLeft="200" ScoreWidth="350" ScoreHeight="200"><![CDATA[<span Class="form-font-14 color-black">For this email, keep in mind that Charles frequently shops at OnlineMegaStore.com. Decide whether each part of the following email message is suspicious or not. Click “Start” to begin.</span>]]></IntroText>
+					<Elements>
+					<Element Top="5" Left="5" Width="575" Height="435"><![CDATA[<img src="xmls/en/quiz/mailmac_look_2012.png" Height="435">]]></Element>
+						<Element Top="12" Left="20"><![CDATA[<span Class="form-font-11 color-black"><b>From:</b></span>]]></Element>
+						<Element Top="28" Left="20"><![CDATA[<span Class="form-font-11 color-black"><b>To:</b></span>]]></Element>
+						<Element Top="47" Left="20"><![CDATA[<span Class="form-font-11 color-black"><b>Subject:</b></span>]]></Element>
+						<Element Top="12" Left="100" ><![CDATA[<span Class="form-font-11 color-black">Online MegaStore &lt;notify.OnlineMegaStore@hotmail.com&gt;</span>]]></Element>
+						<Element Top="28" Left="100"><![CDATA[<span Class="form-font-11 color-black">Charles@BigBoxes.com</span>]]></Element>
+						<Element Top="47" Left="100"><![CDATA[<span Class="form-font-11 color-black">Your order of "Omron HBW‐980G Fat Loss ..." has shipped!</span>]]></Element>
+						<Element Top="63" Left="100" Width="100" ><![CDATA[<span Class="form-font-12"><img src="xmls/en/images/attach.png"></span>]]></Element>
+						<Element Top="63" Left="118" Width="100" ><![CDATA[<span Class="form-font-12 link-effect "><span title="ChangeOrder.pdf">ChangeOrder.pdf</title></span>]]></Element>
+						<Element Top="85" Left="22" Width="500" Height="100"><![CDATA[<span Class="form-font-12"><img src="xmls/en/images/onlineorder.jpg">]]></Element>
+						<Element Top="195" Left="30" Width="500" ><![CDATA[<span Class="form-font-12 color-black">Dear Charles,<br><br>Thank you for shopping with us. We thought you'd like to know that we shipped your item, and that this completes your order. Your order is on its way.</span>]]></Element>
+						<Element Top="265" Left="30" Width="500" ><![CDATA[<span Class="form-font-12 link-effect "><span title="http://www.onlinemegastore.com.sec.it/MyOrders">Omron HBW‐980G Fat Loss Monitor Black</title>‐ $109.95<br>Paid by card on file ‐ $109.95</span>]]></Element>
+						<Element Top="325" Left="30" Width="500" ><![CDATA[<span Class="form-font-12 color-black">We hope to see you again soon!<br><br>OnlineMegaStore.com<br>1-800-555-0100<br></span>]]></Element>
+					</Elements>
+				</PageSetup>
+				<Question Name="Question 1">
+					<Highlight Class="border-box" Top="8" Left="10" Width="380" Height="20"></Highlight>
+					<AnswerBox Top="80" Left="420" Width="195" Height="70"></AnswerBox>
+					<Answer AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_12_c.mp3" Correct="yes" Class="themebutton themesimple" Icon="ok" Width="150" Text="Suspicious" ComputerPoints="0" Points="10"><![CDATA[<span class="form-font-14 color-black">The name appears to be correct, but the email doesn’t. Legitimate organizations won’t send emails from public email addresses, such as Gmail, Yahoo, or Hotmail.</span>]]></Answer>
+					<Answer AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_12_i.mp3" Class="themebutton themesimple" Icon="cancel" Width="150" Text="NOT Suspicious" ComputerPoints="10" Points="0"><![CDATA[<span class="form-font-14 color-black">The name appears to be correct, but the email doesn’t. Legitimate organizations won’t send emails from public email addresses, such as Gmail, Yahoo, or Hotmail.</span>]]></Answer>
+				</Question>
+				<Question Name="Question 2">
+					<Highlight Class="border-box" Top="58" Left="90" Width="130" Height="24"></Highlight>
+					<AnswerBox Top="130" Left="240" Width="195" Height="70"></AnswerBox>
+					<Answer AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_13_c.mp3" Correct="yes" Class="themebutton themesimple" Icon="ok" Width="150" Text="Suspicious" ComputerPoints="0" Points="10"><![CDATA[<span class="form-font-14 color-black">An attachment in an unsolicited email message is suspicious. Phishers can embed malicious software into an attachment that could be automatically installed once you open it. Don’t open attachments in unsolicited emails or any email that seems suspicious.</span>]]></Answer>
+					<Answer AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_13_i.mp3" Class="themebutton themesimple" Icon="cancel" Width="150" Text="NOT Suspicious" ComputerPoints="10" Points="0"><![CDATA[<span class="form-font-14 color-black">An attachment in an unsolicited email message is suspicious. Phishers can embed malicious software into an attachment that could be automatically installed once you open it. Don’t open attachments in unsolicited emails or any email that seems suspicious.</span>]]></Answer>
+				</Question>
+				<Question Name="Question 3">
+					<Highlight Class="border-box" Top="80" Left="20" Width="500" Height="105" Title="http://MegaBank.secure.logoninform.com/MyAccount/jdkj98320291jx92;4"></Highlight>
+					<AnswerBox Top="180" Left="537" Width="195" Height="70"></AnswerBox>
+					<Answer AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_14_c.mp3" Correct="yes" Class="themebutton themesimple" Icon="ok" Width="150" Text="Suspicious" ComputerPoints="0" Points="10"><![CDATA[<span class="form-font-14 color-black">If you look closely you can see that this link goes to the sec.it domain. Never click links that attempt to mask their true destination.</span>]]></Answer>
+					<Answer AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_14_i.mp3" Class="themebutton themesimple" Icon="cancel" Width="150" Text="NOT Suspicious" ComputerPoints="10" Points="0"><![CDATA[<span class="form-font-14 color-black">If you look closely you can see that this link goes to the sec.it domain. Never click links that attempt to mask their true destination.</span>]]></Answer>
+				</Question>
+				<Question Name="Question 4">
+					<Highlight Class="border-box" Top="350" Left="20" Width="135" Height="42"></Highlight>
+					<AnswerBox Top="400" Left="200" Width="195" Height="70"></AnswerBox>
+					<Answer AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_15_c.mp3" Correct="yes" Class="themebutton themesimple" Icon="ok" Width="150" Text="Suspicious" ComputerPoints="0" Points="10"><![CDATA[<span class="form-font-14 color-black">Since this email is suspicious you should be suspicious of any number listed in it and not call it. Phishers can create fake voice response systems that sound just like calling the real company. Instead, call the number listed on your statement or an associated card or get the number from the company’s website by typing in the web address in a browser, rather than clicking on a link.</span>]]></Answer>
+					<Answer AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_15_i.mp3" Class="themebutton themesimple" Icon="cancel" Width="150" Text="NOT Suspicious" ComputerPoints="10" Points="0"><![CDATA[<span class="form-font-14 color-black">Since this email is suspicious you should be suspicious of any number listed in it and not call it. Phishers can create fake voice response systems that sound just like calling the real company. Instead, call the number listed on your statement or an associated card or get the number from the company’s website by typing in the web address in a browser, rather than clicking on a link.</span>]]></Answer>
+				</Question>
+			</Page>
+		</Module>
+		<Module Name="Outwitting Internet Spear Phishers">
+			<Page VideoTemplate="VideoTemplate1" TextTemplate="TextTemplate1" Name="Spear Phishers" MinTime="1" VideoImage="xmls/en/images/video-screen.png"  Type="Course">
+				<Mode Level="1" File="http://inspiredcdn.s3.amazonaws.com/AP-101/video/iE_Spear_Phishers.mp4,http://inspiredcdn.s3.amazonaws.com/AP-101/video/iE_Internet_Phishers.webm"></Mode>
+				<Mode Level="2" File="http://inspiredcdn.s3.amazonaws.com/AP-101/video/iE_Spear_Phishers_02.mp4,http://inspiredcdn.s3.amazonaws.com/AP-101/video/iE_Spear_Phishers.webm"></Mode>
+
+				<Text Insert="Insert" Target="TextArea1" TimeToShow="00:00:01" AltImage="xmls/en/images/spear1.png"><![CDATA[<span class="form-font-12-text"><P><b>Outwitting Internet Spear Phishers</b><br><br>Whereas regular Phishers target a wide audience by sending their fake emails to any address they can find, Spear Phishers target a select group, or a few individuals, with a highly tailored message.  This method is much harder to counter because the email messages can seem so authentic.
+				<br><br>For example, an attacker could conduct an online search, quickly compiling a list of names, email addresses, and job titles of you and your colleagues.</P></span>]]></Text>
+				<Text Insert="Overwrite" Target="TextArea1" TimeToShow="00:00:32" AltImage="xmls/en/images/spear2.png"><![CDATA[<span class="form-font-12-text"><P>The attacker can then send out an email message that appears to be coming from a coworker, discussing a relevant topic. This makes it much harder to resist opening an infected attachment or clicking on an infected link.
+				<br><br>The attacker can then send out an email message that appears to be coming from a coworker, discussing a relevant topic. This makes it much harder to resist opening an infected attachment or clicking on an infected link.
+				<br><br>In fact, spear phishing is estimated to be four times as successful as regular phishing.  To avoid being tricked by spear phishers, follow these best practices:</P></span>]]></Text>
+				<Text Insert="Overwrite" Target="TextArea1" TimeToShow="00:01:07" AltImage="xmls/en/images/spear3.png"><![CDATA[<span class="form-font-12-text"><p>If a suspicious looking email arrives from someone you trust, call them or email them separately and ask if they sent it before opening the email, clicking on any links, or opening any attachments.
+				<br><br>And keep in mind that anything you’ve posted on social networks can be used in spear phishing emails to make them seem legitimate.</p></span>]]></Text>
+			</Page>
+		</Module>
+		<Module Name="Quiz">
+			<Page Template="QuizTemplate" Name="Spear Phishing Practice: Simulation 1" Type="Quiz" KeepScore="true">
+				<PageSetup ContinueButton="Continue" StartButton="Start">
+					<RightAnswerHeader><![CDATA[<span class="form-font-16 color-black right-answer-image">Correct</span>]]></RightAnswerHeader>
+					<WrongAnswerHeader><![CDATA[<span class="form-font-16 color-black wrong-answer-image">Incorrect</span>]]></WrongAnswerHeader>
+					<ScoreBoxHeader><![CDATA[<span class="form-font-16 color-black score-box-image">Current Score</span>]]></ScoreBoxHeader>
+					<ModuleScoreResultUserWinner><![CDATA[
+						<br>
+						<span style="display:block; padding:4px; padding-right:14px; background-color:#ddffdd;"><span style="display:block" class="form-font-16 color-black right-answer-image">Your Score: <span style="float:right"><b>#UserScore</b></span></span></span>
+						<span style="display:block; height:4px;"></span>
+						<span style="display:block; padding:4px; padding-right:14px;"><span style="display:block" class="form-font-16 color-black wrong-answer-image">Phishers: <span style="float:right"><b>#ComputerScore</b></span></span></span><br>]]>
+					</ModuleScoreResultUserWinner>
+					<ModuleScoreResultComputerWinner><![CDATA[
+						<br>
+						<span style="display:block; padding:4px; padding-right:14px; background-color:#ddffdd;"><span style="display:block" class="form-font-16 color-black wrong-answer-image">Phishers: <span style="float:right"><b>#ComputerScore</b></span></span></span>
+						<span style="display:block; height:4px;"></span>
+						<span style="display:block; padding:4px; padding-right:14px;"><span style="display:block" class="form-font-16 color-black right-answer-image">Your Score: <span style="float:right"><b>#UserScore</b></span></span></span><br>]]>
+					</ModuleScoreResultComputerWinner>
+					<IntroTitle><![CDATA[<span class="form-font-14 color-black">Spear Phishing Practice: Simulation 1</span>]]></IntroTitle>
+						<IntroText AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_17.mp3" Top="80" Left="200" Width="350" Height="235" AnswerTop="80" AnswerLeft="200" AnswerWidth="350" AnswerHeight="210" ScoreTop="80" ScoreLeft="200" ScoreWidth="350" ScoreHeight="200"><![CDATA[
+						<span Class="form-font-14 color-black">Now let’s look at a few more email messages.<br><br>In this simulation, you’ll play the role of Sophia, who works with Charles at Big Boxes International. Mary Rios is the head of IT at Big Boxes.  Decide whether each part of the email message is suspicious or not. Click “Start” to begin.</span>]]>
+						</IntroText>
+					<Elements>
+						<Element Top="5" Left="5" Width="575" Height="435"><![CDATA[<img src="xmls/en/quiz/mailmac_look_2012.png" Height="435">]]></Element>
+						<Element Top="12" Left="20"><![CDATA[<span Class="form-font-11 color-black"><b>From:</b></span>]]></Element>
+						<Element Top="28" Left="20"><![CDATA[<span Class="form-font-11 color-black"><b>To:</b></span>]]></Element>
+						<Element Top="47" Left="20"><![CDATA[<span Class="form-font-11 color-black"><b>CC:</b></span>]]></Element>
+						<Element Top="63" Left="20"><![CDATA[<span Class="form-font-11 color-black"><b>Subject:</b></span>]]></Element>
+						<Element Top="12" Left="100" ><![CDATA[<span Class="form-font-11 color-black">Mary Rios &lt;Marry.Rios@gmail.com&gt;</span>]]></Element>
+						<Element Top="28" Left="100"><![CDATA[<span Class="form-font-11 color-black">Sophia@BigBoxes.com</span>]]></Element>
+						<Element Top="63" Left="100"><![CDATA[<span Class="form-font-11 color-black">Big Boxes International: Email Server Update</span>]]></Element>
+						<Element Top="105" Left="30" Width="500" ><![CDATA[<span Class="form-font-12 color-black">Sophia,<br><br>We are currently rolling out an update to our email system. In the process, we are deleting inactive mailboxes.<br><br>To prevent your account from being deleted, you will need to verify and update your information.  To ensure your information is sent securely, please use the form below.</span>]]></Element>
+						<Element Top="240" Left="30" Width="500" ><![CDATA[<span Class="form-font-12 color-black">Full Name: [______________]<br>Email: [______________]<br>Password: [______________]</span>]]></Element>
+						<Element Top="300" Left="30" Width="500" ><![CDATA[<span Class="form-font-12 link-effect">[ Submit ]</span>]]></Element>
+						<Element Top="325" Left="30" Width="500" ><![CDATA[<span Class="form-font-12 color-black">Regards,<br>Mary Rios<br>IT Manager<br>Big Boxes International</span>]]></Element>
+					</Elements>
+				</PageSetup>
+				<Question Name="Question 1">
+					<Highlight Class="border-box" Top="8" Left="10" Width="320" Height="20"></Highlight>
+					<AnswerBox Top="80" Left="360" Width="215" Height="70"></AnswerBox>
+					<Answer AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_18_c.mp3" Correct="yes" Class="themebutton themesimple" Icon="ok" Width="150" Text="Suspicious" ComputerPoints="0" Points="10"><![CDATA[<span class="form-font-14 color-black">This email address is suspicious because Mary’s name is misspelled and it’s from a Gmail account. Spear Phishers often go through the trouble of creating fake personal email accounts to make it appear that you are getting an email from a coworker or friend. </span>]]></Answer>
+					<Answer AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_18_i.mp3" Class="themebutton themesimple" Icon="cancel" Width="150" Text="NOT Suspicious" ComputerPoints="10" Points="0"><![CDATA[<span class="form-font-14 color-black">This email address is suspicious because Mary’s name is misspelled and it’s from a Gmail account. Spear Phishers often go through the trouble of creating fake personal email accounts to make it appear that you are getting an email from a coworker or friend.</span>]]></Answer>
+				</Question>
+				<Question Name="Question 2">
+					<Highlight Class="border-box" Top="235" Left="20" Width="520" Height="55"></Highlight>
+						<AnswerBox Top="300" Left="570" Width="195" Height="70"></AnswerBox>
+					<Answer AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_19_c.mp3" Correct="yes" Class="themebutton themesimple" Icon="ok" Width="150" Text="Suspicious" ComputerPoints="0" Points="10"><![CDATA[<span class="form-font-14 color-black">No legitimate person will ask for your password via email, an email form, or any other means.</span>]]></Answer>
+					<Answer AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_19_i.mp3" Class="themebutton themesimple" Icon="cancel" Width="150" Text="NOT Suspicious" ComputerPoints="10" Points="0"><![CDATA[<span class="form-font-14 color-black">No legitimate person will ask for your password via email, an email form, or any other means.</span>]]></Answer>
+				</Question>
+			</Page>
+			<Page Template="QuizTemplate" Name="Spear Phishing Practice: Simulation 2" Type="Quiz" KeepScore="true">
+				<PageSetup ContinueButton="Continue" StartButton="Start">
+					<RightAnswerHeader><![CDATA[<span class="form-font-16 color-black right-answer-image">Correct</span>]]></RightAnswerHeader>
+					<WrongAnswerHeader><![CDATA[<span class="form-font-16 color-black wrong-answer-image">Incorrect</span>]]></WrongAnswerHeader>
+					<ScoreBoxHeader><![CDATA[<span class="form-font-16 color-black score-box-image">Final Score</span>]]></ScoreBoxHeader>
+					<ModuleScoreResultUserWinner><![CDATA[
+						<br>
+						<span style="display:block; padding:4px; padding-right:14px; background-color:#ddffdd;"><span style="display:block" class="form-font-16 color-black right-answer-image">Your Score: <span style="float:right"><b>#UserScore</b></span></span></span>
+						<span style="display:block; height:4px;"></span>
+						<span style="display:block; padding:4px; padding-right:14px;"><span style="display:block" class="form-font-16 color-black wrong-answer-image">Phishers: <span style="float:right"><b>#ComputerScore</b></span></span></span>
+						<br>
+						<span Class="form-font-11 color-black" style="float:left;"><img src="xmls/en/images/star.smaller.png"></span>
+						<span class="form-font-16 color-black" style="display:inline;"><B>You've defeated the Phishers!</B></span>]]></ModuleScoreResultUserWinner>
+					<ModuleScoreResultComputerWinner><![CDATA[
+						<br>
+						<span style="display:block; padding:4px; padding-right:14px; background-color:#ddffdd;"><span style="display:block" class="form-font-16 color-black wrong-answer-image">Phishers: <span style="float:right"><b>#ComputerScore</b></span></span></span>
+						<span style="display:block; height:4px;"></span>
+						<span style="display:block; padding:4px; padding-right:14px;"><span style="display:block" class="form-font-16 color-black right-answer-image">Your Score: <span style="float:right"><b>#UserScore</b></span></span></span>
+						<br>
+						<span Class="form-font-11 color-black" style="float:left;"><img src="xmls/en/images/warning-icon-v2.png"></span>
+						<span class="form-font-16 color-black" style="display:inline;"> <B>The Phishers won!</B><br><br><br><B>To get course credit, you will have to retake this course from the beginning.</B></span>]]></ModuleScoreResultComputerWinner>
+					<IntroTitle><![CDATA[<span class="form-font-16 color-black">Spear Phishing Practice: Simulation 2</span>]]></IntroTitle>
+					<IntroText AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_20.mp3" Top="80" Left="200" Width="350" Height="180" AnswerTop="80" AnswerLeft="200" AnswerWidth="350" AnswerHeight="235" ScoreTop="80" ScoreLeft="200" ScoreWidth="350" ScoreHeight="290"><![CDATA[<span Class="form-font-14 color-black">For this email, keep in mind that Alex Smith is Sophia and Charles’ supervisor and John is another coworker. Click “Start” to begin.</span>]]></IntroText>
+					<Elements>
+					<Element Top="5" Left="5" Width="575" Height="435"><![CDATA[<img src="xmls/en/quiz/mailmac_look_2012_v2.png" Height="435">]]></Element>
+						<Element Top="12" Left="20"><![CDATA[<span Class="form-font-11 color-black"><b>From:</b></span>]]></Element>
+						<Element Top="28" Left="20"><![CDATA[<span Class="form-font-11 color-black"><b>To:</b></span>]]></Element>
+						<Element Top="47" Left="20"><![CDATA[<span Class="form-font-11 color-black"><b>CC:</b></span>]]></Element>
+						<Element Top="63" Left="20"><![CDATA[<span Class="form-font-11 color-black"><b>Subject:</b></span>]]></Element>
+						<Element Top="79" Left="100"><![CDATA[<span Class="form-font-11 color-black"><img src="xmls/en/images/attach.png"></span>]]></Element>
+						<Element Top="79" Left="118"><![CDATA[<span Class="form-font-11 link-effect"><span title="Budget.xlsx">Budget.xlsx</title></span>]]></Element>
+						<Element Top="12" Left="100" ><![CDATA[<span Class="form-font-11 color-black">Alex Smith &lt;Alex.Smith@BigBoxes.com&gt;</span>]]></Element>
+						<Element Top="28" Left="100"><![CDATA[<span Class="form-font-11 color-black">Sophia@BigBoxes.com</span>]]></Element>
+						<Element Top="28" Left="20"><![CDATA[<span Class="form-font-11 color-black"><b>To:</b></span>]]></Element>
+						<Element Top="47" Left="100"><![CDATA[<span Class="form-font-11 color-black"><b>Charles@BigBoxes.com; John@BigBoxes.com</b></span>]]></Element>
+						<Element Top="63" Left="100"><![CDATA[<span Class="form-font-11 color-black">Next Year's Budget</span>]]></Element>
+						<Element Top="125" Left="30" Width="500" ><![CDATA[<span Class="form-font-12 color-black">Have a look at the attached spreadsheet.<br><br>Regards,<br>Al</span>]]></Element>
+						<Element Top="210" Left="30" Width="500" ><![CDATA[<span Class="form-font-12 color-black">+++++++++++++++++++++++++++++</span>]]></Element>
+					</Elements>
+				</PageSetup>
+				<Question Name="Question 1">
+					<Highlight Class="border-box" Top="42" Left="10" Width="380" Height="20"></Highlight>
+					<AnswerBox Top="100" Left="430" Width="195" Height="70"></AnswerBox>
+					<Answer AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_21_i.mp3" Class="themebutton themesimple" Icon="ok" Width="150" Text="Suspicious" ComputerPoints="10" Points="0"><![CDATA[<span class="form-font-14 color-black">Having coworkers copied on an email is not suspicious.  But keep in mind that Spear Phishers will sometimes find out who your coworkers and colleagues are and copy them on a phishing email to make it seem more legitimate.</span>]]></Answer>
+					<Answer AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_21_c.mp3" Correct="yes" Class="themebutton themesimple" Icon="cancel" Width="150" Text="NOT Suspicious" ComputerPoints="0" Points="10"><![CDATA[<span class="form-font-14 color-black">Having coworkers copied on an email is not suspicious.  But keep in mind that Spear Phishers will sometimes find out who your coworkers and colleagues are and copy them on a phishing email to make it seem more legitimate.</span>]]></Answer>
+				</Question>
+				<Question Name="Question 2">
+					<Highlight Class="border-box" Top="74" Left="95" Width="80" Height="20"></Highlight>
+					<AnswerBox Top="130" Left="220" Width="195" Height="70"></AnswerBox>
+					<Answer AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_22_i.mp3" Class="themebutton themesimple" Icon="ok" Width="150" Text="Suspicious" ComputerPoints="10" Points="0"><![CDATA[<span class="form-font-14 color-black">Getting an Excel attachment from your supervisor isn’t necessarily suspicious.  But keep in mind that malicious software can be spread through attachments and Spear Phishers will often send attachments in their phishing emails.</span>]]></Answer>
+					<Answer AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_22_c.mp3" Correct="yes" Class="themebutton themesimple" Icon="cancel" Width="150" Text="NOT Suspicious" ComputerPoints="0" Points="10"><![CDATA[<span class="form-font-14 color-black">Getting an Excel attachment from your supervisor isn’t necessarily suspicious.  But keep in mind that malicious software can be spread through attachments and Spear Phishers will often send attachments in their phishing emails.</span>]]></Answer>
+				</Question>
+				<Question Name="Question 3">
+					<AnswerBox Top="220" Left="200" Width="195" Height="160"><![CDATA[<span class="form-font-14 color-black">Overall, is this email message suspicious?</span>]]></AnswerBox>
+					<Answer AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_23_i.mp3" Class="themebutton themesimple" Icon="ok" Width="150" Text="Yes" ComputerPoints="10" Points="0"><![CDATA[<span class="form-font-14 color-black">This email could be legitimate.  It is actually based on a real spear phishing email. The question to ask yourself here is, is this a normal interaction?  Does your supervisor ever send you a budget spreadsheet? Is it budget season?  If it doesn’t feel right, you should call the sender or email them separately and ask if they sent it, before opening it.</span>]]></Answer>
+					<Answer AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_23_i.mp3" Class="themebutton themesimple" Icon="cancel" Width="150" Text="No" ComputerPoints="10" Points="0"><![CDATA[<span class="form-font-14 color-black">This email could be legitimate.  It is actually based on a real spear phishing email. The question to ask yourself here is, is this a normal interaction?  Does your supervisor ever send you a budget spreadsheet? Is it budget season?  If it doesn’t feel right, you should call the sender or email them separately and ask if they sent it, before opening it.</span>]]></Answer>
+					<Answer AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_23_c.mp3" Correct="yes" Class="themebutton themesimple" Icon="help" Width="150" Text="Maybe" ComputerPoints="0" Points="10"><![CDATA[<span class="form-font-14 color-black">This email could be legitimate.  It is actually based on a real spear phishing email. The question to ask yourself here is, is this a normal interaction?  Does your supervisor ever send you a budget spreadsheet? Is it budget season?  If it doesn’t feel right, you should call the sender or email them separately and ask if they sent it, before opening it.</span>]]></Answer>
+				</Question>
+			</Page>
+		</Module>
+		<Module Name="Conclusion">
+			<Page Template="SummaryTemplate" Name="Module Summary" Type="Slide" AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_24_summary.mp3">
+					<Elements>
+						<Element TimeToShow="00:00:00"  Top="15" Left="15" Width="487" Height="400"><![CDATA[<img src="xmls/en/images/phishproof_summary.png">]]></Element>
+						<Element TimeToShow="00:00:00" Top="35" Left="450" Height="100"><![CDATA[<span style="font-size:22px; color:black"><b>Module Summary</b></span>]]></Element>
+						<Element TimeToShow="00:00:00" Top="75" Left="450"><![CDATA[<span Class="form-font color-black">Phishers use lies and deceptive tactics to trick people into giving away their sensitive information or installing malicious software on their computers.
+						<br><br>Don’t fall for it.  Always think before you click to avoid getting hooked by an Internet Phisher.<br><br>If you think you’ve been the victim of a phishing attack, contact the Help Desk who can further assist you.</span>]]></Element>
+					</Elements>
+			</Page>
+			<Page Template="SummaryTemplate" Name="Module Complete" Type="Slide" AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_24_complete.mp3">
+					<Elements>
+						<Element TimeToShow="00:00:00"  Top="15" Left="15" Width="487" Height="400"><![CDATA[<img src="xmls/en/images/phishproof_complete.png">]]></Element>
+						<Element TimeToShow="00:00:00" Top="35" Left="450" Height="120"><![CDATA[<span style="font-size:22px; color:black"><b>Course Complete</b></span>]]></Element>
+						<Element TimeToShow="00:00:00" Top="75" Left="450"><![CDATA[<span Class="form-font color-black">Thank you for completing this course.</span>]]></Element>
+					</Elements>
+			</Page>
+		</Module>
+
+		<Module Name="Policies">
+			<Page Template="QuizTemplate" Name="Image Quiz 1" Type="FlatQuiz" AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_02.mp3" ContinueButton="Continue" StartButton="Start">
+
+				<RightAnswerHeader><![CDATA[<span class="form-font-16 color-black right-answer-image">Correct</span>]]></RightAnswerHeader>
+				<WrongAnswerHeader><![CDATA[<span class="form-font-16 color-black wrong-answer-image">Incorrect</span>]]></WrongAnswerHeader>
+				<Elements>
+					<Element Top="60" Left="60" Width="450"><![CDATA[<span Class="form-font-16 color-black"><b>You have connected your tablet via a secure Wi-Fi connection and need to upload a sensitive document to a website. What should you dou?</b></span>]]></Element>
+					<Element Top="160" Left="60" AnswerID="1" HoverClass="flat-quiz-answer"><![CDATA[<center><b><img src="xmls/en/images/keyboard-press.jpg"><center><br><span Class="form-font-14 color-black">Upload it right away</span>]]></Element>
+					<Element Top="160" Left="420" AnswerID="2" HoverClass="flat-quiz-answer"><![CDATA[<center><b><img src="xmls/en/images/wifi-security.jpg"><center><br><span Class="form-font-14 color-black">Ensure additional security is in place.</span>]]></Element>
+				</Elements>
+				<AnswerBox Top="85" Left="200" Width="400" Height="200"></AnswerBox>
+				<Answer AnswerID="1" AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_03_c.mp3" Correct="yes"><![CDATA[<span class="form-font-14 color-black">That is correct, on a mobile device a securid connection is all that is needed..</span>]]></Answer>
+				<Answer AnswerID="2" AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_03_i.mp3"><![CDATA[<span class="form-font-14 color-black">Incorrect, you don't need more security than a secure Wi-Fi on a mobile device.</span>]]></Answer>
+			</Page>
+
+			<Page Template="SummaryTemplate" Name="Code of Conduct" Type="Policy" AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_24_summary.mp3" RadioValue="1" RadioName="check" RadioCount="8">
+				<IncompleteHeader><![CDATA[<span class="form-font-16 color-black wrong-answer-image">Incomplete</span>]]></IncompleteHeader>
+				<SuccessHeader><![CDATA[<span class="form-font-16 color-black right-answer-image">Thank You</span>]]></SuccessHeader>
+				<InvalidHeader><![CDATA[<span class="form-font-16 color-black wrong-answer-image">Invalid</span>]]></InvalidHeader>
+
+
+				<IncompleteBox Top="85" Left="200" Width="400" Height="200" AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_03_i.mp3"><![CDATA[<span class="form-font-14 color-black">Please agree on all questions. You may have to scorll down to check them all.</span>]]></IncompleteBox>
+				<SuccessBox Top="85" Left="200" Width="400" Height="200" AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_03_c.mp3"><![CDATA[<span class="form-font-14 color-black">Success, thank you. Please click on next to start the course..</span>]]></SuccessBox>
+				<InvalidBox Top="85" Left="200" Width="400" Height="200" AudioFile="http://inspiredcdn.s3.amazonaws.com/AP-101/audio/S161_03_i.mp3"><![CDATA[<span class="form-font-14 color-black">Invalid, you have to agree on all the terms.</span>]]></InvalidBox>
+
+					<Elements>
+						<Element Top="15" Left="30" Width="64" Height="64"><![CDATA[<img src="xmls/en/images/agt_action_success.png" style="height:64px">]]></Element>
+						<Element Top="25" Left="105" Height="100"><![CDATA[<span style="font-size:22px; color:red;"><b>Policy Acceptance Form</b></span>]]></Element>
+						<Element Top="55" Left="95" Height="100"><![CDATA[<span style="font-size:16px; color:black"><b>Please complete the policy acceptance form bellow.</b></span>]]></Element>
+
+						<Element Top="85" Left="15"><![CDATA[
+<style type="text/css">
+td { padding: 5px 0px; }
+tr.policyrow:hover { background-color: #DDDDDD;}
+tr.policyrow_odd { background-color: #EEEEEE;}
+tr.policyrow_odd:hover { background-color: #DDDDDD;}
+</style>
+
+<table border=0 cellpadding=0 cellspacing=0 style="width:735px;">
+<tr>
+<td style="width:40px"><span style="font-size:14px; color:black"><b><center>Yes
+<td style="width:40px"><span style="font-size:14px; color:black"><b><center>No
+<td style="width:20px;">
+<td style="width:610px">
+<td style="width:25px">
+</table>
+
+<div style="overflow-x: hidden; overflow-y: scroll; width:750px; height:270px; border:1px solid black; padding:0px;">
+
+<table border=0 cellpadding=0 cellspacing=0 style="width:735px;">
+<tr class="policyrow">
+<td style="width:40px;"><center><input type="radio"  style="cursor:pointer" name="check_1" value="1">
+<td style="width:40px"><center><input type="radio"  style="cursor:pointer" name="check_1" value="0">
+<td style="width:20px; border-left: 1px solid black;">
+<td style="width:610px"><span style="font-size:14px; color:black">Do you understand our organization has a zero tolerance policy with respect to workplace harrasment based on <span style="color:blue"><b>gender, race, national origin, age and disability?</b>
+<td style="width:25px">
+</tr>
+
+<tr class="policyrow_odd">
+<td style="width:40px"><center><input type="radio"  style="cursor:pointer" name="check_2" value="1">
+<td style="width:40px"><center><input type="radio"  style="cursor:pointer" name="check_2" value="0">
+<td style="width:20px; border-left: 1px solid black;">
+<td style="width:610px"><span style="font-size:14px; color:black">organization has a zero tolerance policy with respect to workplace harrasment based on gender, race, national origin, age and disability?</b>
+<td style="width:25px">
+</tr>
+
+<tr class="policyrow">
+<td style="width:40px"><center><input type="radio"  style="cursor:pointer" name="check_3" value="1">
+<td style="width:40px"><center><input type="radio"  style="cursor:pointer" name="check_3" value="0">
+<td style="width:20px; border-left: 1px solid black;">
+<td style="width:610px"><span style="font-size:14px; color:black">Do you understand our organization has a based on <span style="color:blue"><b>gender, race, national origin, age and disability</b></span> zero tolerance policy with respect to workplace harrasment?
+<td style="width:25px">
+</tr>
+
+<tr class="policyrow_odd">
+<td style="width:40px"><center><input type="radio"  style="cursor:pointer" name="check_4" value="1">
+<td style="width:40px"><center><input type="radio"  style="cursor:pointer" name="check_4" value="0">
+<td style="width:20px; border-left: 1px solid black;">
+<td style="width:610px"><span style="font-size:14px; color:black">zero tolerance policy with respect to workplace harrasment based on gender, race, national origin, age and disability?</b>
+<td style="width:25px">
+</tr>
+
+<tr class="policyrow">
+<td style="width:40px"><center><input type="radio"  style="cursor:pointer" name="check_5" value="1">
+<td style="width:40px"><center><input type="radio"  style="cursor:pointer" name="check_5" value="0">
+<td style="width:20px; border-left: 1px solid black;">
+<td style="width:610px"><span style="font-size:14px; color:black">Do you organization understand our has a zero tolerance policy with respect to workplace harrasment based on <span style="color:blue"><b>gender, race, national origin, age and disability?</b>
+<td style="width:25px">
+</tr>
+
+<tr class="policyrow_odd">
+<td style="width:40px"><center><input type="radio"  style="cursor:pointer" name="check_6" value="1">
+<td style="width:40px"><center><input type="radio"  style="cursor:pointer" name="check_6" value="0">
+<td style="width:20px; border-left: 1px solid black;">
+<td style="width:610px"><span style="font-size:14px; color:black">policy with respect to workplace harrasment based on gender, race, national origin, age and disability?</b>
+<td style="width:25px">
+</tr>
+
+<tr class="policyrow">
+<td style="width:40px"><center><input type="radio"  style="cursor:pointer" name="check_7" value="1">
+<td style="width:40px"><center><input type="radio"  style="cursor:pointer" name="check_7" value="0">
+<td style="width:20px; border-left: 1px solid black;">
+<td style="width:610px"><span style="font-size:14px; color:black">Do you a zero tolerance policy with respect to workplace harrasment based on <span style="color:blue"><b>gender, race, national origin, age and disability?</b>
+<td style="width:25px">
+</tr>
+
+<tr class="policyrow_odd">
+<td style="width:40px"><center><input type="radio"  style="cursor:pointer" name="check_8" value="1">
+<td style="width:40px"><center><input type="radio"  style="cursor:pointer" name="check_8" value="0">
+<td style="width:20px; border-left: 1px solid black;">
+<td style="width:610px"><span style="font-size:14px; color:black">organization tolerance policy with respect to workplace harrasment based on gender, race, national origin, age and disability?</b>
+<td style="width:25px">
+</tr>
+
+</table>
+
+</div>
+
+<a href="#" onclick="return false" style="cursor:pointer; width:80px; margin-top:10px; margin-left:650px;" class="themebutton themesimple" id="PolicyButton" title="Submit"><center>Submit</center></a>
+
+
+]]>
+						</Element>
+					</Elements>
+			</Page>
+
+
+		</Module>
+
+	</Modules>
+</course>

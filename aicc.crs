@@ -1,0 +1,19 @@
+
+[Course]
+  Course_Creator = Inspired eLearning Inc.
+  Course_ID = DEMO
+  Course_System = Web
+  Course_Title = AICC iEngine 4.1 Test Course
+  Level = 1
+  Max_Fields_CST = 2
+  Total_AUs = 1
+  Total_Blocks = 0
+  Version = 2.2
+ 
+ 
+[Course_Behavior]
+  Max_Normal = 0
+ 
+[Course_Description]
+  
+  This course is designed to build your awareness of information security issues so that you can prevent security breaches. 

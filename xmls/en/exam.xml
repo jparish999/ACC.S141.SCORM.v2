@@ -1,0 +1,1593 @@
+<Final>
+	<SubFinalPass AudioFile="http://cdn.inspiredelearning.com/EC-131/generic/audio/qui.mp3" Top="140" Left="210"><![CDATA[
+
+		<div class="FreeTestDialog" style="Width:500px; Height:400px;">
+			<div class="CourseVideoQuizDialogHeader"><img src="xmls/en/images/s141/quiz_light/correct_frame.png" style="position:absolute;"><span class="form-font-20lg" style="padding-left:40px;"><font color="#000000">Sub Final Score</font></span></div>
+			<div class="CourseVideoQuizDialogContent" style="Width:460px; height:280px; padding-right:20px">
+				<span style="display:block; padding:4px; padding-right:14px; background-color:#ddffdd;"><span style="display:block" class="form-font-16 color-black right-answer-image">Your Score: <span style="float:right"><b>#UserScore</b></span></span></span>
+				<span style="display:block; height:4px;"></span>
+				<span style="display:block; padding:4px; padding-right:14px;"><span style="display:block" class="form-font-16 color-black right-answer-image">Max Score: <span style="float:right"><b>#MaxScore</b></span></span></span>
+				<span style="display:block; height:4px;"></span>
+				<span style="display:block; padding:4px; padding-right:14px;"><span style="display:block" class="form-font-16 color-black right-answer-image">To pass you have to score more than <b>#PassingPercentage%</b>.</span></span>
+				<span style="display:block; height:4px;"></span>
+				<span style="display:block; padding:4px; padding-right:14px;"><span style="display:block" class="form-font-16 color-black right-answer-image">You scored: <span style="float:right"><b>#UserPercentage%</b></span></span></span>
+				<br>
+				<span Class="form-font-11 color-black" style="float:left;"><img src="xmls/en/images/star.smaller.png"></span>
+				<span class="form-font-16 color-black" style="display:inline;"><B>You have passed the quiz!</B></span>
+			</div>
+			<a href="#" id="FreeFormDialogCloseButton" style="display:block; position:absolute; right:10px; bottom:10px; width:40px; margin-bottom:0px;" class="themebutton themesimple" title="Sonraki"><center><img src="skins/new-wide/play_blue.png" style="margin-right:0px"></center></a>
+		</div>
+	]]></SubFinalPass>
+
+	<SubFinalFail AudioFile="http://cdn.inspiredelearning.com/EC-131/generic/audio/quz.mp3" Top="110" Left="180"><![CDATA[
+
+		<div class="FreeTestDialog" style="width: 535px; height: 360px;">
+			<div class="CourseVideoQuizDialogHeader">
+				<img src="xmls/en/images/s141/quiz_light/incorrect_frame.png" class="guest_image-header-popup">
+				<p class="guest_text-header-popup form-font-20lg">Results</p>
+			</div>
+			<div class="CourseVideoQuizDialogContent" style="width: auto; height: auto;">
+
+				<div>
+					<div style=" float: left; width: 173px; height: 158px; background: url('xmls/en/images/s141/final_exam/bg_final-exam_sub-fail.png') no-repeat;"  >	
+						<p class="form-font-14 color-black" 
+							style="font-size: 100px; text-align: center; color: #fff; text-shadow: 0px -1px 0px rgba(141, 1, 1, 1); width: 138px; margin-bottom: 0; line-height: 126px;">
+							#UserPercentage<span style="vertical-align: super; font-size: 35px; position: absolute; top: -3px;">%</span>
+						</p>
+						<p style="color: #fff; font-size: 16px; text-shadow: 0px -1px 0px rgba(118, 0, 0, 1); position: absolute; left: 53px; top: 148px;">
+							Passing: #PassingPercentage%+
+						</p>
+					</div>
+					<div style="float:left; width: 60%; margin-left: 15px;">
+						<div style="">	
+							<p class="form-font-14 color-black" style="color: #f20000; font-size: 17px;"><span style="font-weight: bold; line-height: 18px; margin-bottom: 8px;">You did not pass the exam.</span> </p>	
+						</div>
+						<div style="background-color: #fff2f2; border: 1px solid #ff5555; border-radius: 4px; width: 100%; padding: 15px 0;">
+							<p class="form-font-14 color-black" style="padding: 0 10px 0 15px; margin-bottom: 0;">You answered <span style="font-weight: bold;">#UserScore</span> out of <span style="font-weight: bold;">#MaxScore</span> questions correctly.</p>
+						</div>
+						<p class="form-font-14 color-black" style="margin-top: 7px;"><span style="font-weight: bold;">Attempts Remaining: </span>#AtemptsLeft of #MaxAtempt</p>
+						<p class="form-font-14 guest_text-popup-continue" style="margin: 20px 0 0 0; font-size: 13px;">Click the Continue button below to retake the exam.</p>						
+					</div>	
+
+				</div>
+				<p style="font-style: italic; padding-top: 20px; clear:both; width: 498px; font-size: 14px;">
+					<span style="font-weight: bold;">Note:</span> There is no time limit for the exam. However, if you start the exam and log off before the exam is completed, that will be counted as one failed attempt.
+				</p>				
+				
+			</div>
+
+			<div id="FreeFormDialogCloseButton" class="themebutton themesimple">
+				<a href="#" title="Continue"><center><img src="skins/new/play_blue.png" style="margin-right:0px"></center></a>
+			</div>
+		</div>
+	
+	
+	]]></SubFinalFail>
+	
+	<SubFinalResetFail AudioFile="http://cdn.inspiredelearning.com/EC-131/generic/audio/qui.mp3" Top="110" Left="180"><![CDATA[
+
+		
+		<div class="FreeTestDialog" style="width: 535px; height: 360px;">
+			<div class="CourseVideoQuizDialogHeader">
+				<img src="xmls/en/images/s141/quiz_light/incorrect_frame.png" class="guest_image-header-popup">
+				<p class="guest_text-header-popup form-font-20lg">Results</p>
+			</div>
+			<div class="CourseVideoQuizDialogContent" style="width: auto; height: auto;">
+
+				<div>
+					<div style=" float: left; width: 173px; height: 158px; background: url('xmls/en/images/s141/final_exam/bg_final-exam_sub-fail.png') no-repeat;"  >	
+						<p class="form-font-14 color-black" 
+							style="font-size: 100px; text-align: center; color: #fff; text-shadow: 0px -1px 0px rgba(141, 1, 1, 1); width: 138px; margin-bottom: 0; line-height: 126px;">
+							#UserPercentage<span style="vertical-align: super; font-size: 35px; position: absolute; top: -3px;">%</span>
+						</p>
+						<p style="color: #fff; font-size: 16px; text-shadow: 0px -1px 0px rgba(118, 0, 0, 1); position: absolute; left: 53px; top: 148px;">
+							Passing: #PassingPercentage%+
+						</p>
+					</div>
+					<div style="float:left; width: 60%; margin-left: 14px;">
+						<div>	
+							<p class="form-font-14 color-black" style="color: #f20000; font-size: 17px; line-height: 18px; margin-bottom: 8px;"><span style="font-weight: bold;">You did not pass the exam.</span> </p>	
+						</div>
+						<div>	
+							<p class="form-font-14 color-black" style="color: #f20000; font-size: 13px; line-height: 18px;"><span style="font-weight: bold;">You have no remaining exam attempts, so you must retake the course before attempting the exam again.</span> </p>	
+						</div>
+						<div style="background-color: #fff2f2; border: 1px solid #ff5555; border-radius: 4px; width: 100%; padding: 15px 0; margin-top: 22px;">
+							<p class="form-font-14 color-black" style="padding: 0 10px 0 15px; margin-bottom: 0;">You answered <span style="font-weight: bold;">#UserScore</span> out of <span style="font-weight: bold;">#MaxScore</span> questions correctly.</p>
+						</div>
+					</div>	
+
+				</div>
+				<p style="padding-top: 20px; clear:both; width: 498px; font-size: 14px; font-weight: bold;">
+					Click the Continue button below to start the course over.
+				</p>				
+				
+			</div>
+
+			<div id="FreeFormDialogCloseButton" class="themebutton themesimple">
+				<a href="#" title="Continue"><center><img src="skins/new/play_blue.png" style="margin-right:0px"></center></a>
+			</div>
+		</div>
+
+	]]></SubFinalResetFail>
+	
+
+	<FinalPass AudioFile="http://cdn.inspiredelearning.com/EC-131/generic/audio/qui.mp3" Top="94" Left="296"><![CDATA[
+		<div class="FreeTestDialog" style="width: 362px; height: 430px;">
+			<div class="CourseVideoQuizDialogHeader">
+				<img src="xmls/en/images/s141/quiz_light/correct_frame.png" class="guest_image-header-popup">
+				<p class="guest_text-header-popup form-font-20lg">Results</p>
+			</div>
+			<div class="CourseVideoQuizDialogContent" style="width: auto; height: auto;">
+				<div style="">	
+					<p class="form-font-14 color-black" style="color: #3fa4e7; font-size: 17px;"><span style="font-weight: bold;">Congratulations!</span> You passed the exam.</p>	
+				</div>
+				<div style=" width: 322px; height: 157px; background: url('xmls/en/images/s141/final_exam/bg_final-exam_pass.png') no-repeat;"  >	
+					<p class="form-font-14 color-black" 
+						style="font-size: 120px; font-weight: bold; text-align: center; color: #fff; text-shadow: 0px -1px 0px rgba(14, 89, 211, 1); width: 270px; line-height: 157px;">
+						#UserPercentage<span style="vertical-align: super; font-size: 60px; position: absolute; top: 35px;">%</span>
+					</p>
+				</div>
+				<div style="background-color: #edf7fd; border: 1px solid #96cdf2; border-radius: 4px; width: 319px; padding: 15px 0; margin: 10px 0 0 1px;">
+					<p class="form-font-14 color-black" style="padding: 0 15px; margin-bottom: 0;">You answered <span style="font-weight: bold;">#UserScore</span> out of <span style="font-weight: bold;">#MaxScore</span> questions correctly.</p>
+				</div>
+				<p class="form-font-14 guest_text-popup-continue" style="margin-top: 15px;">Click the Continue button below to proceed.</p>
+			</div>
+			<div id="FreeFormDialogCloseButton" class="themebutton themesimple">
+				<a href="#" title="Continue"><center><img src="skins/new/play_blue.png" style="margin-right:0px"></center></a>
+			</div>
+		</div>		
+	]]></FinalPass>
+
+	<FinalFullFail AudioFile="http://cdn.inspiredelearning.com/EC-131/generic/audio/qui.mp3" Top="110" Left="180"><![CDATA[
+
+		<div class="FreeTestDialog" style="width: 535px; height: 360px;">
+			<div class="CourseVideoQuizDialogHeader">
+				<img src="xmls/en/images/s141/quiz_light/incorrect_frame.png" class="guest_image-header-popup">
+				<p class="guest_text-header-popup form-font-20lg">Results</p>
+			</div>
+			<div class="CourseVideoQuizDialogContent" style="width: auto; height: auto;">
+
+				<div>
+					<div style=" float: left; width: 173px; height: 158px; background: url('xmls/en/images/s141/final_exam/bg_final-exam_sub-fail.png') no-repeat;"  >	
+						<p class="form-font-14 color-black" 
+							style="font-size: 100px; text-align: center; color: #fff; text-shadow: 0px -1px 0px rgba(141, 1, 1, 1); width: 138px; margin-bottom: 0; line-height: 126px;">
+							#UserPercentage<span style="vertical-align: super; font-size: 35px; position: absolute; top: -3px;">%</span>
+						</p>
+						<p style="color: #fff; font-size: 16px; text-shadow: 0px -1px 0px rgba(112, 0, 0, 1); position: absolute; left: 53px; top: 148px;">
+							Passing: #PassingPercentage%+
+						</p>
+					</div>
+					<div style="float:left; width: 60%; margin-left: 14px;">
+						<div>	
+							<p class="form-font-14 color-black" style="color: #f20000; font-size: 17px; line-height: 18px; margin-bottom: 8px;"><span style="font-weight: bold;">You did not pass the exam.</span> </p>	
+						</div>
+						<div>	
+							<p class="form-font-14 color-black" style="color: #f20000; font-size: 13px; line-height: 18px;"><span style="font-weight: bold;">You have no remaining exam attempts, so you must retake the course before attempting the exam again.</span> </p>	
+						</div>
+						<div style="background-color: #fff2f2; border: 1px solid #ff5555; border-radius: 4px; width: 100%; padding: 15px 0; margin-top: 22px;">
+							<p class="form-font-14 color-black" style="padding: 0 15px; margin-bottom: 0;">You answered <span style="font-weight: bold;">#UserScore</span> out of <span style="font-weight: bold;">#MaxScore</span> questions correctly.</p>
+						</div>
+					</div>	
+
+				</div>
+				<p style="padding-top: 20px; clear:both; width: 498px; font-size: 14px; font-weight: bold;">
+					Click the Continue button below to start the course over.
+				</p>				
+				
+			</div>
+
+			<div id="FreeFormDialogCloseButton" class="themebutton themesimple">
+				<a href="#" title="Continue"><center><img src="skins/new/play_blue.png" style="margin-right:0px"></center></a>
+			</div>
+		</div>
+
+	]]></FinalFullFail>
+
+	<QuestionGroup Name="First" QuestionCount="6">
+	
+		<Intro AudioFile="http://cdn.inspiredelearning.com/EC-131/generic/audio/.mp3" Top="77" Left="12">
+		<![CDATA[
+		<div style="width:926px; height:466px; background-image: url(xmls/en/images/quizbg.png);">
+			<div class="FreeTestDialog" style="width:440px; height:300px; position: absolute; top: 85px; left: 255px; box-shadow: 0 0 8px 1px rgba(0, 0, 0, 0.1); border: 1px solid #dbdbdb;">
+				<div class="CourseVideoQuizDialogHeader"><span class="form-font-20lg"><font color="#000000">Final Exam</font></span></div>
+				<div class="CourseVideoQuizDialogContent" style="Width:400px; padding-right:20px">
+					<span class="form-font-14 color-black">You have been granted up to <b>#MaxAtempt</b> attempt(s) to pass this exam. You have <b>#AtemptsLeft</b> attempt(s) remaining. The exam will consist of <b>#TotalQuestionCount</b> questions. Click the Continue button below to proceed.</span>
+
+					<p style="font-style: italic; padding-top: 20px; clear:both; width: 400px; font-size: 14px;">
+						<span style="font-weight: bold;">Note:</span> There is no time limit for the exam. However, if you start the exam and log off before the exam is completed, that will be counted as one failed attempt.
+					</p>
+					
+					<br><a href="#" id="FreeFormDialogCloseButton" style="display:block; position:absolute; right:10px; bottom:10px; width:40px; margin-bottom:0px;" class="themebutton themesimple" title="Continue"><center><img src="skins/new-wide/play_blue.png" style="margin-right:0px"></center></a>
+				</div>
+			</div>
+		</div>
+		]]>		
+		</Intro>
+
+		<!-- first attempt -->
+
+		<Question>  <!-- Question 1 -->
+			<Elements>
+
+				<Element Top="0" Left="0" Width="926" Height="466"><![CDATA[<img src="xmls/en/images/quizbg.png" class="quiz_bg-slide-general">]]></Element>
+
+				<Element Top="10" Left="9" Width="909" Height="449"><![CDATA[<img src="xmls/en/images/s141/final_exam/bg_final-exam.png" 	>]]></Element>
+					
+				<Element Top="27" Left="848"><![CDATA[<span Class="form-font-quiz-head-number">#CurrentGroupQ of #CurrentGroupTotal</span>]]></Element>
+
+				<Element Top="22" Left="39" Width="700" AudioFile="" ><![CDATA[<span class="form-font-quiz-head">Final Exam</span>]]></Element>
+
+			</Elements>
+
+			<AnswerButton Class="themebutton themesimple" Icon="next" Left="39" Top="265" Width="80" Text="Submit"></AnswerButton>
+
+			<QuestionText Top="60" Left="39" Width="847" AudioFile="xmls/en/audio/s141/quizbg2.mp3" ><![CDATA[<p class="guest_title-paragraph form-font-16-question final_exam-fix">Which of the following activities does our acceptable use policy allow?</p>]]>
+			</QuestionText>
+		
+			<Answers Type="radio" Top="136" Left="39" Width="847" Spacing="5" Randomize="no">
+				<Answer AnswerID="1"><![CDATA[
+					<div class="popupquiz-font-16">
+						<p style="float: left; margin: 0;">A)</p>
+						<p style="float: left; margin: 0; width: 770px; padding-left: 4px;">Transmission or retransmission of inappropriate content.</p>
+					</div>
+				]]></Answer>
+				<Answer AnswerID="2"><![CDATA[
+					<div class="popupquiz-font-16">
+						<p style="float: left; margin: 0;">B)</p>
+						<p style="float: left; margin: 0; width: 770px; padding-left: 4px;">Making illegal/pirated copies of software.</p>
+					</div>
+				]]></Answer>
+				<Answer AnswerID="3"><![CDATA[
+					<div class="popupquiz-font-16">
+						<p style="float: left; margin: 0;">C)</p>
+						<p style="float: left; margin: 0; width: 770px; padding-left: 4px;">Conducting personal business or solicitation at work.</p>
+					</div>
+				]]></Answer>
+				<Answer AnswerID="4"><![CDATA[
+					<div class="popupquiz-font-16">
+						<p style="float: left; margin: 0;">D)</p>
+						<p style="float: left; margin: 0; width: 770px; padding-left: 4px;">Communicating with colleagues concerning work related issues.</p>
+					</div>
+					]]></Answer>
+			</Answers>
+
+			<Rules>
+				<Rule Top="240" Left="276" DarkenBackground="yes" AnswerID="" AudioFile="xmls/en/audio/s141/s141_quiz_answer_please-try.mp3"><![CDATA[
+					<div class="FreeTestDialog" style="width: 395px; height: 136px; background-color: #f1f1f1; border: 1px solid #d4d4d4; box-shadow: none;">
+						<div style="float: left; padding: 15px 0 0 15px;">							
+							<img src="xmls/en/images/s141/final_exam/icon_try-again_final-exam.png">												
+						</div>
+						<div class="CourseVideoQuizDialogContent" style="width: 245px; height: 100%; float: left; padding: 10px 0 0 15px;">
+							<p class="form-font-20lg" style="font-size: 18px; font-weight: 600; margin-bottom: 0;">Please Try Again</p>
+							<p class="form-font-14 color-black">Please select your answer.</p>				
+							<p class="form-font-14 guest_text-popup-continue">Click the red Close button to proceed.</p>
+						</div>
+						<div id="FreeFormDialogCloseButton" class="FlatDialogClose InteractivityButton" style="top: -18px; left: 372px;">
+							<a href="#" title="Continue"></a>
+						</div>
+					</div>
+				]]></Rule>
+				<Rule Top="360" Left="51" DarkenBackground="yes" AnswerID="1" AudioFile="xmls/en/audio/s141/s141_quiz_answer_incorrect.mp3"><![CDATA[
+					<div class="FreeTestDialog" style="width: 838px; height: 157px; background-color: #fff2f2; border: 1px solid #ff5555; box-shadow: none;">
+						<div style="float: left; padding: 15px 0 0 15px;">							
+							<img src="xmls/en/images/s141/final_exam/icon_incorrect_final-exam.png">
+							<p class="form-font-20lg" style="font-size: 19px; position: absolute; top: 1px; left: 41px; color: #cb0000; font-weight: bold;">Incorrect</p>					
+						</div>
+						<div class="CourseVideoQuizDialogContent" style="width: 653px; height: 100%; float: left; padding: 10px 0 0 15px;">
+							<p class="form-font-14 color-black">The acceptable use policy disallows the transmission or retransmission of inappropriate content. It would not disallow communicating with colleagues concerning work related issues. The correct answer is D.</p>				
+							<p class="form-font-14 guest_text-popup-continue">Click the red Close button to proceed.</p>
+						</div>
+						<div id="FreeFormDialogCloseButton" class="FlatDialogClose InteractivityButton" style="top: -18px; left: 812px;">
+							<a href="#" title="Continue"></a>
+						</div>
+					</div>
+				]]></Rule>
+				<Rule Top="360" Left="51" DarkenBackground="yes" AnswerID="2" AudioFile="xmls/en/audio/s141/s141_quiz_answer_incorrect.mp3"><![CDATA[
+					<div class="FreeTestDialog" style="width: 838px; height: 157px; background-color: #fff2f2; border: 1px solid #ff5555; box-shadow: none;">
+						<div style="float: left; padding: 15px 0 0 15px;">							
+							<img src="xmls/en/images/s141/final_exam/icon_incorrect_final-exam.png">
+							<p class="form-font-20lg" style="font-size: 19px; position: absolute; top: 1px; left: 41px; color: #cb0000; font-weight: bold;">Incorrect</p>					
+						</div>
+						<div class="CourseVideoQuizDialogContent" style="width: 653px; height: 100%; float: left; padding: 10px 0 0 15px;">
+							<p class="form-font-14 color-black">The acceptable use policy disallows making illegal/pirated copies of software. It would not disallow communicating with colleagues concerning work related issues. The correct answer is D.</p>			
+							<p class="form-font-14 guest_text-popup-continue">Click the red Close button to proceed.</p>
+						</div>
+						<div id="FreeFormDialogCloseButton" class="FlatDialogClose InteractivityButton" style="top: -18px; left: 812px;">
+							<a href="#" title="Continue"></a>
+						</div>
+					</div>
+				]]></Rule>
+				<Rule Top="360" Left="51" DarkenBackground="yes" AnswerID="3" AudioFile="xmls/en/audio/s141/s141_quiz_answer_incorrect.mp3"><![CDATA[
+					<div class="FreeTestDialog" style="width: 838px; height: 157px; background-color: #fff2f2; border: 1px solid #ff5555; box-shadow: none;">
+						<div style="float: left; padding: 15px 0 0 15px;">							
+							<img src="xmls/en/images/s141/final_exam/icon_incorrect_final-exam.png">
+							<p class="form-font-20lg" style="font-size: 19px; position: absolute; top: 1px; left: 41px; color: #cb0000; font-weight: bold;">Incorrect</p>					
+						</div>
+						<div class="CourseVideoQuizDialogContent" style="width: 653px; height: 100%; float: left; padding: 10px 0 0 15px;">
+							<p class="form-font-14 color-black">The acceptable use policy disallows conducting personal business or solicitation at work.  It would not disallow communicating with colleagues concerning work related issues. The correct answer is D.</p>				
+							<p class="form-font-14 guest_text-popup-continue">Click the red Close button to proceed.</p>
+						</div>
+						<div id="FreeFormDialogCloseButton" class="FlatDialogClose InteractivityButton" style="top: -18px; left: 812px;">
+							<a href="#" title="Continue"></a>
+						</div>
+					</div>
+				]]></Rule>
+				<Rule Top="360" Left="51" DarkenBackground="yes" AnswerID="4" AudioFile="xmls/en/audio/s141/s141_quiz_answer_correct.mp3" Correct="yes"><![CDATA[
+					<div class="FreeTestDialog" style="width: 838px; height: 157px; background-color: #edf7fd; border: 1px solid #96cdf2; box-shadow: none;">
+						<div style="float: left; padding: 15px 0 0 15px;">							
+							<img src="xmls/en/images/s141/final_exam/icon_correct_final-exam.png">
+							<p class="form-font-20lg" style="font-size: 19px; position: absolute; top: 1px; left: 49px; color: #3fa4e7; font-weight: bold;">Correct</p>					
+						</div>
+						<div class="CourseVideoQuizDialogContent" style="width: 653px; height: 100%; float: left; padding: 10px 0 0 15px;">
+							<p class="form-font-14 color-black">The acceptable use policy allows communicating with colleagues concerning work related issues.</p>
+							<p class="form-font-14 guest_text-popup-continue">Click the Continue button below to proceed.</p>
+						</div>
+						<div id="FreeFormDialogCloseButton" class="themebutton themesimple">
+							<a href="#" title="Continue"><center><img src="skins/new/play_blue.png" style="margin-right:0px"></center></a>
+						</div>
+					</div>
+				]]></Rule>					
+			</Rules>
+		</Question>	
+
+		<Question>  <!-- Question 2 -->
+			<Elements>
+
+				<Element Top="0" Left="0" Width="926" Height="466"><![CDATA[<img src="xmls/en/images/quizbg.png" class="quiz_bg-slide-general">]]></Element>
+
+				<Element Top="10" Left="9" Width="909" Height="449"><![CDATA[<img src="xmls/en/images/s141/final_exam/bg_final-exam.png">]]></Element>
+					
+				<Element Top="27" Left="848"><![CDATA[<span Class="form-font-quiz-head-number">#CurrentGroupQ of #CurrentGroupTotal</span>]]></Element>
+
+				<Element Top="22" Left="39" Width="700" AudioFile="" ><![CDATA[<span class="form-font-quiz-head">Final Exam</span>]]></Element>
+
+			</Elements>
+
+			<AnswerButton Class="themebutton themesimple" Icon="next" Left="39" Top="265" Width="80" Text="Submit"></AnswerButton>
+
+			<QuestionText Top="60" Left="39" Width="847" AudioFile="xmls/en/audio/s141/quizbg2.mp3" ><![CDATA[<p class="guest_title-paragraph form-font-16-question final_exam-fix">How can you create a strong password that will slow down or even defeat a password cracker program?</p>]]>
+			</QuestionText>
+		
+			<Answers Type="radio" Top="136" Left="39" Width="847" Spacing="5" Randomize="no">
+				<Answer AnswerID="1"><![CDATA[
+					<div class="popupquiz-font-16">
+						<p style="float: left; margin: 0;">A)</p>
+						<p style="float: left; margin: 0; width: 770px; padding-left: 4px;">Use a mix of numbers, uppercase and lowercase letters, and special characters in your password.</p>
+					</div> 					
+				]]></Answer>
+				<Answer AnswerID="2"><![CDATA[
+					<div class="popupquiz-font-16">
+						<p style="float: left; margin: 0;">B)</p>
+						<p style="float: left; margin: 0; width: 770px; padding-left: 4px;">Use as many characters as possible in your password.</p>
+					</div> 
+				]]></Answer>
+				<Answer AnswerID="3"><![CDATA[
+					<div class="popupquiz-font-16">
+						<p style="float: left; margin: 0;">C)</p>
+						<p style="float: left; margin: 0; width: 770px; padding-left: 4px;">Use a long word found in a dictionary.</p>
+					</div> 
+				]]></Answer>
+				<Answer AnswerID="4"><![CDATA[
+					<div class="popupquiz-font-16">
+						<p style="float: left; margin: 0;">D)</p>
+						<p style="float: left; margin: 0; width: 770px; padding-left: 4px;">Both A and B are correct.</p>
+					</div> 
+				]]></Answer>					
+			</Answers>
+
+			<Rules>
+				<Rule Top="240" Left="276" DarkenBackground="yes" AnswerID="" AudioFile="xmls/en/audio/s141/s141_quiz_answer_please-try.mp3"><![CDATA[
+					<div class="FreeTestDialog" style="width: 395px; height: 136px; background-color: #f1f1f1; border: 1px solid #d4d4d4; box-shadow: none;">
+						<div style="float: left; padding: 15px 0 0 15px;">							
+							<img src="xmls/en/images/s141/final_exam/icon_try-again_final-exam.png">												
+						</div>
+						<div class="CourseVideoQuizDialogContent" style="width: 245px; height: 100%; float: left; padding: 10px 0 0 15px;">
+							<p class="form-font-20lg" style="font-size: 18px; font-weight: 600; margin-bottom: 0;">Please Try Again</p>
+							<p class="form-font-14 color-black">Please select your answer.</p>				
+							<p class="form-font-14 guest_text-popup-continue">Click the red Close button to proceed.</p>
+						</div>
+						<div id="FreeFormDialogCloseButton" class="FlatDialogClose InteractivityButton" style="top: -18px; left: 372px;">
+							<a href="#" title="Continue"></a>
+						</div>
+					</div>
+				]]></Rule>			
+				<Rule Top="360" Left="51" DarkenBackground="yes" AnswerID="1" AudioFile="xmls/en/audio/s141/s141_quiz_answer_incorrect.mp3"><![CDATA[
+					<div class="FreeTestDialog" style="width: 838px; height: 157px; background-color: #fff2f2; border: 1px solid #ff5555; box-shadow: none;">
+						<div style="float: left; padding: 15px 0 0 15px;">							
+							<img src="xmls/en/images/s141/final_exam/icon_incorrect_final-exam.png">
+							<p class="form-font-20lg" style="font-size: 19px; position: absolute; top: 1px; left: 41px; color: #cb0000; font-weight: bold;">Incorrect</p>					
+						</div>
+						<div class="CourseVideoQuizDialogContent" style="width: 653px; height: 100%; float: left; padding: 10px 0 0 15px;">
+							<p class="form-font-14 color-black">This is true, but using as many characters as possible in a password is also a good way to foil a password cracker program. The correct answer is D.</p>
+							<p class="form-font-14 guest_text-popup-continue">Click the red Close button to proceed.</p>
+						</div>
+						<div id="FreeFormDialogCloseButton" class="FlatDialogClose InteractivityButton" style="top: -18px; left: 812px;">
+							<a href="#" title="Continue"></a>
+						</div>
+					</div>
+				]]></Rule>
+				<Rule Top="360" Left="51" DarkenBackground="yes" AnswerID="2" AudioFile="xmls/en/audio/s141/s141_quiz_answer_incorrect.mp3"><![CDATA[
+					<div class="FreeTestDialog" style="width: 838px; height: 157px; background-color: #fff2f2; border: 1px solid #ff5555; box-shadow: none;">
+						<div style="float: left; padding: 15px 0 0 15px;">							
+							<img src="xmls/en/images/s141/final_exam/icon_incorrect_final-exam.png">
+							<p class="form-font-20lg" style="font-size: 19px; position: absolute; top: 1px; left: 41px; color: #cb0000; font-weight: bold;">Incorrect</p>					
+						</div>
+						<div class="CourseVideoQuizDialogContent" style="width: 653px; height: 100%; float: left; padding: 10px 0 0 15px;">
+							<p class="form-font-14 color-black">This is true, but using a mix of numbers, uppercase and lowercase letters and special characters in your password is also a good way to foil a password cracker program. The correct answer is D.</p>
+							<p class="form-font-14 guest_text-popup-continue">Click the red Close button to proceed.</p>
+						</div>
+						<div id="FreeFormDialogCloseButton" class="FlatDialogClose InteractivityButton" style="top: -18px; left: 812px;">
+							<a href="#" title="Continue"></a>
+						</div>
+					</div>
+				]]></Rule>
+				<Rule Top="360" Left="51" DarkenBackground="yes" AnswerID="3" AudioFile="xmls/en/audio/s141/s141_quiz_answer_incorrect.mp3"><![CDATA[
+					<div class="FreeTestDialog" style="width: 838px; height: 157px; background-color: #fff2f2; border: 1px solid #ff5555; box-shadow: none;">
+						<div style="float: left; padding: 15px 0 0 15px;">							
+							<img src="xmls/en/images/s141/final_exam/icon_incorrect_final-exam.png">
+							<p class="form-font-20lg" style="font-size: 19px; position: absolute; top: 1px; left: 41px; color: #cb0000; font-weight: bold;">Incorrect</p>					
+						</div>
+						<div class="CourseVideoQuizDialogContent" style="width: 653px; height: 100%; float: left; padding: 10px 0 0 15px;">
+							<p class="form-font-14 color-black">You should never use a word found in the dictionary. The correct answer is D.</p>
+							<p class="form-font-14 guest_text-popup-continue">Click the red Close button to proceed.</p>
+						</div>
+						<div id="FreeFormDialogCloseButton" class="FlatDialogClose InteractivityButton" style="top: -18px; left: 812px;">
+							<a href="#" title="Continue"></a>
+						</div>
+					</div>
+				]]></Rule>
+				<Rule Top="360" Left="51" DarkenBackground="yes" AnswerID="4" AudioFile="xmls/en/audio/s141/s141_quiz_answer_correct.mp3" Correct="yes"><![CDATA[
+					<div class="FreeTestDialog" style="width: 838px; height: 157px; background-color: #edf7fd; border: 1px solid #96cdf2; box-shadow: none;">
+						<div style="float: left; padding: 15px 0 0 15px;">							
+							<img src="xmls/en/images/s141/final_exam/icon_correct_final-exam.png">
+							<p class="form-font-20lg" style="font-size: 19px; position: absolute; top: 1px; left: 49px; color: #3fa4e7; font-weight: bold;">Correct</p>					
+						</div>
+						<div class="CourseVideoQuizDialogContent" style="width: 653px; height: 100%; float: left; padding: 10px 0 0 15px;">
+							<p class="form-font-14 color-black">You should use as many characters as possible in your password and use a mix of numbers, uppercase and lowercase letters, and special characters.</p>
+							<p class="form-font-14 guest_text-popup-continue">Click the Continue button below to proceed.</p>
+						</div>
+						<div id="FreeFormDialogCloseButton" class="themebutton themesimple">
+							<a href="#" title="Continue"><center><img src="skins/new/play_blue.png" style="margin-right:0px"></center></a>
+						</div>
+					</div>
+				]]></Rule>					
+			</Rules>		
+		</Question>
+
+		
+
+		<Question>  <!-- Question 4 -->
+			<Elements>
+
+				<Element Top="0" Left="0" Width="926" Height="466"><![CDATA[<img src="xmls/en/images/quizbg.png" class="quiz_bg-slide-general">]]></Element>
+
+				<Element Top="10" Left="9" Width="909" Height="449"><![CDATA[<img src="xmls/en/images/s141/final_exam/bg_final-exam.png">]]></Element>
+					
+				<Element Top="27" Left="848"><![CDATA[<span Class="form-font-quiz-head-number">#CurrentGroupQ of #CurrentGroupTotal</span>]]></Element>
+
+				<Element Top="22" Left="39" Width="700" AudioFile="" ><![CDATA[<span class="form-font-quiz-head">Final Exam</span>]]></Element>
+
+			</Elements>
+
+			<AnswerButton Class="themebutton themesimple" Icon="next" Left="39" Top="265" Width="80" Text="Submit"></AnswerButton>
+
+			<QuestionText Top="60" Left="39" Width="847" AudioFile="xmls/en/audio/s141/quizbg2.mp3" ><![CDATA[<p class="guest_title-paragraph form-font-16-question final_exam-fix">If you think you are the victim of social engineering, you should do all of the following EXCEPT:</p>]]>
+			</QuestionText>
+		
+			<Answers Type="radio" Top="136" Left="39" Width="847" Spacing="5" Randomize="no">
+				<Answer AnswerID="1"><![CDATA[
+					<div class="popupquiz-font-16">
+						<p style="float: left; margin: 0;">A)</p>
+						<p style="float: left; margin: 0; width: 770px; padding-left: 4px;">Get the person’s name and contact information.</p>
+					</div> 
+				 ]]></Answer>
+				<Answer AnswerID="2"><![CDATA[
+					<div class="popupquiz-font-16">
+						<p style="float: left; margin: 0;">B)</p>
+						<p style="float: left; margin: 0; width: 770px; padding-left: 4px;">Wait one week, then contact your supervisor or the Help Desk.</p>
+					</div> 
+				]]></Answer>
+				<Answer AnswerID="3"><![CDATA[
+					<div class="popupquiz-font-16">
+						<p style="float: left; margin: 0;">C)</p>
+						<p style="float: left; margin: 0; width: 770px; padding-left: 4px;">If it is happening over the phone, try to get the phone number using caller ID.</p>
+					</div> 
+				]]></Answer>
+				<Answer AnswerID="4"><![CDATA[
+					<div class="popupquiz-font-16">
+						<p style="float: left; margin: 0;">D)</p>
+						<p style="float: left; margin: 0; width: 770px; padding-left: 4px;">Take detailed notes about what person is requesting.</p>
+					</div> 
+				]]></Answer>					
+			</Answers>
+
+			<Rules>
+				<Rule Top="240" Left="276" DarkenBackground="yes" AnswerID="" AudioFile="xmls/en/audio/s141/s141_quiz_answer_please-try.mp3"><![CDATA[
+					<div class="FreeTestDialog" style="width: 395px; height: 136px; background-color: #f1f1f1; border: 1px solid #d4d4d4; box-shadow: none;">
+						<div style="float: left; padding: 15px 0 0 15px;">							
+							<img src="xmls/en/images/s141/final_exam/icon_try-again_final-exam.png">												
+						</div>
+						<div class="CourseVideoQuizDialogContent" style="width: 245px; height: 100%; float: left; padding: 10px 0 0 15px;">
+							<p class="form-font-20lg" style="font-size: 18px; font-weight: 600; margin-bottom: 0;">Please Try Again</p>
+							<p class="form-font-14 color-black">Please select your answer.</p>				
+							<p class="form-font-14 guest_text-popup-continue">Click the red Close button to proceed.</p>
+						</div>
+						<div id="FreeFormDialogCloseButton" class="FlatDialogClose InteractivityButton" style="top: -18px; left: 372px;">
+							<a href="#" title="Continue"></a>
+						</div>
+					</div>
+				]]></Rule>
+				<Rule Top="360" Left="51" DarkenBackground="yes" AnswerID="1" AudioFile="xmls/en/audio/s141/s141_quiz_answer_incorrect.mp3"><![CDATA[
+					<div class="FreeTestDialog" style="width: 838px; height: 157px; background-color: #fff2f2; border: 1px solid #ff5555; box-shadow: none;">
+						<div style="float: left; padding: 15px 0 0 15px;">							
+							<img src="xmls/en/images/s141/final_exam/icon_incorrect_final-exam.png">
+							<p class="form-font-20lg" style="font-size: 19px; position: absolute; top: 1px; left: 41px; color: #cb0000; font-weight: bold;">Incorrect</p>					
+						</div>
+						<div class="CourseVideoQuizDialogContent" style="width: 653px; height: 100%; float: left; padding: 10px 0 0 15px;">
+							<p class="form-font-14 color-black">This is a best practice. The correct answer is B.</p>			
+							<p class="form-font-14 guest_text-popup-continue">Click the red Close button to proceed.</p>
+						</div>
+						<div id="FreeFormDialogCloseButton" class="FlatDialogClose InteractivityButton" style="top: -18px; left: 812px;">
+							<a href="#" title="Continue"></a>
+						</div>
+					</div>
+				]]></Rule>
+				<Rule Top="360" Left="51" DarkenBackground="yes" AnswerID="2" AudioFile="xmls/en/audio/s141/s141_quiz_answer_correct.mp3" Correct="yes"><![CDATA[
+					<div class="FreeTestDialog" style="width: 838px; height: 157px; background-color: #edf7fd; border: 1px solid #96cdf2; box-shadow: none;">
+						<div style="float: left; padding: 15px 0 0 15px;">							
+							<img src="xmls/en/images/s141/final_exam/icon_correct_final-exam.png">
+							<p class="form-font-20lg" style="font-size: 19px; position: absolute; top: 1px; left: 49px; color: #3fa4e7; font-weight: bold;">Correct</p>					
+						</div>
+						<div class="CourseVideoQuizDialogContent" style="width: 653px; height: 100%; float: left; padding: 10px 0 0 15px;">
+							<p class="form-font-14 color-black">You should contact your supervisor or the Help Desk immediately.</p>
+							<p class="form-font-14 guest_text-popup-continue">Click the Continue button below to proceed.</p>
+						</div>
+						<div id="FreeFormDialogCloseButton" class="themebutton themesimple">
+							<a href="#" title="Continue"><center><img src="skins/new/play_blue.png" style="margin-right:0px"></center></a>
+						</div>
+					</div>
+				]]></Rule>					
+				<Rule Top="360" Left="51" DarkenBackground="yes" AnswerID="3" AudioFile="xmls/en/audio/s141/s141_quiz_answer_incorrect.mp3"><![CDATA[
+					<div class="FreeTestDialog" style="width: 838px; height: 157px; background-color: #fff2f2; border: 1px solid #ff5555; box-shadow: none;">
+						<div style="float: left; padding: 15px 0 0 15px;">							
+							<img src="xmls/en/images/s141/final_exam/icon_incorrect_final-exam.png">
+							<p class="form-font-20lg" style="font-size: 19px; position: absolute; top: 1px; left: 41px; color: #cb0000; font-weight: bold;">Incorrect</p>					
+						</div>
+						<div class="CourseVideoQuizDialogContent" style="width: 653px; height: 100%; float: left; padding: 10px 0 0 15px;">
+							<p class="form-font-14 color-black">This is a best practice. The correct answer is B.</p>			
+							<p class="form-font-14 guest_text-popup-continue">Click the red Close button to proceed.</p>
+						</div>
+						<div id="FreeFormDialogCloseButton" class="FlatDialogClose InteractivityButton" style="top: -18px; left: 812px;">
+							<a href="#" title="Continue"></a>
+						</div>
+					</div>
+				]]></Rule>
+				<Rule Top="360" Left="51" DarkenBackground="yes" AnswerID="4" AudioFile="xmls/en/audio/s141/s141_quiz_answer_incorrect.mp3"><![CDATA[
+					<div class="FreeTestDialog" style="width: 838px; height: 157px; background-color: #fff2f2; border: 1px solid #ff5555; box-shadow: none;">
+						<div style="float: left; padding: 15px 0 0 15px;">							
+							<img src="xmls/en/images/s141/final_exam/icon_incorrect_final-exam.png">
+							<p class="form-font-20lg" style="font-size: 19px; position: absolute; top: 1px; left: 41px; color: #cb0000; font-weight: bold;">Incorrect</p>					
+						</div>
+						<div class="CourseVideoQuizDialogContent" style="width: 653px; height: 100%; float: left; padding: 10px 0 0 15px;">
+							<p class="form-font-14 color-black">This is a best practice. The correct answer is B.</p>			
+							<p class="form-font-14 guest_text-popup-continue">Click the red Close button to proceed.</p>
+						</div>
+						<div id="FreeFormDialogCloseButton" class="FlatDialogClose InteractivityButton" style="top: -18px; left: 812px;">
+							<a href="#" title="Continue"></a>
+						</div>
+					</div>
+				]]></Rule>
+			</Rules>
+		</Question>	
+
+		
+
+		<Question>  <!-- Question 6 -->
+			<Elements>
+
+				<Element Top="0" Left="0" Width="926" Height="466"><![CDATA[<img src="xmls/en/images/quizbg.png" class="quiz_bg-slide-general">]]></Element>
+
+				<Element Top="10" Left="9" Width="909" Height="449"><![CDATA[<img src="xmls/en/images/s141/final_exam/bg_final-exam.png">]]></Element>
+					
+				<Element Top="27" Left="848"><![CDATA[<span Class="form-font-quiz-head-number">#CurrentGroupQ of #CurrentGroupTotal</span>]]></Element>
+
+				<Element Top="22" Left="39" Width="700" AudioFile="" ><![CDATA[<span class="form-font-quiz-head">Final Exam</span>]]></Element>
+
+			</Elements>
+
+			<AnswerButton Class="themebutton themesimple" Icon="next" Left="39" Top="207" Width="80" Text="Submit"></AnswerButton>
+
+			<QuestionText Top="60" Left="39" Width="847" AudioFile="xmls/en/audio/s141/quizbg2.mp3" ><![CDATA[<p class="guest_title-paragraph form-font-16-question final_exam-fix">True or False? Because you don’t have administrative rights to our network, you’re not a target for hackers.</p>]]>
+			</QuestionText>
+
+			<Answers Type="radio" Top="136" Left="39" Width="847" Spacing="5" Randomize="no">
+				<Answer AnswerID="1"><![CDATA[
+					<div class="popupquiz-font-16">
+						<p style="float: left; margin: 0;"></p>
+						<p style="float: left; margin: 0; width: 770px; padding-left: 4px;">True</p>
+					</div> 
+				]]></Answer>
+				<Answer AnswerID="2"><![CDATA[
+					<div class="popupquiz-font-16">
+						<p style="float: left; margin: 0;"></p>
+						<p style="float: left; margin: 0; width: 770px; padding-left: 4px;">False</p>
+					</div> 
+				]]></Answer>		
+			</Answers>
+
+			<Rules>
+				<Rule Top="240" Left="276" DarkenBackground="yes" AnswerID="" AudioFile="xmls/en/audio/s141/s141_quiz_answer_please-try.mp3"><![CDATA[
+					<div class="FreeTestDialog" style="width: 395px; height: 136px; background-color: #f1f1f1; border: 1px solid #d4d4d4; box-shadow: none;">
+						<div style="float: left; padding: 15px 0 0 15px;">							
+							<img src="xmls/en/images/s141/final_exam/icon_try-again_final-exam.png">												
+						</div>
+						<div class="CourseVideoQuizDialogContent" style="width: 245px; height: 100%; float: left; padding: 10px 0 0 15px;">
+							<p class="form-font-20lg" style="font-size: 18px; font-weight: 600; margin-bottom: 0;">Please Try Again</p>
+							<p class="form-font-14 color-black">Please select your answer.</p>				
+							<p class="form-font-14 guest_text-popup-continue">Click the red Close button to proceed.</p>
+						</div>
+						<div id="FreeFormDialogCloseButton" class="FlatDialogClose InteractivityButton" style="top: -18px; left: 372px;">
+							<a href="#" title="Continue"></a>
+						</div>
+					</div>
+				]]></Rule>
+				<Rule Top="360" Left="51" DarkenBackground="yes" AnswerID="1" AudioFile="xmls/en/audio/s141/s141_quiz_answer_incorrect.mp3"><![CDATA[
+					<div class="FreeTestDialog" style="width: 838px; height: 157px; background-color: #fff2f2; border: 1px solid #ff5555; box-shadow: none;">
+						<div style="float: left; padding: 15px 0 0 15px;">							
+							<img src="xmls/en/images/s141/final_exam/icon_incorrect_final-exam.png">
+							<p class="form-font-20lg" style="font-size: 19px; position: absolute; top: 1px; left: 41px; color: #cb0000; font-weight: bold;">Incorrect</p>					
+						</div>
+						<div class="CourseVideoQuizDialogContent" style="width: 653px; height: 100%; float: left; padding: 10px 0 0 15px;">
+							<p class="form-font-14 color-black">If an attacker could gain control of any computer that resides on our network, he or she could use that as a jumping off point to attack other systems. Everyone is a potential target for hackers.</p>				
+							<p class="form-font-14 guest_text-popup-continue">Click the red Close button to proceed.</p>
+						</div>
+						<div id="FreeFormDialogCloseButton" class="FlatDialogClose InteractivityButton" style="top: -18px; left: 812px;">
+							<a href="#" title="Continue"></a>
+						</div>
+					</div>
+				]]></Rule>
+				<Rule Top="360" Left="51" DarkenBackground="yes" AnswerID="2" AudioFile="xmls/en/audio/s141/s141_quiz_answer_correct.mp3" Correct="yes"><![CDATA[
+					<div class="FreeTestDialog" style="width: 838px; height: 157px; background-color: #edf7fd; border: 1px solid #96cdf2; box-shadow: none;">
+						<div style="float: left; padding: 15px 0 0 15px;">							
+							<img src="xmls/en/images/s141/final_exam/icon_correct_final-exam.png">
+							<p class="form-font-20lg" style="font-size: 19px; position: absolute; top: 1px; left: 49px; color: #3fa4e7; font-weight: bold;">Correct</p>					
+						</div>
+						<div class="CourseVideoQuizDialogContent" style="width: 653px; height: 100%; float: left; padding: 10px 0 0 15px;">
+							<p class="form-font-14 color-black">If an attacker could gain control of any computer that resides on our network, he or she could use that as a jumping off point to attack other systems. Everyone is a potential target for hackers.</p>
+							<p class="form-font-14 guest_text-popup-continue">Click the Continue button below to proceed.</p>
+						</div>
+						<div id="FreeFormDialogCloseButton" class="themebutton themesimple">
+							<a href="#" title="Continue"><center><img src="skins/new/play_blue.png" style="margin-right:0px"></center></a>
+						</div>
+					</div>
+				]]></Rule>		
+
+			</Rules>
+		</Question>	
+
+		<!-- second attempt -->
+
+		
+
+		
+
+		<Question>  <!-- Question 6 -->
+			<Elements>
+
+				<Element Top="0" Left="0" Width="926" Height="466"><![CDATA[<img src="xmls/en/images/quizbg.png" class="quiz_bg-slide-general">]]></Element>
+
+				<Element Top="10" Left="9" Width="909" Height="449"><![CDATA[<img src="xmls/en/images/s141/final_exam/bg_final-exam.png">]]></Element>
+					
+				<Element Top="27" Left="848"><![CDATA[<span Class="form-font-quiz-head-number">#CurrentGroupQ of #CurrentGroupTotal</span>]]></Element>
+
+				<Element Top="22" Left="39" Width="700" AudioFile="" ><![CDATA[<span class="form-font-quiz-head">Final Exam</span>]]></Element>
+
+			</Elements>
+
+			<AnswerButton Class="themebutton themesimple" Icon="next" Left="39" Top="207" Width="80" Text="Submit"></AnswerButton>
+
+			<QuestionText Top="60" Left="39" Width="847" AudioFile="xmls/en/audio/s141/quizbg2.mp3" ><![CDATA[<p class="guest_title-paragraph form-font-16-question final_exam-fix">True or False? Because you don’t have administrative rights to our network, you’re not a target for hackers.</p>]]>
+			</QuestionText>
+
+			<Answers Type="radio" Top="136" Left="39" Width="847" Spacing="5" Randomize="no">
+				<Answer AnswerID="1"><![CDATA[
+					<div class="popupquiz-font-16">
+						<p style="float: left; margin: 0;"></p>
+						<p style="float: left; margin: 0; width: 770px; padding-left: 4px;">True</p>
+					</div> 
+				]]></Answer>
+				<Answer AnswerID="2"><![CDATA[
+					<div class="popupquiz-font-16">
+						<p style="float: left; margin: 0;"></p>
+						<p style="float: left; margin: 0; width: 770px; padding-left: 4px;">False</p>
+					</div> 
+				]]></Answer>		
+			</Answers>
+
+			<Rules>
+				<Rule Top="240" Left="276" DarkenBackground="yes" AnswerID="" AudioFile="xmls/en/audio/s141/s141_quiz_answer_please-try.mp3"><![CDATA[
+					<div class="FreeTestDialog" style="width: 395px; height: 136px; background-color: #f1f1f1; border: 1px solid #d4d4d4; box-shadow: none;">
+						<div style="float: left; padding: 15px 0 0 15px;">							
+							<img src="xmls/en/images/s141/final_exam/icon_try-again_final-exam.png">												
+						</div>
+						<div class="CourseVideoQuizDialogContent" style="width: 245px; height: 100%; float: left; padding: 10px 0 0 15px;">
+							<p class="form-font-20lg" style="font-size: 18px; font-weight: 600; margin-bottom: 0;">Please Try Again</p>
+							<p class="form-font-14 color-black">Please select your answer.</p>				
+							<p class="form-font-14 guest_text-popup-continue">Click the red Close button to proceed.</p>
+						</div>
+						<div id="FreeFormDialogCloseButton" class="FlatDialogClose InteractivityButton" style="top: -18px; left: 372px;">
+							<a href="#" title="Continue"></a>
+						</div>
+					</div>
+				]]></Rule>
+				<Rule Top="360" Left="51" DarkenBackground="yes" AnswerID="1" AudioFile="xmls/en/audio/s141/s141_quiz_answer_incorrect.mp3"><![CDATA[
+					<div class="FreeTestDialog" style="width: 838px; height: 157px; background-color: #fff2f2; border: 1px solid #ff5555; box-shadow: none;">
+						<div style="float: left; padding: 15px 0 0 15px;">							
+							<img src="xmls/en/images/s141/final_exam/icon_incorrect_final-exam.png">
+							<p class="form-font-20lg" style="font-size: 19px; position: absolute; top: 1px; left: 41px; color: #cb0000; font-weight: bold;">Incorrect</p>					
+						</div>
+						<div class="CourseVideoQuizDialogContent" style="width: 653px; height: 100%; float: left; padding: 10px 0 0 15px;">
+							<p class="form-font-14 color-black">If an attacker could gain control of any computer that resides on our network, he or she could use that as a jumping off point to attack other systems. Everyone is a potential target for hackers.</p>				
+							<p class="form-font-14 guest_text-popup-continue">Click the red Close button to proceed.</p>
+						</div>
+						<div id="FreeFormDialogCloseButton" class="FlatDialogClose InteractivityButton" style="top: -18px; left: 812px;">
+							<a href="#" title="Continue"></a>
+						</div>
+					</div>
+				]]></Rule>
+				<Rule Top="360" Left="51" DarkenBackground="yes" AnswerID="2" AudioFile="xmls/en/audio/s141/s141_quiz_answer_correct.mp3" Correct="yes"><![CDATA[
+					<div class="FreeTestDialog" style="width: 838px; height: 157px; background-color: #edf7fd; border: 1px solid #96cdf2; box-shadow: none;">
+						<div style="float: left; padding: 15px 0 0 15px;">							
+							<img src="xmls/en/images/s141/final_exam/icon_correct_final-exam.png">
+							<p class="form-font-20lg" style="font-size: 19px; position: absolute; top: 1px; left: 49px; color: #3fa4e7; font-weight: bold;">Correct</p>					
+						</div>
+						<div class="CourseVideoQuizDialogContent" style="width: 653px; height: 100%; float: left; padding: 10px 0 0 15px;">
+							<p class="form-font-14 color-black">If an attacker could gain control of any computer that resides on our network, he or she could use that as a jumping off point to attack other systems. Everyone is a potential target for hackers.</p>
+							<p class="form-font-14 guest_text-popup-continue">Click the Continue button below to proceed.</p>
+						</div>
+						<div id="FreeFormDialogCloseButton" class="themebutton themesimple">
+							<a href="#" title="Continue"><center><img src="skins/new/play_blue.png" style="margin-right:0px"></center></a>
+						</div>
+					</div>
+				]]></Rule>		
+
+			</Rules>
+		</Question>	
+
+		<Question>  <!-- Question 2 -->
+			<Elements>
+
+				<Element Top="0" Left="0" Width="926" Height="466"><![CDATA[<img src="xmls/en/images/quizbg.png" class="quiz_bg-slide-general">]]></Element>
+
+				<Element Top="10" Left="9" Width="909" Height="449"><![CDATA[<img src="xmls/en/images/s141/final_exam/bg_final-exam.png">]]></Element>
+					
+				<Element Top="27" Left="848"><![CDATA[<span Class="form-font-quiz-head-number">#CurrentGroupQ of #CurrentGroupTotal</span>]]></Element>
+
+				<Element Top="22" Left="39" Width="700" AudioFile="" ><![CDATA[<span class="form-font-quiz-head">Final Exam</span>]]></Element>
+
+			</Elements>
+
+			<AnswerButton Class="themebutton themesimple" Icon="next" Left="39" Top="265" Width="80" Text="Submit"></AnswerButton>
+
+			<QuestionText Top="60" Left="39" Width="847" AudioFile="xmls/en/audio/s141/quizbg2.mp3" ><![CDATA[<p class="guest_title-paragraph form-font-16-question final_exam-fix">How can you create a strong password that will slow down or even defeat a password cracker program?</p>]]>
+			</QuestionText>
+		
+			<Answers Type="radio" Top="136" Left="39" Width="847" Spacing="5" Randomize="no">
+				<Answer AnswerID="1"><![CDATA[
+					<div class="popupquiz-font-16">
+						<p style="float: left; margin: 0;">A)</p>
+						<p style="float: left; margin: 0; width: 770px; padding-left: 4px;">Use a mix of numbers, uppercase and lowercase letters, and special characters in your password.</p>
+					</div> 					
+				]]></Answer>
+				<Answer AnswerID="2"><![CDATA[
+					<div class="popupquiz-font-16">
+						<p style="float: left; margin: 0;">B)</p>
+						<p style="float: left; margin: 0; width: 770px; padding-left: 4px;">Use as many characters as possible in your password.</p>
+					</div> 
+				]]></Answer>
+				<Answer AnswerID="3"><![CDATA[
+					<div class="popupquiz-font-16">
+						<p style="float: left; margin: 0;">C)</p>
+						<p style="float: left; margin: 0; width: 770px; padding-left: 4px;">Use a long word found in a dictionary.</p>
+					</div> 
+				]]></Answer>
+				<Answer AnswerID="4"><![CDATA[
+					<div class="popupquiz-font-16">
+						<p style="float: left; margin: 0;">D)</p>
+						<p style="float: left; margin: 0; width: 770px; padding-left: 4px;">Both A and B are correct.</p>
+					</div> 
+				]]></Answer>					
+			</Answers>
+
+			<Rules>
+				<Rule Top="240" Left="276" DarkenBackground="yes" AnswerID="" AudioFile="xmls/en/audio/s141/s141_quiz_answer_please-try.mp3"><![CDATA[
+					<div class="FreeTestDialog" style="width: 395px; height: 136px; background-color: #f1f1f1; border: 1px solid #d4d4d4; box-shadow: none;">
+						<div style="float: left; padding: 15px 0 0 15px;">							
+							<img src="xmls/en/images/s141/final_exam/icon_try-again_final-exam.png">												
+						</div>
+						<div class="CourseVideoQuizDialogContent" style="width: 245px; height: 100%; float: left; padding: 10px 0 0 15px;">
+							<p class="form-font-20lg" style="font-size: 18px; font-weight: 600; margin-bottom: 0;">Please Try Again</p>
+							<p class="form-font-14 color-black">Please select your answer.</p>				
+							<p class="form-font-14 guest_text-popup-continue">Click the red Close button to proceed.</p>
+						</div>
+						<div id="FreeFormDialogCloseButton" class="FlatDialogClose InteractivityButton" style="top: -18px; left: 372px;">
+							<a href="#" title="Continue"></a>
+						</div>
+					</div>
+				]]></Rule>			
+				<Rule Top="360" Left="51" DarkenBackground="yes" AnswerID="1" AudioFile="xmls/en/audio/s141/s141_quiz_answer_incorrect.mp3"><![CDATA[
+					<div class="FreeTestDialog" style="width: 838px; height: 157px; background-color: #fff2f2; border: 1px solid #ff5555; box-shadow: none;">
+						<div style="float: left; padding: 15px 0 0 15px;">							
+							<img src="xmls/en/images/s141/final_exam/icon_incorrect_final-exam.png">
+							<p class="form-font-20lg" style="font-size: 19px; position: absolute; top: 1px; left: 41px; color: #cb0000; font-weight: bold;">Incorrect</p>					
+						</div>
+						<div class="CourseVideoQuizDialogContent" style="width: 653px; height: 100%; float: left; padding: 10px 0 0 15px;">
+							<p class="form-font-14 color-black">This is true, but using as many characters as possible in a password is also a good way to foil a password cracker program. The correct answer is D.</p>
+							<p class="form-font-14 guest_text-popup-continue">Click the red Close button to proceed.</p>
+						</div>
+						<div id="FreeFormDialogCloseButton" class="FlatDialogClose InteractivityButton" style="top: -18px; left: 812px;">
+							<a href="#" title="Continue"></a>
+						</div>
+					</div>
+				]]></Rule>
+				<Rule Top="360" Left="51" DarkenBackground="yes" AnswerID="2" AudioFile="xmls/en/audio/s141/s141_quiz_answer_incorrect.mp3"><![CDATA[
+					<div class="FreeTestDialog" style="width: 838px; height: 157px; background-color: #fff2f2; border: 1px solid #ff5555; box-shadow: none;">
+						<div style="float: left; padding: 15px 0 0 15px;">							
+							<img src="xmls/en/images/s141/final_exam/icon_incorrect_final-exam.png">
+							<p class="form-font-20lg" style="font-size: 19px; position: absolute; top: 1px; left: 41px; color: #cb0000; font-weight: bold;">Incorrect</p>					
+						</div>
+						<div class="CourseVideoQuizDialogContent" style="width: 653px; height: 100%; float: left; padding: 10px 0 0 15px;">
+							<p class="form-font-14 color-black">This is true, but using a mix of numbers, uppercase and lowercase letters and special characters in your password is also a good way to foil a password cracker program. The correct answer is D.</p>
+							<p class="form-font-14 guest_text-popup-continue">Click the red Close button to proceed.</p>
+						</div>
+						<div id="FreeFormDialogCloseButton" class="FlatDialogClose InteractivityButton" style="top: -18px; left: 812px;">
+							<a href="#" title="Continue"></a>
+						</div>
+					</div>
+				]]></Rule>
+				<Rule Top="360" Left="51" DarkenBackground="yes" AnswerID="3" AudioFile="xmls/en/audio/s141/s141_quiz_answer_incorrect.mp3"><![CDATA[
+					<div class="FreeTestDialog" style="width: 838px; height: 157px; background-color: #fff2f2; border: 1px solid #ff5555; box-shadow: none;">
+						<div style="float: left; padding: 15px 0 0 15px;">							
+							<img src="xmls/en/images/s141/final_exam/icon_incorrect_final-exam.png">
+							<p class="form-font-20lg" style="font-size: 19px; position: absolute; top: 1px; left: 41px; color: #cb0000; font-weight: bold;">Incorrect</p>					
+						</div>
+						<div class="CourseVideoQuizDialogContent" style="width: 653px; height: 100%; float: left; padding: 10px 0 0 15px;">
+							<p class="form-font-14 color-black">You should never use a word found in the dictionary. The correct answer is D.</p>
+							<p class="form-font-14 guest_text-popup-continue">Click the red Close button to proceed.</p>
+						</div>
+						<div id="FreeFormDialogCloseButton" class="FlatDialogClose InteractivityButton" style="top: -18px; left: 812px;">
+							<a href="#" title="Continue"></a>
+						</div>
+					</div>
+				]]></Rule>
+				<Rule Top="360" Left="51" DarkenBackground="yes" AnswerID="4" AudioFile="xmls/en/audio/s141/s141_quiz_answer_correct.mp3" Correct="yes"><![CDATA[
+					<div class="FreeTestDialog" style="width: 838px; height: 157px; background-color: #edf7fd; border: 1px solid #96cdf2; box-shadow: none;">
+						<div style="float: left; padding: 15px 0 0 15px;">							
+							<img src="xmls/en/images/s141/final_exam/icon_correct_final-exam.png">
+							<p class="form-font-20lg" style="font-size: 19px; position: absolute; top: 1px; left: 49px; color: #3fa4e7; font-weight: bold;">Correct</p>					
+						</div>
+						<div class="CourseVideoQuizDialogContent" style="width: 653px; height: 100%; float: left; padding: 10px 0 0 15px;">
+							<p class="form-font-14 color-black">You should use as many characters as possible in your password and use a mix of numbers, uppercase and lowercase letters, and special characters.</p>
+							<p class="form-font-14 guest_text-popup-continue">Click the Continue button below to proceed.</p>
+						</div>
+						<div id="FreeFormDialogCloseButton" class="themebutton themesimple">
+							<a href="#" title="Continue"><center><img src="skins/new/play_blue.png" style="margin-right:0px"></center></a>
+						</div>
+					</div>
+				]]></Rule>					
+			</Rules>		
+		</Question>
+
+		<Question>  <!-- Question 1 -->
+			<Elements>
+
+				<Element Top="0" Left="0" Width="926" Height="466"><![CDATA[<img src="xmls/en/images/quizbg.png" class="quiz_bg-slide-general">]]></Element>
+
+				<Element Top="10" Left="9" Width="909" Height="449"><![CDATA[<img src="xmls/en/images/s141/final_exam/bg_final-exam.png" 	>]]></Element>
+					
+				<Element Top="27" Left="848"><![CDATA[<span Class="form-font-quiz-head-number">#CurrentGroupQ of #CurrentGroupTotal</span>]]></Element>
+
+				<Element Top="22" Left="39" Width="700" AudioFile="" ><![CDATA[<span class="form-font-quiz-head">Final Exam</span>]]></Element>
+
+			</Elements>
+
+			<AnswerButton Class="themebutton themesimple" Icon="next" Left="39" Top="265" Width="80" Text="Submit"></AnswerButton>
+
+			<QuestionText Top="60" Left="39" Width="847" AudioFile="xmls/en/audio/s141/quizbg2.mp3" ><![CDATA[<p class="guest_title-paragraph form-font-16-question final_exam-fix">Which of the following activities does our acceptable use policy allow?</p>]]>
+			</QuestionText>
+		
+			<Answers Type="radio" Top="136" Left="39" Width="847" Spacing="5" Randomize="no">
+				<Answer AnswerID="1"><![CDATA[
+					<div class="popupquiz-font-16">
+						<p style="float: left; margin: 0;">A)</p>
+						<p style="float: left; margin: 0; width: 770px; padding-left: 4px;">Transmission or retransmission of inappropriate content.</p>
+					</div>
+				]]></Answer>
+				<Answer AnswerID="2"><![CDATA[
+					<div class="popupquiz-font-16">
+						<p style="float: left; margin: 0;">B)</p>
+						<p style="float: left; margin: 0; width: 770px; padding-left: 4px;">Making illegal/pirated copies of software.</p>
+					</div>
+				]]></Answer>
+				<Answer AnswerID="3"><![CDATA[
+					<div class="popupquiz-font-16">
+						<p style="float: left; margin: 0;">C)</p>
+						<p style="float: left; margin: 0; width: 770px; padding-left: 4px;">Conducting personal business or solicitation at work.</p>
+					</div>
+				]]></Answer>
+				<Answer AnswerID="4"><![CDATA[
+					<div class="popupquiz-font-16">
+						<p style="float: left; margin: 0;">D)</p>
+						<p style="float: left; margin: 0; width: 770px; padding-left: 4px;">Communicating with colleagues concerning work related issues.</p>
+					</div>
+					]]></Answer>
+			</Answers>
+
+			<Rules>
+				<Rule Top="240" Left="276" DarkenBackground="yes" AnswerID="" AudioFile="xmls/en/audio/s141/s141_quiz_answer_please-try.mp3"><![CDATA[
+					<div class="FreeTestDialog" style="width: 395px; height: 136px; background-color: #f1f1f1; border: 1px solid #d4d4d4; box-shadow: none;">
+						<div style="float: left; padding: 15px 0 0 15px;">							
+							<img src="xmls/en/images/s141/final_exam/icon_try-again_final-exam.png">												
+						</div>
+						<div class="CourseVideoQuizDialogContent" style="width: 245px; height: 100%; float: left; padding: 10px 0 0 15px;">
+							<p class="form-font-20lg" style="font-size: 18px; font-weight: 600; margin-bottom: 0;">Please Try Again</p>
+							<p class="form-font-14 color-black">Please select your answer.</p>				
+							<p class="form-font-14 guest_text-popup-continue">Click the red Close button to proceed.</p>
+						</div>
+						<div id="FreeFormDialogCloseButton" class="FlatDialogClose InteractivityButton" style="top: -18px; left: 372px;">
+							<a href="#" title="Continue"></a>
+						</div>
+					</div>
+				]]></Rule>
+				<Rule Top="360" Left="51" DarkenBackground="yes" AnswerID="1" AudioFile="xmls/en/audio/s141/s141_quiz_answer_incorrect.mp3"><![CDATA[
+					<div class="FreeTestDialog" style="width: 838px; height: 157px; background-color: #fff2f2; border: 1px solid #ff5555; box-shadow: none;">
+						<div style="float: left; padding: 15px 0 0 15px;">							
+							<img src="xmls/en/images/s141/final_exam/icon_incorrect_final-exam.png">
+							<p class="form-font-20lg" style="font-size: 19px; position: absolute; top: 1px; left: 41px; color: #cb0000; font-weight: bold;">Incorrect</p>					
+						</div>
+						<div class="CourseVideoQuizDialogContent" style="width: 653px; height: 100%; float: left; padding: 10px 0 0 15px;">
+							<p class="form-font-14 color-black">The acceptable use policy disallows the transmission or retransmission of inappropriate content. It would not disallow communicating with colleagues concerning work related issues. The correct answer is D.</p>				
+							<p class="form-font-14 guest_text-popup-continue">Click the red Close button to proceed.</p>
+						</div>
+						<div id="FreeFormDialogCloseButton" class="FlatDialogClose InteractivityButton" style="top: -18px; left: 812px;">
+							<a href="#" title="Continue"></a>
+						</div>
+					</div>
+				]]></Rule>
+				<Rule Top="360" Left="51" DarkenBackground="yes" AnswerID="2" AudioFile="xmls/en/audio/s141/s141_quiz_answer_incorrect.mp3"><![CDATA[
+					<div class="FreeTestDialog" style="width: 838px; height: 157px; background-color: #fff2f2; border: 1px solid #ff5555; box-shadow: none;">
+						<div style="float: left; padding: 15px 0 0 15px;">							
+							<img src="xmls/en/images/s141/final_exam/icon_incorrect_final-exam.png">
+							<p class="form-font-20lg" style="font-size: 19px; position: absolute; top: 1px; left: 41px; color: #cb0000; font-weight: bold;">Incorrect</p>					
+						</div>
+						<div class="CourseVideoQuizDialogContent" style="width: 653px; height: 100%; float: left; padding: 10px 0 0 15px;">
+							<p class="form-font-14 color-black">The acceptable use policy disallows making illegal/pirated copies of software. It would not disallow communicating with colleagues concerning work related issues. The correct answer is D.</p>			
+							<p class="form-font-14 guest_text-popup-continue">Click the red Close button to proceed.</p>
+						</div>
+						<div id="FreeFormDialogCloseButton" class="FlatDialogClose InteractivityButton" style="top: -18px; left: 812px;">
+							<a href="#" title="Continue"></a>
+						</div>
+					</div>
+				]]></Rule>
+				<Rule Top="360" Left="51" DarkenBackground="yes" AnswerID="3" AudioFile="xmls/en/audio/s141/s141_quiz_answer_incorrect.mp3"><![CDATA[
+					<div class="FreeTestDialog" style="width: 838px; height: 157px; background-color: #fff2f2; border: 1px solid #ff5555; box-shadow: none;">
+						<div style="float: left; padding: 15px 0 0 15px;">							
+							<img src="xmls/en/images/s141/final_exam/icon_incorrect_final-exam.png">
+							<p class="form-font-20lg" style="font-size: 19px; position: absolute; top: 1px; left: 41px; color: #cb0000; font-weight: bold;">Incorrect</p>					
+						</div>
+						<div class="CourseVideoQuizDialogContent" style="width: 653px; height: 100%; float: left; padding: 10px 0 0 15px;">
+							<p class="form-font-14 color-black">The acceptable use policy disallows conducting personal business or solicitation at work.  It would not disallow communicating with colleagues concerning work related issues. The correct answer is D.</p>				
+							<p class="form-font-14 guest_text-popup-continue">Click the red Close button to proceed.</p>
+						</div>
+						<div id="FreeFormDialogCloseButton" class="FlatDialogClose InteractivityButton" style="top: -18px; left: 812px;">
+							<a href="#" title="Continue"></a>
+						</div>
+					</div>
+				]]></Rule>
+				<Rule Top="360" Left="51" DarkenBackground="yes" AnswerID="4" AudioFile="xmls/en/audio/s141/s141_quiz_answer_correct.mp3" Correct="yes"><![CDATA[
+					<div class="FreeTestDialog" style="width: 838px; height: 157px; background-color: #edf7fd; border: 1px solid #96cdf2; box-shadow: none;">
+						<div style="float: left; padding: 15px 0 0 15px;">							
+							<img src="xmls/en/images/s141/final_exam/icon_correct_final-exam.png">
+							<p class="form-font-20lg" style="font-size: 19px; position: absolute; top: 1px; left: 49px; color: #3fa4e7; font-weight: bold;">Correct</p>					
+						</div>
+						<div class="CourseVideoQuizDialogContent" style="width: 653px; height: 100%; float: left; padding: 10px 0 0 15px;">
+							<p class="form-font-14 color-black">The acceptable use policy allows communicating with colleagues concerning work related issues.</p>
+							<p class="form-font-14 guest_text-popup-continue">Click the Continue button below to proceed.</p>
+						</div>
+						<div id="FreeFormDialogCloseButton" class="themebutton themesimple">
+							<a href="#" title="Continue"><center><img src="skins/new/play_blue.png" style="margin-right:0px"></center></a>
+						</div>
+					</div>
+				]]></Rule>					
+			</Rules>
+		</Question>	
+
+		<Question>  <!-- Question 4 -->
+			<Elements>
+
+				<Element Top="0" Left="0" Width="926" Height="466"><![CDATA[<img src="xmls/en/images/quizbg.png" class="quiz_bg-slide-general">]]></Element>
+
+				<Element Top="10" Left="9" Width="909" Height="449"><![CDATA[<img src="xmls/en/images/s141/final_exam/bg_final-exam.png">]]></Element>
+					
+				<Element Top="27" Left="848"><![CDATA[<span Class="form-font-quiz-head-number">#CurrentGroupQ of #CurrentGroupTotal</span>]]></Element>
+
+				<Element Top="22" Left="39" Width="700" AudioFile="" ><![CDATA[<span class="form-font-quiz-head">Final Exam</span>]]></Element>
+
+			</Elements>
+
+			<AnswerButton Class="themebutton themesimple" Icon="next" Left="39" Top="265" Width="80" Text="Submit"></AnswerButton>
+
+			<QuestionText Top="60" Left="39" Width="847" AudioFile="xmls/en/audio/s141/quizbg2.mp3" ><![CDATA[<p class="guest_title-paragraph form-font-16-question final_exam-fix">If you think you are the victim of social engineering, you should do all of the following EXCEPT:</p>]]>
+			</QuestionText>
+		
+			<Answers Type="radio" Top="136" Left="39" Width="847" Spacing="5" Randomize="no">
+				<Answer AnswerID="1"><![CDATA[
+					<div class="popupquiz-font-16">
+						<p style="float: left; margin: 0;">A)</p>
+						<p style="float: left; margin: 0; width: 770px; padding-left: 4px;">Get the person’s name and contact information.</p>
+					</div> 
+				 ]]></Answer>
+				<Answer AnswerID="2"><![CDATA[
+					<div class="popupquiz-font-16">
+						<p style="float: left; margin: 0;">B)</p>
+						<p style="float: left; margin: 0; width: 770px; padding-left: 4px;">Wait one week, then contact your supervisor or the Help Desk.</p>
+					</div> 
+				]]></Answer>
+				<Answer AnswerID="3"><![CDATA[
+					<div class="popupquiz-font-16">
+						<p style="float: left; margin: 0;">C)</p>
+						<p style="float: left; margin: 0; width: 770px; padding-left: 4px;">If it is happening over the phone, try to get the phone number using caller ID.</p>
+					</div> 
+				]]></Answer>
+				<Answer AnswerID="4"><![CDATA[
+					<div class="popupquiz-font-16">
+						<p style="float: left; margin: 0;">D)</p>
+						<p style="float: left; margin: 0; width: 770px; padding-left: 4px;">Take detailed notes about what person is requesting.</p>
+					</div> 
+				]]></Answer>					
+			</Answers>
+
+			<Rules>
+				<Rule Top="240" Left="276" DarkenBackground="yes" AnswerID="" AudioFile="xmls/en/audio/s141/s141_quiz_answer_please-try.mp3"><![CDATA[
+					<div class="FreeTestDialog" style="width: 395px; height: 136px; background-color: #f1f1f1; border: 1px solid #d4d4d4; box-shadow: none;">
+						<div style="float: left; padding: 15px 0 0 15px;">							
+							<img src="xmls/en/images/s141/final_exam/icon_try-again_final-exam.png">												
+						</div>
+						<div class="CourseVideoQuizDialogContent" style="width: 245px; height: 100%; float: left; padding: 10px 0 0 15px;">
+							<p class="form-font-20lg" style="font-size: 18px; font-weight: 600; margin-bottom: 0;">Please Try Again</p>
+							<p class="form-font-14 color-black">Please select your answer.</p>				
+							<p class="form-font-14 guest_text-popup-continue">Click the red Close button to proceed.</p>
+						</div>
+						<div id="FreeFormDialogCloseButton" class="FlatDialogClose InteractivityButton" style="top: -18px; left: 372px;">
+							<a href="#" title="Continue"></a>
+						</div>
+					</div>
+				]]></Rule>
+				<Rule Top="360" Left="51" DarkenBackground="yes" AnswerID="1" AudioFile="xmls/en/audio/s141/s141_quiz_answer_incorrect.mp3"><![CDATA[
+					<div class="FreeTestDialog" style="width: 838px; height: 157px; background-color: #fff2f2; border: 1px solid #ff5555; box-shadow: none;">
+						<div style="float: left; padding: 15px 0 0 15px;">							
+							<img src="xmls/en/images/s141/final_exam/icon_incorrect_final-exam.png">
+							<p class="form-font-20lg" style="font-size: 19px; position: absolute; top: 1px; left: 41px; color: #cb0000; font-weight: bold;">Incorrect</p>					
+						</div>
+						<div class="CourseVideoQuizDialogContent" style="width: 653px; height: 100%; float: left; padding: 10px 0 0 15px;">
+							<p class="form-font-14 color-black">This is a best practice. The correct answer is B.</p>			
+							<p class="form-font-14 guest_text-popup-continue">Click the red Close button to proceed.</p>
+						</div>
+						<div id="FreeFormDialogCloseButton" class="FlatDialogClose InteractivityButton" style="top: -18px; left: 812px;">
+							<a href="#" title="Continue"></a>
+						</div>
+					</div>
+				]]></Rule>
+				<Rule Top="360" Left="51" DarkenBackground="yes" AnswerID="2" AudioFile="xmls/en/audio/s141/s141_quiz_answer_correct.mp3" Correct="yes"><![CDATA[
+					<div class="FreeTestDialog" style="width: 838px; height: 157px; background-color: #edf7fd; border: 1px solid #96cdf2; box-shadow: none;">
+						<div style="float: left; padding: 15px 0 0 15px;">							
+							<img src="xmls/en/images/s141/final_exam/icon_correct_final-exam.png">
+							<p class="form-font-20lg" style="font-size: 19px; position: absolute; top: 1px; left: 49px; color: #3fa4e7; font-weight: bold;">Correct</p>					
+						</div>
+						<div class="CourseVideoQuizDialogContent" style="width: 653px; height: 100%; float: left; padding: 10px 0 0 15px;">
+							<p class="form-font-14 color-black">You should contact your supervisor or the Help Desk immediately.</p>
+							<p class="form-font-14 guest_text-popup-continue">Click the Continue button below to proceed.</p>
+						</div>
+						<div id="FreeFormDialogCloseButton" class="themebutton themesimple">
+							<a href="#" title="Continue"><center><img src="skins/new/play_blue.png" style="margin-right:0px"></center></a>
+						</div>
+					</div>
+				]]></Rule>					
+				<Rule Top="360" Left="51" DarkenBackground="yes" AnswerID="3" AudioFile="xmls/en/audio/s141/s141_quiz_answer_incorrect.mp3"><![CDATA[
+					<div class="FreeTestDialog" style="width: 838px; height: 157px; background-color: #fff2f2; border: 1px solid #ff5555; box-shadow: none;">
+						<div style="float: left; padding: 15px 0 0 15px;">							
+							<img src="xmls/en/images/s141/final_exam/icon_incorrect_final-exam.png">
+							<p class="form-font-20lg" style="font-size: 19px; position: absolute; top: 1px; left: 41px; color: #cb0000; font-weight: bold;">Incorrect</p>					
+						</div>
+						<div class="CourseVideoQuizDialogContent" style="width: 653px; height: 100%; float: left; padding: 10px 0 0 15px;">
+							<p class="form-font-14 color-black">This is a best practice. The correct answer is B.</p>			
+							<p class="form-font-14 guest_text-popup-continue">Click the red Close button to proceed.</p>
+						</div>
+						<div id="FreeFormDialogCloseButton" class="FlatDialogClose InteractivityButton" style="top: -18px; left: 812px;">
+							<a href="#" title="Continue"></a>
+						</div>
+					</div>
+				]]></Rule>
+				<Rule Top="360" Left="51" DarkenBackground="yes" AnswerID="4" AudioFile="xmls/en/audio/s141/s141_quiz_answer_incorrect.mp3"><![CDATA[
+					<div class="FreeTestDialog" style="width: 838px; height: 157px; background-color: #fff2f2; border: 1px solid #ff5555; box-shadow: none;">
+						<div style="float: left; padding: 15px 0 0 15px;">							
+							<img src="xmls/en/images/s141/final_exam/icon_incorrect_final-exam.png">
+							<p class="form-font-20lg" style="font-size: 19px; position: absolute; top: 1px; left: 41px; color: #cb0000; font-weight: bold;">Incorrect</p>					
+						</div>
+						<div class="CourseVideoQuizDialogContent" style="width: 653px; height: 100%; float: left; padding: 10px 0 0 15px;">
+							<p class="form-font-14 color-black">This is a best practice. The correct answer is B.</p>			
+							<p class="form-font-14 guest_text-popup-continue">Click the red Close button to proceed.</p>
+						</div>
+						<div id="FreeFormDialogCloseButton" class="FlatDialogClose InteractivityButton" style="top: -18px; left: 812px;">
+							<a href="#" title="Continue"></a>
+						</div>
+					</div>
+				]]></Rule>
+			</Rules>
+		</Question>	
+
+
+		<!-- third attempt -->
+
+		
+
+		<Question>  <!-- Question 1 -->
+			<Elements>
+
+				<Element Top="0" Left="0" Width="926" Height="466"><![CDATA[<img src="xmls/en/images/quizbg.png" class="quiz_bg-slide-general">]]></Element>
+
+				<Element Top="10" Left="9" Width="909" Height="449"><![CDATA[<img src="xmls/en/images/s141/final_exam/bg_final-exam.png" 	>]]></Element>
+					
+				<Element Top="27" Left="848"><![CDATA[<span Class="form-font-quiz-head-number">#CurrentGroupQ of #CurrentGroupTotal</span>]]></Element>
+
+				<Element Top="22" Left="39" Width="700" AudioFile="" ><![CDATA[<span class="form-font-quiz-head">Final Exam</span>]]></Element>
+
+			</Elements>
+
+			<AnswerButton Class="themebutton themesimple" Icon="next" Left="39" Top="265" Width="80" Text="Submit"></AnswerButton>
+
+			<QuestionText Top="60" Left="39" Width="847" AudioFile="xmls/en/audio/s141/quizbg2.mp3" ><![CDATA[<p class="guest_title-paragraph form-font-16-question final_exam-fix">Which of the following activities does our acceptable use policy allow?</p>]]>
+			</QuestionText>
+		
+			<Answers Type="radio" Top="136" Left="39" Width="847" Spacing="5" Randomize="no">
+				<Answer AnswerID="1"><![CDATA[
+					<div class="popupquiz-font-16">
+						<p style="float: left; margin: 0;">A)</p>
+						<p style="float: left; margin: 0; width: 770px; padding-left: 4px;">Transmission or retransmission of inappropriate content.</p>
+					</div>
+				]]></Answer>
+				<Answer AnswerID="2"><![CDATA[
+					<div class="popupquiz-font-16">
+						<p style="float: left; margin: 0;">B)</p>
+						<p style="float: left; margin: 0; width: 770px; padding-left: 4px;">Making illegal/pirated copies of software.</p>
+					</div>
+				]]></Answer>
+				<Answer AnswerID="3"><![CDATA[
+					<div class="popupquiz-font-16">
+						<p style="float: left; margin: 0;">C)</p>
+						<p style="float: left; margin: 0; width: 770px; padding-left: 4px;">Conducting personal business or solicitation at work.</p>
+					</div>
+				]]></Answer>
+				<Answer AnswerID="4"><![CDATA[
+					<div class="popupquiz-font-16">
+						<p style="float: left; margin: 0;">D)</p>
+						<p style="float: left; margin: 0; width: 770px; padding-left: 4px;">Communicating with colleagues concerning work related issues.</p>
+					</div>
+					]]></Answer>
+			</Answers>
+
+			<Rules>
+				<Rule Top="240" Left="276" DarkenBackground="yes" AnswerID="" AudioFile="xmls/en/audio/s141/s141_quiz_answer_please-try.mp3"><![CDATA[
+					<div class="FreeTestDialog" style="width: 395px; height: 136px; background-color: #f1f1f1; border: 1px solid #d4d4d4; box-shadow: none;">
+						<div style="float: left; padding: 15px 0 0 15px;">							
+							<img src="xmls/en/images/s141/final_exam/icon_try-again_final-exam.png">												
+						</div>
+						<div class="CourseVideoQuizDialogContent" style="width: 245px; height: 100%; float: left; padding: 10px 0 0 15px;">
+							<p class="form-font-20lg" style="font-size: 18px; font-weight: 600; margin-bottom: 0;">Please Try Again</p>
+							<p class="form-font-14 color-black">Please select your answer.</p>				
+							<p class="form-font-14 guest_text-popup-continue">Click the red Close button to proceed.</p>
+						</div>
+						<div id="FreeFormDialogCloseButton" class="FlatDialogClose InteractivityButton" style="top: -18px; left: 372px;">
+							<a href="#" title="Continue"></a>
+						</div>
+					</div>
+				]]></Rule>
+				<Rule Top="360" Left="51" DarkenBackground="yes" AnswerID="1" AudioFile="xmls/en/audio/s141/s141_quiz_answer_incorrect.mp3"><![CDATA[
+					<div class="FreeTestDialog" style="width: 838px; height: 157px; background-color: #fff2f2; border: 1px solid #ff5555; box-shadow: none;">
+						<div style="float: left; padding: 15px 0 0 15px;">							
+							<img src="xmls/en/images/s141/final_exam/icon_incorrect_final-exam.png">
+							<p class="form-font-20lg" style="font-size: 19px; position: absolute; top: 1px; left: 41px; color: #cb0000; font-weight: bold;">Incorrect</p>					
+						</div>
+						<div class="CourseVideoQuizDialogContent" style="width: 653px; height: 100%; float: left; padding: 10px 0 0 15px;">
+							<p class="form-font-14 color-black">The acceptable use policy disallows the transmission or retransmission of inappropriate content. It would not disallow communicating with colleagues concerning work related issues. The correct answer is D.</p>				
+							<p class="form-font-14 guest_text-popup-continue">Click the red Close button to proceed.</p>
+						</div>
+						<div id="FreeFormDialogCloseButton" class="FlatDialogClose InteractivityButton" style="top: -18px; left: 812px;">
+							<a href="#" title="Continue"></a>
+						</div>
+					</div>
+				]]></Rule>
+				<Rule Top="360" Left="51" DarkenBackground="yes" AnswerID="2" AudioFile="xmls/en/audio/s141/s141_quiz_answer_incorrect.mp3"><![CDATA[
+					<div class="FreeTestDialog" style="width: 838px; height: 157px; background-color: #fff2f2; border: 1px solid #ff5555; box-shadow: none;">
+						<div style="float: left; padding: 15px 0 0 15px;">							
+							<img src="xmls/en/images/s141/final_exam/icon_incorrect_final-exam.png">
+							<p class="form-font-20lg" style="font-size: 19px; position: absolute; top: 1px; left: 41px; color: #cb0000; font-weight: bold;">Incorrect</p>					
+						</div>
+						<div class="CourseVideoQuizDialogContent" style="width: 653px; height: 100%; float: left; padding: 10px 0 0 15px;">
+							<p class="form-font-14 color-black">The acceptable use policy disallows making illegal/pirated copies of software. It would not disallow communicating with colleagues concerning work related issues. The correct answer is D.</p>			
+							<p class="form-font-14 guest_text-popup-continue">Click the red Close button to proceed.</p>
+						</div>
+						<div id="FreeFormDialogCloseButton" class="FlatDialogClose InteractivityButton" style="top: -18px; left: 812px;">
+							<a href="#" title="Continue"></a>
+						</div>
+					</div>
+				]]></Rule>
+				<Rule Top="360" Left="51" DarkenBackground="yes" AnswerID="3" AudioFile="xmls/en/audio/s141/s141_quiz_answer_incorrect.mp3"><![CDATA[
+					<div class="FreeTestDialog" style="width: 838px; height: 157px; background-color: #fff2f2; border: 1px solid #ff5555; box-shadow: none;">
+						<div style="float: left; padding: 15px 0 0 15px;">							
+							<img src="xmls/en/images/s141/final_exam/icon_incorrect_final-exam.png">
+							<p class="form-font-20lg" style="font-size: 19px; position: absolute; top: 1px; left: 41px; color: #cb0000; font-weight: bold;">Incorrect</p>					
+						</div>
+						<div class="CourseVideoQuizDialogContent" style="width: 653px; height: 100%; float: left; padding: 10px 0 0 15px;">
+							<p class="form-font-14 color-black">The acceptable use policy disallows conducting personal business or solicitation at work.  It would not disallow communicating with colleagues concerning work related issues. The correct answer is D.</p>				
+							<p class="form-font-14 guest_text-popup-continue">Click the red Close button to proceed.</p>
+						</div>
+						<div id="FreeFormDialogCloseButton" class="FlatDialogClose InteractivityButton" style="top: -18px; left: 812px;">
+							<a href="#" title="Continue"></a>
+						</div>
+					</div>
+				]]></Rule>
+				<Rule Top="360" Left="51" DarkenBackground="yes" AnswerID="4" AudioFile="xmls/en/audio/s141/s141_quiz_answer_correct.mp3" Correct="yes"><![CDATA[
+					<div class="FreeTestDialog" style="width: 838px; height: 157px; background-color: #edf7fd; border: 1px solid #96cdf2; box-shadow: none;">
+						<div style="float: left; padding: 15px 0 0 15px;">							
+							<img src="xmls/en/images/s141/final_exam/icon_correct_final-exam.png">
+							<p class="form-font-20lg" style="font-size: 19px; position: absolute; top: 1px; left: 49px; color: #3fa4e7; font-weight: bold;">Correct</p>					
+						</div>
+						<div class="CourseVideoQuizDialogContent" style="width: 653px; height: 100%; float: left; padding: 10px 0 0 15px;">
+							<p class="form-font-14 color-black">The acceptable use policy allows communicating with colleagues concerning work related issues.</p>
+							<p class="form-font-14 guest_text-popup-continue">Click the Continue button below to proceed.</p>
+						</div>
+						<div id="FreeFormDialogCloseButton" class="themebutton themesimple">
+							<a href="#" title="Continue"><center><img src="skins/new/play_blue.png" style="margin-right:0px"></center></a>
+						</div>
+					</div>
+				]]></Rule>					
+			</Rules>
+		</Question>	
+
+		
+
+		<Question>  <!-- Question 4 -->
+			<Elements>
+
+				<Element Top="0" Left="0" Width="926" Height="466"><![CDATA[<img src="xmls/en/images/quizbg.png" class="quiz_bg-slide-general">]]></Element>
+
+				<Element Top="10" Left="9" Width="909" Height="449"><![CDATA[<img src="xmls/en/images/s141/final_exam/bg_final-exam.png">]]></Element>
+					
+				<Element Top="27" Left="848"><![CDATA[<span Class="form-font-quiz-head-number">#CurrentGroupQ of #CurrentGroupTotal</span>]]></Element>
+
+				<Element Top="22" Left="39" Width="700" AudioFile="" ><![CDATA[<span class="form-font-quiz-head">Final Exam</span>]]></Element>
+
+			</Elements>
+
+			<AnswerButton Class="themebutton themesimple" Icon="next" Left="39" Top="265" Width="80" Text="Submit"></AnswerButton>
+
+			<QuestionText Top="60" Left="39" Width="847" AudioFile="xmls/en/audio/s141/quizbg2.mp3" ><![CDATA[<p class="guest_title-paragraph form-font-16-question final_exam-fix">If you think you are the victim of social engineering, you should do all of the following EXCEPT:</p>]]>
+			</QuestionText>
+		
+			<Answers Type="radio" Top="136" Left="39" Width="847" Spacing="5" Randomize="no">
+				<Answer AnswerID="1"><![CDATA[
+					<div class="popupquiz-font-16">
+						<p style="float: left; margin: 0;">A)</p>
+						<p style="float: left; margin: 0; width: 770px; padding-left: 4px;">Get the person’s name and contact information.</p>
+					</div> 
+				 ]]></Answer>
+				<Answer AnswerID="2"><![CDATA[
+					<div class="popupquiz-font-16">
+						<p style="float: left; margin: 0;">B)</p>
+						<p style="float: left; margin: 0; width: 770px; padding-left: 4px;">Wait one week, then contact your supervisor or the Help Desk.</p>
+					</div> 
+				]]></Answer>
+				<Answer AnswerID="3"><![CDATA[
+					<div class="popupquiz-font-16">
+						<p style="float: left; margin: 0;">C)</p>
+						<p style="float: left; margin: 0; width: 770px; padding-left: 4px;">If it is happening over the phone, try to get the phone number using caller ID.</p>
+					</div> 
+				]]></Answer>
+				<Answer AnswerID="4"><![CDATA[
+					<div class="popupquiz-font-16">
+						<p style="float: left; margin: 0;">D)</p>
+						<p style="float: left; margin: 0; width: 770px; padding-left: 4px;">Take detailed notes about what person is requesting.</p>
+					</div> 
+				]]></Answer>					
+			</Answers>
+
+			<Rules>
+				<Rule Top="240" Left="276" DarkenBackground="yes" AnswerID="" AudioFile="xmls/en/audio/s141/s141_quiz_answer_please-try.mp3"><![CDATA[
+					<div class="FreeTestDialog" style="width: 395px; height: 136px; background-color: #f1f1f1; border: 1px solid #d4d4d4; box-shadow: none;">
+						<div style="float: left; padding: 15px 0 0 15px;">							
+							<img src="xmls/en/images/s141/final_exam/icon_try-again_final-exam.png">												
+						</div>
+						<div class="CourseVideoQuizDialogContent" style="width: 245px; height: 100%; float: left; padding: 10px 0 0 15px;">
+							<p class="form-font-20lg" style="font-size: 18px; font-weight: 600; margin-bottom: 0;">Please Try Again</p>
+							<p class="form-font-14 color-black">Please select your answer.</p>				
+							<p class="form-font-14 guest_text-popup-continue">Click the red Close button to proceed.</p>
+						</div>
+						<div id="FreeFormDialogCloseButton" class="FlatDialogClose InteractivityButton" style="top: -18px; left: 372px;">
+							<a href="#" title="Continue"></a>
+						</div>
+					</div>
+				]]></Rule>
+				<Rule Top="360" Left="51" DarkenBackground="yes" AnswerID="1" AudioFile="xmls/en/audio/s141/s141_quiz_answer_incorrect.mp3"><![CDATA[
+					<div class="FreeTestDialog" style="width: 838px; height: 157px; background-color: #fff2f2; border: 1px solid #ff5555; box-shadow: none;">
+						<div style="float: left; padding: 15px 0 0 15px;">							
+							<img src="xmls/en/images/s141/final_exam/icon_incorrect_final-exam.png">
+							<p class="form-font-20lg" style="font-size: 19px; position: absolute; top: 1px; left: 41px; color: #cb0000; font-weight: bold;">Incorrect</p>					
+						</div>
+						<div class="CourseVideoQuizDialogContent" style="width: 653px; height: 100%; float: left; padding: 10px 0 0 15px;">
+							<p class="form-font-14 color-black">This is a best practice. The correct answer is B.</p>			
+							<p class="form-font-14 guest_text-popup-continue">Click the red Close button to proceed.</p>
+						</div>
+						<div id="FreeFormDialogCloseButton" class="FlatDialogClose InteractivityButton" style="top: -18px; left: 812px;">
+							<a href="#" title="Continue"></a>
+						</div>
+					</div>
+				]]></Rule>
+				<Rule Top="360" Left="51" DarkenBackground="yes" AnswerID="2" AudioFile="xmls/en/audio/s141/s141_quiz_answer_correct.mp3" Correct="yes"><![CDATA[
+					<div class="FreeTestDialog" style="width: 838px; height: 157px; background-color: #edf7fd; border: 1px solid #96cdf2; box-shadow: none;">
+						<div style="float: left; padding: 15px 0 0 15px;">							
+							<img src="xmls/en/images/s141/final_exam/icon_correct_final-exam.png">
+							<p class="form-font-20lg" style="font-size: 19px; position: absolute; top: 1px; left: 49px; color: #3fa4e7; font-weight: bold;">Correct</p>					
+						</div>
+						<div class="CourseVideoQuizDialogContent" style="width: 653px; height: 100%; float: left; padding: 10px 0 0 15px;">
+							<p class="form-font-14 color-black">You should contact your supervisor or the Help Desk immediately.</p>
+							<p class="form-font-14 guest_text-popup-continue">Click the Continue button below to proceed.</p>
+						</div>
+						<div id="FreeFormDialogCloseButton" class="themebutton themesimple">
+							<a href="#" title="Continue"><center><img src="skins/new/play_blue.png" style="margin-right:0px"></center></a>
+						</div>
+					</div>
+				]]></Rule>					
+				<Rule Top="360" Left="51" DarkenBackground="yes" AnswerID="3" AudioFile="xmls/en/audio/s141/s141_quiz_answer_incorrect.mp3"><![CDATA[
+					<div class="FreeTestDialog" style="width: 838px; height: 157px; background-color: #fff2f2; border: 1px solid #ff5555; box-shadow: none;">
+						<div style="float: left; padding: 15px 0 0 15px;">							
+							<img src="xmls/en/images/s141/final_exam/icon_incorrect_final-exam.png">
+							<p class="form-font-20lg" style="font-size: 19px; position: absolute; top: 1px; left: 41px; color: #cb0000; font-weight: bold;">Incorrect</p>					
+						</div>
+						<div class="CourseVideoQuizDialogContent" style="width: 653px; height: 100%; float: left; padding: 10px 0 0 15px;">
+							<p class="form-font-14 color-black">This is a best practice. The correct answer is B.</p>			
+							<p class="form-font-14 guest_text-popup-continue">Click the red Close button to proceed.</p>
+						</div>
+						<div id="FreeFormDialogCloseButton" class="FlatDialogClose InteractivityButton" style="top: -18px; left: 812px;">
+							<a href="#" title="Continue"></a>
+						</div>
+					</div>
+				]]></Rule>
+				<Rule Top="360" Left="51" DarkenBackground="yes" AnswerID="4" AudioFile="xmls/en/audio/s141/s141_quiz_answer_incorrect.mp3"><![CDATA[
+					<div class="FreeTestDialog" style="width: 838px; height: 157px; background-color: #fff2f2; border: 1px solid #ff5555; box-shadow: none;">
+						<div style="float: left; padding: 15px 0 0 15px;">							
+							<img src="xmls/en/images/s141/final_exam/icon_incorrect_final-exam.png">
+							<p class="form-font-20lg" style="font-size: 19px; position: absolute; top: 1px; left: 41px; color: #cb0000; font-weight: bold;">Incorrect</p>					
+						</div>
+						<div class="CourseVideoQuizDialogContent" style="width: 653px; height: 100%; float: left; padding: 10px 0 0 15px;">
+							<p class="form-font-14 color-black">This is a best practice. The correct answer is B.</p>			
+							<p class="form-font-14 guest_text-popup-continue">Click the red Close button to proceed.</p>
+						</div>
+						<div id="FreeFormDialogCloseButton" class="FlatDialogClose InteractivityButton" style="top: -18px; left: 812px;">
+							<a href="#" title="Continue"></a>
+						</div>
+					</div>
+				]]></Rule>
+			</Rules>
+		</Question>	
+
+		<Question>  <!-- Question 6 -->
+			<Elements>
+
+				<Element Top="0" Left="0" Width="926" Height="466"><![CDATA[<img src="xmls/en/images/quizbg.png" class="quiz_bg-slide-general">]]></Element>
+
+				<Element Top="10" Left="9" Width="909" Height="449"><![CDATA[<img src="xmls/en/images/s141/final_exam/bg_final-exam.png">]]></Element>
+					
+				<Element Top="27" Left="848"><![CDATA[<span Class="form-font-quiz-head-number">#CurrentGroupQ of #CurrentGroupTotal</span>]]></Element>
+
+				<Element Top="22" Left="39" Width="700" AudioFile="" ><![CDATA[<span class="form-font-quiz-head">Final Exam</span>]]></Element>
+
+			</Elements>
+
+			<AnswerButton Class="themebutton themesimple" Icon="next" Left="39" Top="207" Width="80" Text="Submit"></AnswerButton>
+
+			<QuestionText Top="60" Left="39" Width="847" AudioFile="xmls/en/audio/s141/quizbg2.mp3" ><![CDATA[<p class="guest_title-paragraph form-font-16-question final_exam-fix">True or False? Because you don’t have administrative rights to our network, you’re not a target for hackers.</p>]]>
+			</QuestionText>
+
+			<Answers Type="radio" Top="136" Left="39" Width="847" Spacing="5" Randomize="no">
+				<Answer AnswerID="1"><![CDATA[
+					<div class="popupquiz-font-16">
+						<p style="float: left; margin: 0;"></p>
+						<p style="float: left; margin: 0; width: 770px; padding-left: 4px;">True</p>
+					</div> 
+				]]></Answer>
+				<Answer AnswerID="2"><![CDATA[
+					<div class="popupquiz-font-16">
+						<p style="float: left; margin: 0;"></p>
+						<p style="float: left; margin: 0; width: 770px; padding-left: 4px;">False</p>
+					</div> 
+				]]></Answer>		
+			</Answers>
+
+			<Rules>
+				<Rule Top="240" Left="276" DarkenBackground="yes" AnswerID="" AudioFile="xmls/en/audio/s141/s141_quiz_answer_please-try.mp3"><![CDATA[
+					<div class="FreeTestDialog" style="width: 395px; height: 136px; background-color: #f1f1f1; border: 1px solid #d4d4d4; box-shadow: none;">
+						<div style="float: left; padding: 15px 0 0 15px;">							
+							<img src="xmls/en/images/s141/final_exam/icon_try-again_final-exam.png">												
+						</div>
+						<div class="CourseVideoQuizDialogContent" style="width: 245px; height: 100%; float: left; padding: 10px 0 0 15px;">
+							<p class="form-font-20lg" style="font-size: 18px; font-weight: 600; margin-bottom: 0;">Please Try Again</p>
+							<p class="form-font-14 color-black">Please select your answer.</p>				
+							<p class="form-font-14 guest_text-popup-continue">Click the red Close button to proceed.</p>
+						</div>
+						<div id="FreeFormDialogCloseButton" class="FlatDialogClose InteractivityButton" style="top: -18px; left: 372px;">
+							<a href="#" title="Continue"></a>
+						</div>
+					</div>
+				]]></Rule>
+				<Rule Top="360" Left="51" DarkenBackground="yes" AnswerID="1" AudioFile="xmls/en/audio/s141/s141_quiz_answer_incorrect.mp3"><![CDATA[
+					<div class="FreeTestDialog" style="width: 838px; height: 157px; background-color: #fff2f2; border: 1px solid #ff5555; box-shadow: none;">
+						<div style="float: left; padding: 15px 0 0 15px;">							
+							<img src="xmls/en/images/s141/final_exam/icon_incorrect_final-exam.png">
+							<p class="form-font-20lg" style="font-size: 19px; position: absolute; top: 1px; left: 41px; color: #cb0000; font-weight: bold;">Incorrect</p>					
+						</div>
+						<div class="CourseVideoQuizDialogContent" style="width: 653px; height: 100%; float: left; padding: 10px 0 0 15px;">
+							<p class="form-font-14 color-black">If an attacker could gain control of any computer that resides on our network, he or she could use that as a jumping off point to attack other systems. Everyone is a potential target for hackers.</p>				
+							<p class="form-font-14 guest_text-popup-continue">Click the red Close button to proceed.</p>
+						</div>
+						<div id="FreeFormDialogCloseButton" class="FlatDialogClose InteractivityButton" style="top: -18px; left: 812px;">
+							<a href="#" title="Continue"></a>
+						</div>
+					</div>
+				]]></Rule>
+				<Rule Top="360" Left="51" DarkenBackground="yes" AnswerID="2" AudioFile="xmls/en/audio/s141/s141_quiz_answer_correct.mp3" Correct="yes"><![CDATA[
+					<div class="FreeTestDialog" style="width: 838px; height: 157px; background-color: #edf7fd; border: 1px solid #96cdf2; box-shadow: none;">
+						<div style="float: left; padding: 15px 0 0 15px;">							
+							<img src="xmls/en/images/s141/final_exam/icon_correct_final-exam.png">
+							<p class="form-font-20lg" style="font-size: 19px; position: absolute; top: 1px; left: 49px; color: #3fa4e7; font-weight: bold;">Correct</p>					
+						</div>
+						<div class="CourseVideoQuizDialogContent" style="width: 653px; height: 100%; float: left; padding: 10px 0 0 15px;">
+							<p class="form-font-14 color-black">If an attacker could gain control of any computer that resides on our network, he or she could use that as a jumping off point to attack other systems. Everyone is a potential target for hackers.</p>
+							<p class="form-font-14 guest_text-popup-continue">Click the Continue button below to proceed.</p>
+						</div>
+						<div id="FreeFormDialogCloseButton" class="themebutton themesimple">
+							<a href="#" title="Continue"><center><img src="skins/new/play_blue.png" style="margin-right:0px"></center></a>
+						</div>
+					</div>
+				]]></Rule>		
+
+			</Rules>
+		</Question>	
+
+		<Question>  <!-- Question 2 -->
+			<Elements>
+
+				<Element Top="0" Left="0" Width="926" Height="466"><![CDATA[<img src="xmls/en/images/quizbg.png" class="quiz_bg-slide-general">]]></Element>
+
+				<Element Top="10" Left="9" Width="909" Height="449"><![CDATA[<img src="xmls/en/images/s141/final_exam/bg_final-exam.png">]]></Element>
+					
+				<Element Top="27" Left="848"><![CDATA[<span Class="form-font-quiz-head-number">#CurrentGroupQ of #CurrentGroupTotal</span>]]></Element>
+
+				<Element Top="22" Left="39" Width="700" AudioFile="" ><![CDATA[<span class="form-font-quiz-head">Final Exam</span>]]></Element>
+
+			</Elements>
+
+			<AnswerButton Class="themebutton themesimple" Icon="next" Left="39" Top="265" Width="80" Text="Submit"></AnswerButton>
+
+			<QuestionText Top="60" Left="39" Width="847" AudioFile="xmls/en/audio/s141/quizbg2.mp3" ><![CDATA[<p class="guest_title-paragraph form-font-16-question final_exam-fix">How can you create a strong password that will slow down or even defeat a password cracker program?</p>]]>
+			</QuestionText>
+		
+			<Answers Type="radio" Top="136" Left="39" Width="847" Spacing="5" Randomize="no">
+				<Answer AnswerID="1"><![CDATA[
+					<div class="popupquiz-font-16">
+						<p style="float: left; margin: 0;">A)</p>
+						<p style="float: left; margin: 0; width: 770px; padding-left: 4px;">Use a mix of numbers, uppercase and lowercase letters, and special characters in your password.</p>
+					</div> 					
+				]]></Answer>
+				<Answer AnswerID="2"><![CDATA[
+					<div class="popupquiz-font-16">
+						<p style="float: left; margin: 0;">B)</p>
+						<p style="float: left; margin: 0; width: 770px; padding-left: 4px;">Use as many characters as possible in your password.</p>
+					</div> 
+				]]></Answer>
+				<Answer AnswerID="3"><![CDATA[
+					<div class="popupquiz-font-16">
+						<p style="float: left; margin: 0;">C)</p>
+						<p style="float: left; margin: 0; width: 770px; padding-left: 4px;">Use a long word found in a dictionary.</p>
+					</div> 
+				]]></Answer>
+				<Answer AnswerID="4"><![CDATA[
+					<div class="popupquiz-font-16">
+						<p style="float: left; margin: 0;">D)</p>
+						<p style="float: left; margin: 0; width: 770px; padding-left: 4px;">Both A and B are correct.</p>
+					</div> 
+				]]></Answer>					
+			</Answers>
+
+			<Rules>
+				<Rule Top="240" Left="276" DarkenBackground="yes" AnswerID="" AudioFile="xmls/en/audio/s141/s141_quiz_answer_please-try.mp3"><![CDATA[
+					<div class="FreeTestDialog" style="width: 395px; height: 136px; background-color: #f1f1f1; border: 1px solid #d4d4d4; box-shadow: none;">
+						<div style="float: left; padding: 15px 0 0 15px;">							
+							<img src="xmls/en/images/s141/final_exam/icon_try-again_final-exam.png">												
+						</div>
+						<div class="CourseVideoQuizDialogContent" style="width: 245px; height: 100%; float: left; padding: 10px 0 0 15px;">
+							<p class="form-font-20lg" style="font-size: 18px; font-weight: 600; margin-bottom: 0;">Please Try Again</p>
+							<p class="form-font-14 color-black">Please select your answer.</p>				
+							<p class="form-font-14 guest_text-popup-continue">Click the red Close button to proceed.</p>
+						</div>
+						<div id="FreeFormDialogCloseButton" class="FlatDialogClose InteractivityButton" style="top: -18px; left: 372px;">
+							<a href="#" title="Continue"></a>
+						</div>
+					</div>
+				]]></Rule>			
+				<Rule Top="360" Left="51" DarkenBackground="yes" AnswerID="1" AudioFile="xmls/en/audio/s141/s141_quiz_answer_incorrect.mp3"><![CDATA[
+					<div class="FreeTestDialog" style="width: 838px; height: 157px; background-color: #fff2f2; border: 1px solid #ff5555; box-shadow: none;">
+						<div style="float: left; padding: 15px 0 0 15px;">							
+							<img src="xmls/en/images/s141/final_exam/icon_incorrect_final-exam.png">
+							<p class="form-font-20lg" style="font-size: 19px; position: absolute; top: 1px; left: 41px; color: #cb0000; font-weight: bold;">Incorrect</p>					
+						</div>
+						<div class="CourseVideoQuizDialogContent" style="width: 653px; height: 100%; float: left; padding: 10px 0 0 15px;">
+							<p class="form-font-14 color-black">This is true, but using as many characters as possible in a password is also a good way to foil a password cracker program. The correct answer is D.</p>
+							<p class="form-font-14 guest_text-popup-continue">Click the red Close button to proceed.</p>
+						</div>
+						<div id="FreeFormDialogCloseButton" class="FlatDialogClose InteractivityButton" style="top: -18px; left: 812px;">
+							<a href="#" title="Continue"></a>
+						</div>
+					</div>
+				]]></Rule>
+				<Rule Top="360" Left="51" DarkenBackground="yes" AnswerID="2" AudioFile="xmls/en/audio/s141/s141_quiz_answer_incorrect.mp3"><![CDATA[
+					<div class="FreeTestDialog" style="width: 838px; height: 157px; background-color: #fff2f2; border: 1px solid #ff5555; box-shadow: none;">
+						<div style="float: left; padding: 15px 0 0 15px;">							
+							<img src="xmls/en/images/s141/final_exam/icon_incorrect_final-exam.png">
+							<p class="form-font-20lg" style="font-size: 19px; position: absolute; top: 1px; left: 41px; color: #cb0000; font-weight: bold;">Incorrect</p>					
+						</div>
+						<div class="CourseVideoQuizDialogContent" style="width: 653px; height: 100%; float: left; padding: 10px 0 0 15px;">
+							<p class="form-font-14 color-black">This is true, but using a mix of numbers, uppercase and lowercase letters and special characters in your password is also a good way to foil a password cracker program. The correct answer is D.</p>
+							<p class="form-font-14 guest_text-popup-continue">Click the red Close button to proceed.</p>
+						</div>
+						<div id="FreeFormDialogCloseButton" class="FlatDialogClose InteractivityButton" style="top: -18px; left: 812px;">
+							<a href="#" title="Continue"></a>
+						</div>
+					</div>
+				]]></Rule>
+				<Rule Top="360" Left="51" DarkenBackground="yes" AnswerID="3" AudioFile="xmls/en/audio/s141/s141_quiz_answer_incorrect.mp3"><![CDATA[
+					<div class="FreeTestDialog" style="width: 838px; height: 157px; background-color: #fff2f2; border: 1px solid #ff5555; box-shadow: none;">
+						<div style="float: left; padding: 15px 0 0 15px;">							
+							<img src="xmls/en/images/s141/final_exam/icon_incorrect_final-exam.png">
+							<p class="form-font-20lg" style="font-size: 19px; position: absolute; top: 1px; left: 41px; color: #cb0000; font-weight: bold;">Incorrect</p>					
+						</div>
+						<div class="CourseVideoQuizDialogContent" style="width: 653px; height: 100%; float: left; padding: 10px 0 0 15px;">
+							<p class="form-font-14 color-black">You should never use a word found in the dictionary. The correct answer is D.</p>
+							<p class="form-font-14 guest_text-popup-continue">Click the red Close button to proceed.</p>
+						</div>
+						<div id="FreeFormDialogCloseButton" class="FlatDialogClose InteractivityButton" style="top: -18px; left: 812px;">
+							<a href="#" title="Continue"></a>
+						</div>
+					</div>
+				]]></Rule>
+				<Rule Top="360" Left="51" DarkenBackground="yes" AnswerID="4" AudioFile="xmls/en/audio/s141/s141_quiz_answer_correct.mp3" Correct="yes"><![CDATA[
+					<div class="FreeTestDialog" style="width: 838px; height: 157px; background-color: #edf7fd; border: 1px solid #96cdf2; box-shadow: none;">
+						<div style="float: left; padding: 15px 0 0 15px;">							
+							<img src="xmls/en/images/s141/final_exam/icon_correct_final-exam.png">
+							<p class="form-font-20lg" style="font-size: 19px; position: absolute; top: 1px; left: 49px; color: #3fa4e7; font-weight: bold;">Correct</p>					
+						</div>
+						<div class="CourseVideoQuizDialogContent" style="width: 653px; height: 100%; float: left; padding: 10px 0 0 15px;">
+							<p class="form-font-14 color-black">You should use as many characters as possible in your password and use a mix of numbers, uppercase and lowercase letters, and special characters.</p>
+							<p class="form-font-14 guest_text-popup-continue">Click the Continue button below to proceed.</p>
+						</div>
+						<div id="FreeFormDialogCloseButton" class="themebutton themesimple">
+							<a href="#" title="Continue"><center><img src="skins/new/play_blue.png" style="margin-right:0px"></center></a>
+						</div>
+					</div>
+				]]></Rule>					
+			</Rules>		
+		</Question>
+
+	</QuestionGroup>
+
+</Final>

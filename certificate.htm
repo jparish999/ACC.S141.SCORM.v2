@@ -1,0 +1,152 @@
+<html>
+<head>
+<title></title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<script src="js/completion-certificate.js" type="text/javascript" charset="utf-8"></script>
+<script language="javascript">
+
+var mStudentName = '';
+var mScore = '';
+var mCertDate,mStrMonthLength;
+var mStrMonthDateYear=new String();
+
+mStudentName = unescape(getParameterByName("studentname"));
+mScore = getParameterByName("score");
+
+
+dt = new Date();   //Gets today's date right now (to the millisecond).
+mMonth = dt.getMonth()+1;
+mDay = dt.getDate();
+mYear = dt.getFullYear();
+	
+mStrMonthDateYear=GetMonthString(mMonth) +' '+mDay+', '+mYear
+var mRandomNumber=GetRandomNumber();
+var mCertNumber=new String();
+mCertNumber=COURSE_CODE+'-'+mRandomNumber+'-'+mDay+mMonth+mYear
+
+function GetRandomNumber(){
+	var mRNumber=Math.random()*10;
+	var mRandNumber=new String();
+	var mRandLength;
+	mRandNumber=mRNumber.toString();
+	mRandLength=mRandNumber.length;
+	if (mRandLength>11){
+		mRNumber=parseInt(mRandNumber.substring(3,11))
+	}
+	else{
+		mRNumber=parseInt(mRandNumber.substring(3,mRandLength-1))
+	}
+	if (mRNumber>0){
+		mRandNumber=mRNumber.toString();
+		mRandLength=mRandNumber.length;
+		if (mRandLength<8){
+			return GetRandomNumber();
+		}
+		else{
+			return mRNumber;
+		}
+	}
+	else{
+		return GetRandomNumber();
+	}
+}
+
+function GetMonthString(pMonth){
+	pMonth=parseInt(pMonth);
+	if (pMonth==1)
+		return "January";
+	else if(pMonth==2)
+		return "February";
+	else if(pMonth==3)
+		return "March";
+	else if(pMonth==4)
+		return "April";
+	else if(pMonth==5)
+		return "May";
+	else if(pMonth==6)
+		return "June";
+	else if(pMonth==7)
+		return "July";
+	else if(pMonth==8)
+		return "August";
+	else if(pMonth==9)
+		return "September";
+	else if(pMonth==10)
+		return "October";
+	else if(pMonth==11)
+		return "November";
+	else if(pMonth==12)
+		return "December";
+}
+
+function getParameterByName(name)
+{
+  name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+  var regexS = "[\\?&]" + name + "=([^&#]*)";
+  var regex = new RegExp(regexS);
+  var results = regex.exec(window.location.search);
+  if(results == null)
+    return "";
+  else
+    return decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+</script>
+</head>
+<body>
+<table align='center' width='600'  border='0' cellpadding='0' cellspacing='0'>
+<tr>
+	<td colspan='3'>
+	<img src="css/certificate/border-top.jpg"  width='600' height='50'>
+	</td>
+</tr>
+<tr>
+	<td width='50'>
+	<img src="css/certificate/border-left.jpg"  width='50' height='357'>
+	</td>
+	<td valign='top'>
+	<div align='center'>
+	<img src="css/certificate/certificate-text-1.gif" width='338' height='40' hspace='0' vspace='6'>
+	<br>
+	<img src="css/certificate/certificate_logo.jpg">
+	<br>
+	<p><Font face='Verdana' size='2'><script language="javascript">document.write(mStudentName)</script></Font></p>
+	<p><img src="css/certificate/certificate-text-2.gif" width='268' height='29'>
+	<br>
+	<Font face='Verdana' size='2'>Course: <script language="javascript">document.write(COURSE_NAME)</script>
+	<br>
+	<script language="javascript">if(DISPLAY_SCORE_ON_CERTIFICATE){document.write("Score: " + mScore);}</script>
+	<br>
+	Completed On: <script language="javascript">document.write(mStrMonthDateYear)</script>
+	<br><br>
+	Certificate Number<br><script language="javascript">document.write(mCertNumber)</script>
+	</p>
+	</Font>
+	</div>
+	</td>
+	<td width='100' align = 'right'><img src="css/certificate/border-right.jpg" width='51' height='357'></td>
+</tr>
+<tr>
+	<td colspan='3'>
+	<img src="css/certificate/border-bottom.jpg" width='600' height='50'>
+	</td>
+</tr>	 
+</table>												    			 
+<script>
+if (navigator.userAgent.toLowerCase().indexOf('safari')!=-1){
+	if(window.addEventListener){
+		window.addEventListener("load", CertificatePrint, false);
+	}
+	else{
+		window.onload = CertificatePrint;
+	}
+} 
+else{
+	window.onload = CertificatePrint;
+}
+
+function CertificatePrint(){
+	print();
+}
+</script>
+</body>
+</html>

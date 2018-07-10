@@ -1,0 +1,370 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="Content-Language" content="en-us">
+<meta name="title" content="Video Now!">
+
+<meta name="viewport" content="user-scalable=yes, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+
+<title>Inspired eLearning</title>
+
+<script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery.timer.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/jquery.timer2.js" type="text/javascript" charset="utf-8"></script>
+
+<script src="js/jsencryption.js"></script>
+
+<link href="index.css" rel="stylesheet" type="text/css" >
+
+<script type="text/javascript">
+/*
+ * IEngine4
+ * IEngine4 Video Engine
+ *
+ * Copyright (c) Inspired eLearning Inc. 2003-2014.  All Rights Reserved.
+ * This source file is proprietary property of Inspired eLearning Inc.
+ * http://http://www.inspiredelearning.com/inspired/License
+ *
+ * @version 4.8.11
+ */
+
+ 
+//------------------------------------------------------------------------------------------------------------------
+function getParameterByName(name)
+{
+  name = name.replace(/[\[]/, "\\\[").replace(/[\]]/, "\\\]");
+  var regexS = "[\\?&]" + name + "=([^&#]*)";
+  var regex = new RegExp(regexS);
+  var results = regex.exec(window.location.search);
+  if(results == null)
+    return "";
+  else
+    return decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+
+//------------------------------------------------------------------------------------------------------------------
+var SettingsXML;
+
+var AutoStartLanguageFolder = "en"; //leave blank for language select menu
+
+var admin_SkinCSS = "";
+
+var admin_CopyrightInfo = "";
+var admin_Version = "";
+
+var admin_LaunchIntroFile_Path = "";
+var admin_LaunchIntroFile_Yes = "no";
+var admin_LaunchIntroFile_DefaultMode = "video";
+
+var admin_URLOnExit = "";
+
+var admin_AutoForwardDefaultSetting = true;
+var admin_AutoForwardEnabled = true;
+
+var admin_DisableVolume = false;
+
+var admin_BottomLogo = "";
+var admin_TopLogo = "";
+
+var admin_HelpFile = "";
+var admin_GlossaryFile = "";
+var admin_CourseFile = "";
+
+var admin_RetakeFinalExam = "";
+var admin_Submit = "";
+var admin_Finish = "";
+var admin_Help = "";
+var admin_Glossary = "";
+var admin_SaveAndExit = "";
+var admin_Review = "";
+
+var admin_Volume = "";
+var admin_Mute = "";
+var admin_UnMute = "";
+
+var admin_Mode = "";
+
+var admin_AutoForwardText = "";
+var admin_NoAutoForwardText = "";
+
+var admin_Replay = "";
+
+var admin_Prev = "";
+
+var admin_Pause = "";
+var admin_Play = "";
+
+var admin_Next = "";
+
+var admin_Progress = "";
+var admin_ProgressWidth = 775;
+
+var admin_MinTimeWaitAlert = "";
+var admin_DropDownAlert = "";
+
+var admin_LicenseURL = "";
+var KeyCode = "";
+
+// AICC Variables
+var admin_UseAicc = false;
+var admin_AiccUrl = "";
+var admin_AiccSid = "";
+// END
+
+var aDate = new Date();
+xcode = $.timerY(aDate.getFullYear()+"."+aDate.getUTCMonth()+"."+aDate.getDate(), 'IEngine');
+var XCode = xcode.substring(0,3)+xcode.substr(xcode.length-1,1);
+
+xcode2 = $.timerY(aDate.getFullYear()+"."+aDate.getUTCMonth()+"."+(aDate.getDate()-1), 'IEngine');
+var XCode2 = xcode2.substring(0,3)+xcode2.substr(xcode2.length-1,1);
+
+xcode3 = $.timerY(aDate.getFullYear()+"."+aDate.getUTCMonth()+"."+(aDate.getDate()+1), 'IEngine');
+var XCode3 = xcode3.substring(0,3)+xcode3.substr(xcode3.length-1,1);
+
+var languagelist = { 
+	'ch' : {'text':'Chinese (Simplified)', show : 'no' },
+	'cz' : {'text':'Czech', show : 'no' },
+	'du' : {'text':'Dutch', show : 'no' },
+	'en' : {'text':'English', show : 'no' },
+	'fr' : {'text':'French', show : 'no' },
+	'frc' : {'text':'French Canadian', show : 'no' },
+	'ge' : {'text':'German', show : 'no' },
+	'gr' : {'text':'Greek', show : 'no' },
+	'it' : {'text':'Italian', show : 'no' },
+	'ja' : {'text':'Japanese', show : 'no' },
+	'ko' : {'text':'Korean', show : 'no' },
+	'spl' : {'text':'Latin American Spanish', show : 'no' },
+	'pob' : {'text':'Portuguese (Brazilian)', show : 'no' },
+	'po' : {'text':'Portuguese (European)', show : 'no' },
+	'ru' : {'text':'Russian', show : 'no' },
+	'sp' : {'text':'Spanish', show : 'no' },
+	'th' : {'text':'Thai', show : 'no' },
+	'cht' : {'text':'Traditional Chinese', show : 'no' },
+	'ma' : {'text':'Malay', show : 'no' },
+	'tr' : {'text':'Turkish', show : 'no' },
+	'sl' : {'text':'Slovakian', show : 'no' }
+};
+
+var languagesFound = 0;
+var langFound = "";
+
+//------------------------------------------------------------------------------------------------------------------
+function parseSettingsXml(xml)
+{
+	admin_LaunchIntroFile_Path = $(xml).find("Launch").attr("IntroFilePath");
+	admin_LaunchIntroFile_DefaultMode = $(xml).find("Launch").attr("DefaultCourseMode").toLowerCase();
+	admin_LaunchIntroFile_Yes = $(xml).find("Launch").attr("LaunchIntroFile").toLowerCase() === 'true';
+
+	admin_LicenseURL = $(xml).find("LicenseURL").text();
+
+	//Read AICC Variables
+	admin_UseAicc = $(xml).find("UseAICC").text().toLowerCase() === 'true';
+	if(admin_UseAicc){
+		admin_AiccUrl = getParameterByName('AICC_URL');
+		admin_AiccSid = getParameterByName('AICC_SID');
+		if(admin_AiccUrl == "" && admin_AiccSid == ""){
+			alert("AICC HACP communication parameters are missing. Please contact administrator.");
+		}
+	}
+	//End
+
+
+	//validate usage date
+	if ( (KeyCode.indexOf(XCode)==-1) && (KeyCode.indexOf(XCode2)==-1) && (KeyCode.indexOf(XCode3)==-1)) { window.location.href=admin_LicenseURL; return false; }
+
+	if (admin_LaunchIntroFile_Yes)
+	{
+		if(admin_UseAicc){
+			window.location.href=admin_LaunchIntroFile_Path+"?AICC_URL="+admin_AiccUrl+"&AICC_SID="+admin_AiccSid;
+		}
+		else{
+		window.location.href=admin_LaunchIntroFile_Path;
+		}
+	} else
+	{
+		if (admin_LaunchIntroFile_DefaultMode == "text")
+			{
+				if(admin_UseAicc){ window.location.href="index-text.htm"+"?AICC_URL="+admin_AiccUrl+"&AICC_SID="+admin_AiccSid; } else
+				{ window.location.href="index-text.htm"; }
+			} else
+			{
+				if(admin_UseAicc){ window.location.href="index-video.htm"+"?AICC_URL="+admin_AiccUrl+"&AICC_SID="+admin_AiccSid; } else
+				{ window.location.href="index-video.htm"; }
+			}
+	}
+}
+
+//------------------------------------------------------------------------------------------------------------------
+function SaveSettingsXML(xml)
+{
+	SettingsXML = xml;
+	parseSettingsXml(SettingsXML);
+}
+
+//------------------------------------------------------------------------------------------------------------------
+function LoadSettingsXML()
+{
+	CourseLanguage = getParameterByName("lang");
+	if (CourseLanguage=="") { CourseLanguage = "en"; }
+	
+	if (AutoStartLanguageFolder!="") //auto start without language selection menu
+	{
+		$("#Loading").hide();
+		$.ajax({
+			type: "GET",
+			url: "xmls/"+AutoStartLanguageFolder+"/adminsettings.xml?time="+Math.round(+new Date()/1000),
+			dataType: "xml",
+			success: SaveSettingsXML
+		});
+		
+	} else
+	{	
+	//	$("#Loading").show();
+
+		for (var key in languagelist) {
+			var obj = languagelist[key];
+			$.ajax({
+				url:'xmls/'+key+'/adminsettings.xml?time='+Math.round(+new Date()/1000),
+				type:'get',
+				dataType: "xml",
+				async: false,
+				error: function() {	},
+				success: function(xml) { 
+					var testdata = $(xml).find("UseScorm").text();
+					if ((testdata=="true")||(testdata=="false"))
+					{
+						languagelist[key].show = 'yes'; 
+						languagesFound++; 
+						langFound=key; 
+					}
+				}
+			});
+		}
+
+		$("#Loading").hide();
+
+		//if only one language detected
+		if (languagesFound==1) {
+			$.ajax({
+				type: "GET",
+				url: "xmls/"+langFound+"/adminsettings.xml?time="+Math.round(+new Date()/1000),
+				dataType: "xml",
+				success: SaveSettingsXML
+			});
+		} else
+		{
+			for (var key in languagelist) {
+				if (languagelist[key].show == "yes")
+				{
+					$("#langdropdown").append('<li><a href="#" data-lang="'+key+'" class="langlink">'+languagelist[key].text+'</a></li>');
+				}
+			}
+
+			$(".langlink").on('click', function()
+			{
+				$("#langselect").html( $(this).data("lang")+"..." );
+				$('.lang-dropdown').removeClass('active');
+
+				$.ajax({
+					type: "GET",
+					url: "xmls/"+$(this).data("lang")+"/adminsettings.xml?time="+Math.round(+new Date()/1000),
+					dataType: "xml",
+					success: SaveSettingsXML
+				});
+
+				return false;
+			});
+		}
+	}
+}
+
+//------------------------------------------------------------------------------------------------------------------
+function parseVersionXml(xml)
+{
+	admin_Version = $(xml).find("Version").text();
+	xke = $(xml).find("VersionText").text();
+	homecode = $(xml).find("HomeCode").text();
+	if (typeof homecode =="undefined") { homecode=""; };
+
+	KeyCode = $(xml).find("KeyCode").text();
+	LoadSettingsXML(); //load settings.xml after version and key from data.xml is loaded
+}
+
+//------------------------------------------------------------------------------------------------------------------
+function SaveVersionXML(xml)
+{
+	VersionXML = xml;
+	parseVersionXml(VersionXML);
+}
+
+//------------------------------------------------------------------------------------------------------------------
+function LoadVersionXML()
+{
+	$.ajax({
+		type: "GET",
+		url: "js/data.xml?q=430&time="+Math.round(+new Date()/1000),
+		dataType: "xml",
+		success: SaveVersionXML
+	});
+}
+
+	function DropDown(el) {
+		this.dd = el;
+		this.initEvents();
+	}
+	DropDown.prototype = {
+		initEvents : function() {
+			var obj = this;
+
+			obj.dd.on('click', function(event){
+				$(this).toggleClass('active');
+				event.stopPropagation();
+			});	
+		}
+	}
+
+
+//------------------------------------------------------------------------------------------------------------------
+$(document).ready(function() {
+	
+	var dd = new DropDown( $('#dd') );
+
+	$(document).click(function() {
+		// all dropdowns
+		$('.lang-dropdown').removeClass('active');
+	});
+	
+	if (AutoStartLanguageFolder!="") //auto start without language selection menu 
+	{
+		LoadVersionXML(); //no delay needed
+	} else
+	{
+		$('.container1').show();
+		$('#Loading').show();
+		setTimeout(function() { LoadVersionXML(); },1000 ); //delay loading so animation can start
+	}
+
+	
+});
+
+</script>
+</head>
+
+<body>
+	<div ID="Loading" style="display: none"></div>
+	
+	<div class="container1" style="display: none">
+		<img src="languages-small.jpg" style=" text-align:center; width:240px; border-radius: 5px; box-shadow: 0px 0px 10px rgba(0,0,0,0.5);" />
+		<br />
+		
+		<div class="lang-select">
+			<div id="dd" class="lang-dropdown" tabindex="1"><span id="langselect">language/语/idioma/sprache</span>
+				<ul class="dropdown" id="langdropdown">
+				</ul>
+			</div>
+		​</div>
+
+	</div>
+	
+	
+</body>
